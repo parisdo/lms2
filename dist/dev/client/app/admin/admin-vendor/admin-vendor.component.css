@@ -1,0 +1,41 @@
+.container {
+  margin-top: 100px; }
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 5px; }
+
+.title-tag {
+  padding: 20px; }
+
+.well-tag {
+  margin: 10px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  padding: 10px; }
+
+.well-tag:hover {
+  cursor: pointer; }
+
+.row_button {
+  padding: 10px;
+  margin: 1px; }
+
+.btn-save {
+  margin-right: 35px;
+  margin-top: 15px; }
+
+.button_tag {
+  padding: 0;
+  padding-right: 2px; }
+
+.btn-delete {
+  margin-left: 250px; }
+
+.selected {
+  background-color: red;
+  color: white; }
+
+/*# sourceMappingURL=admin-vendor.component.css.map */

@@ -1,0 +1,155 @@
+<!-- Modal For archive account-->
+<div class="modal fade" id="modalArchiveAccount" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Archive Vendor Account</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to archive this vendor account?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                (click)="archiveAccount(userId,status)">OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal For Unarchive account-->
+<div class="modal fade" id="modalUnarchiveAccount" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Unrchive Vendor Account</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to unarchive this vendor account?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                (click)="archiveAccount(userId,status)">OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="tb-body">
+  <div class="container" style="padding-top: 45px; padding-bottom: 45px;">
+    <!--Alert Callback when user click Archive account-->
+    <div *ngIf="archive_success">
+      <alert dismissOnTimeout="3000" [type]="'success'">
+        <b>Success:</b> Vendor account has been archived
+      </alert>
+    </div>
+
+    <!--Alert Callback when user click Unarchive account-->
+    <div *ngIf="unarchive_success">
+      <alert dismissOnTimeout="3000" [type]="'success'">
+        <b>Success:</b> Vendor account has been active
+      </alert>
+    </div>
+
+    <div *ngIf="resetPassword">
+      <alert dismissOnTimeout="3000" [type]="'success'">
+        <b>Success:</b> Your password has been reset
+      </alert>
+    </div>
+
+
+    <div *ngIf="errorStatus">
+      <alert dismissOnTimeout="3000" [type]="'warning'">
+        <b>Error:</b> {{errorText}}
+      </alert>
+    </div>
+
+    <h1>{{'Manage Vendors' | translate}}</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngIf="!loading_vendor">
+          <p-dataTable [value]="vendor_data" [rows]="10" [paginator]="true" [rowsPerPageOptions]="[5,10,20]" [globalFilter]="gb">
+            <header>List of Vendors</header>
+            <p-column field="name" header="Name" [filter]="true" filterMatchMode="contains"></p-column>
+            <p-column field="companyname" header="Company Name" [filter]="true" filterMatchMode="contains"></p-column>
+            <p-column styleClass="col-button">
+              <template let-data="rowData" pTemplate type="body">
+                <button type="button" pButton (click)="viewProfile(data)" class="btn btn-default">View Profile</button>
+              </template>
+            </p-column>
+          </p-dataTable>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div *ngIf="!onInit"
+             class="well">
+          <div *ngIf="!loading_detail">
+          <span class="label label-default pull-right"
+                *ngIf="detail_vendor.archived === '0'">{{'activate' | translate}}</span>
+            <span class="label label-default pull-right"
+                  *ngIf="detail_vendor.archived === '1'">{{'archived' | translate}}</span>
+            <br>
+            <div class="row">
+              <div class="col-xs-3">
+                <h5><b>{{'Name'| translate}}:</b></h5>
+                <h5><b>{{'Email'| translate}}:</b></h5>
+                <h5><b>{{'Phone'| translate}}:</b></h5>
+                <h5><b>{{'Company' | translate}}:</b></h5>
+                <h5><b>{{'Position' | translate}}:</b></h5>
+                <h5><b>{{'LinkedIn' | translate}}</b></h5>
+                <h5><b>{{'Listing'| translate}}</b></h5>
+              </div>
+              <div class="col-xs-9">
+                <h5>{{detail_vendor?.name}}</h5>
+                <h5>{{detail_vendor?.email}}</h5>
+                <h5>{{detail?.phonenumber}}</h5>
+                <h5>{{detail?.company_name}}</h5>
+                <h5>{{detail?.position}}</h5>
+                <h5>{{detail?.linkedin}}</h5>
+                <div *ngFor="let app of apps">
+                  <div class="row">
+                    <div class="col-xs-9"><a (click)="goToDetail(app.id)">{{app.name}}</a></div>
+                    <div class="col-xs-3">
+                      <span class="label label-default pull-right">{{app.status}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <button *ngIf="detail_vendor.archived !== '1'"
+                    class="btn btn-primary"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modalArchiveAccount"
+                    (click)="confirmArchiveAccount(detail_vendor.id,'archive')">
+              {{'Archive Account'| translate}}
+            </button>
+            <button *ngIf="detail_vendor.archived === '1'"
+                    class="btn btn-warning"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modalUnarchiveAccount"
+                    (click)="confirmArchiveAccount(detail_vendor.id,'unarchive')">
+              {{'Unarchive Account' | translate}}
+            </button>
+            <hr>
+            <button class="btn btn-danger"
+                    (click)="resetPasswordAccount(detail_vendor.id)">{{'Reset Password'| translate}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

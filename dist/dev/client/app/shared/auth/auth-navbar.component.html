@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right nav-auth">
+          <li><a class="link" routerLink="/auth/register-customer"  *ngIf="!_authService.isLoggedIn()">{{'auth_nav_register_customer' | translate}}</a></li>
+          <li><a class="link" routerLink="/auth/register-vendor"  *ngIf="!_authService.isLoggedIn()">{{'auth_nav_register_vendor' | translate}}</a></li>
+          <li><a style="margin-right: 45px;" class="link" (click)="toggleDialog()" *ngIf="!_authService.isLoggedIn()">{{'auth_nav_login' | translate}}</a></li>
+          <li><a class="link" routerLink="/vendor"  *ngIf="_authService.checkRole('vendor')">Vendor</a></li>
+          <li><a class="link" routerLink="/admin"  *ngIf="_authService.checkRole('admin')">Admin</a></li>
+          <li><a class="link" (click)="logout()" *ngIf="_authService.isLoggedIn()">Logout</a></li>
+          <li><a class="lang">
+            <tb-translate></tb-translate>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<p-dialog header="Sign in with Marketplace Account" [(visible)]="display" modal="modal"
+          showEffect="fade" responsive="responsive" resizable="!resizable">
+  <!--login form-->
+  <form [formGroup]="loginForm" novalidate autocomplete="off" (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="text" class="form-control" id="email" placeholder="Email" formControlName="email" (keyup.enter)="login()">
+      <control-messages [control]="loginForm.controls.email"></control-messages>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" (keyup.enter)="login()" >
+      <control-messages [control]="loginForm.controls.password"></control-messages>
+    </div>
+  </form>
+  <!---->
+  <footer>
+    <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+      <button type="button" class="btn btn-secondary" (click)="toggleDialog()">Close</button>
+      <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+    </div>
+  </footer>
+</p-dialog>
+
+
+<p-growl [value]="msgs" sticky="sticky"></p-growl>

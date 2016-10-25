@@ -1,0 +1,45 @@
+@import "../../../styles/default";
+
+.modal-dialog{
+  overflow-y: initial !important
+}
+.modal-body{
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.teachList-header{
+  text-align: center;
+}
+
+.teachList-more{
+  color: $green;
+}
+
+
+.addClass{
+  margin-bottom: 55px;
+  max-width: 20rem;
+  padding: 2rem;
+  text-align: center;
+
+  &__btn{
+    margin-bottom: .75rem;
+    color: $green;
+  }
+
+}
+
+.panel-footer {
+  padding: 15px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.fa-cog{
+  cursor: pointer;
+}
+
+

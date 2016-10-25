@@ -1,0 +1,117 @@
+<div class="tb-body">
+  <div class="container">
+
+    <div class="sidebar col-md-4" [style.min-height]="bodyHeight +'px'">
+
+      <div class="category">
+        <div class="category-item {{id == tag?.dbid ? 'active': ''}}" *ngFor="let tag of tags.category; let last = last;"
+             (click)="onNavigate('product/category-page',tag?.type,tag?.dbid)">{{tag?.name}}
+        </div>
+      </div>
+
+      <h2 class="tb-sidebar-title">FILTER BY</h2>
+
+      <accordion>
+        <!--accordion 1-->
+        <accordion-group
+          #group_department
+          [isOpen]="type === 'department'">
+          <div accordion-heading>
+            <h4 class="{{group_department?.isOpen ? 'head-active': ''}}">Department
+              <span><i class="pull-right fa " [ngClass]="{'fa-chevron-down': group_department?.isOpen, 'fa-chevron-right': !group_department?.isOpen}"></i></span>
+            </h4>
+          </div>
+
+
+          <div class="checkbox checkbox-primary">
+            <input id="all_group_department" class="styled" type="checkbox" (change)="onCheckAllTag('department',$event)">
+            <label for="all_group_department">
+              All Department
+            </label>
+          </div>
+
+          <div class="checkbox checkbox-primary" *ngFor="let opt of tags.department; let i = index">
+            <div *ngIf="opt.type === 'department'" >
+              <input [id]="opt.name" class="styled" type="checkbox" #{{opt.name}}
+                     [checked]="(opt.dbid == id && opt.type == type && status.isFirstOpen) || checkAll.department"
+                     (change)="onCheckboxFilterTag(opt.dbid,opt.type,$event)">
+              <label [attr.for]="opt.name">
+                {{opt.name}} ({{opt.count}})
+              </label>
+            </div>
+          </div>
+
+        </accordion-group>
+        <!--accordion 2-->
+        <accordion-group
+          #group_language
+          [isOpen]="type === 'language'">
+          <div accordion-heading>
+            <h4 class="{{group_language?.isOpen ? 'head-active': ''}}">Language
+              <span><i class="pull-right fa" [ngClass]="{'fa-chevron-down': group_language?.isOpen, 'fa-chevron-right': !group_language?.isOpen}"></i></span>
+            </h4>
+          </div>
+
+          <div class="checkbox checkbox-primary">
+            <input id="all_group_language" class="styled" type="checkbox" (change)="onCheckAllTag('language',$event)">
+            <label for="all_group_department">
+              All Language
+            </label>
+          </div>
+
+          <div class="checkbox checkbox-primary" *ngFor="let opt of tags.language; let i = index">
+            <div *ngIf="opt.type === 'language'" >
+              <input [id]="opt.name" class="styled" type="checkbox" #{{opt.name}}
+                     [checked]="(opt.dbid == id && opt.type == type && status.isFirstOpen) || checkAll.language"
+                     (change)="onCheckboxFilterTag(opt.dbid,opt.type,$event)">
+              <label [attr.for]="opt.name">
+                {{opt.name}} ({{opt.count}})
+              </label>
+            </div>
+          </div>
+
+        </accordion-group>
+        <!--accordion 3-->
+        <accordion-group
+          #group_industry
+          [isOpen]="type === 'industry'">
+          <div accordion-heading>
+            <h4 class="{{group_industry?.isOpen ? 'head-active': ''}}">Industry <span><i class="pull-right fa"
+           [ngClass]="{'fa-chevron-down': group_industry?.isOpen, 'fa-chevron-right': !group_industry?.isOpen}"></i></span></h4>
+          </div>
+
+          <div class="checkbox checkbox-primary">
+            <input id="all_group_industry" class="styled" type="checkbox" (change)="onCheckAllTag('industry',$event)">
+            <label for="all_group_department">
+              All Industry
+            </label>
+          </div>
+
+          <div class="checkbox checkbox-primary" *ngFor="let opt of tags.industry; let i = index">
+            <div *ngIf="opt.type === 'industry'" >
+              <input [id]="opt.name" class="styled" type="checkbox" #{{opt.name}}
+                     [checked]="(opt.dbid == id && opt.type == type && status.isFirstOpen) || checkAll.industry"
+                     (change)="onCheckboxFilterTag(opt.dbid,opt.type,$event)">
+              <label [attr.for]="opt.name">
+                {{opt.name}} ({{opt.count}})
+              </label>
+            </div>
+          </div>
+
+
+        </accordion-group>
+      </accordion>
+    </div>
+
+    <div class="tb-content col-md-8" #cardContainer>
+      <div class="tb-content__item" *ngFor="let product of products">
+        <tb-product-item
+          [id]="product.id"
+          [logo]="product.logo"
+          [title]="product.name"
+          [vendor]="product.vendor"
+          [shortdescription]="product.shortdescription"></tb-product-item>
+      </div>
+    </div>
+  </div>
+</div>

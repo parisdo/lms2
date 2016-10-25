@@ -1,0 +1,34 @@
+@import "../../../styles/default";
+.jumbotron{
+  max-height: 150px;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
+.container{
+  margin-top: 0;
+}
+
+.courseNav{
+  background-color: $white;
+  color: $black;
+}
+
+
+.courseNavLink{
+  text-align: center;
+  border-bottom: 5px solid transparent;
+}
+
+.courseNavLink:hover{
+  color: $light-blue;
+  border-bottom: 5px solid $light-blue;
+}
+
+
+.link{
+  margin: 0.5rem;
+}
+.link:hover{
+  color: $light-blue;
+}

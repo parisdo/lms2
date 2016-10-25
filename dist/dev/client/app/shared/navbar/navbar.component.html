@@ -1,0 +1,107 @@
+<nav class="navbar navbar-default  navbar-fixed-top" >
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed tb-navbar-toggle" data-toggle="collapse"
+                data-target="#tb-navbar-collapse" aria-expanded="false" #toggleNav>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" routerLink="/" routerLinkActive="true"><img class="img-responsive" src="assets/svg/trabila_logo.png" alt=""></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse tb-navbar-collapse" id="tb-navbar-collapse">
+
+        <!--Large Size (hidden-sm hidden-xs)-->
+        <div class="hidden-sm hidden-xs">
+          <ul class="nav nav-tabs nav-justified">
+            <li class="dropdown">
+              <a class="link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">{{'navbar_category' | translate}} <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let tag of tags.category"><a class="dropdown-link" (click)="onNavigate('product/category-page',tag.type,tag.dbid)">{{tag.name}}</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">{{'navbar_industry' | translate}} <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let tag of tags.industry"><a class="dropdown-link" (click)="onNavigate('product/browse-page',tag.type,tag.dbid)">{{tag.name}}</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">{{'navbar_departments' | translate}} <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let tag of tags.department"><a class="dropdown-link" (click)="onNavigate('product/browse-page',tag.type,tag.dbid)">{{tag.name}}</a></li>
+              </ul>
+            </li>
+            <li>
+              <form class="navbar-form" role="search">
+                <div class="input-group">
+                  <input #search type="text" class="form-control" placeholder="{{'navbar_search' | translate}}" name="srch-term" id="srch-term" autocomplete="off" (keyup.enter)="onSearch(search.value)">
+                  <div class="input-group-btn">
+                    <button class="btn btn-search-box" type="button" (click)="onSearch(search.value)"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <!---->
+
+        <!--Small Size (hidden-md hidden-lg)-->
+        <div class="hidden-md hidden-lg">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">Category <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu"  style="max-height: 100px; overflow-y: auto">
+                <li *ngFor="let tag of tags.category">
+                  <a class="dropdown-link" (click)="onNavigate('product/category-page',tag.type,tag.dbid)">{{tag.name}}</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a class="link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">Industry <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu"  style="max-height: 100px; overflow-y: auto">
+                <li *ngFor="let tag of tags.industry"><a class="dropdown-link" (click)="onNavigate('product/browse-page',tag.type,tag.dbid)">{{tag.name}}</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a class="link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">Department <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu"  style="max-height: 100px; overflow-y: auto">
+                <li *ngFor="let tag of tags.department"><a class="dropdown-link" (click)="onNavigate('product/browse-page',tag.type,tag.dbid)">{{tag.name}}</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form" role="search">
+              <div class="input-group">
+                <input type="text" class="hidden-sm form-control" placeholder="Search" name="srch-term"
+                       id="srch-term-xs">
+                <input type="text" class="hidden-xs form-control" placeholder="Search" name="srch-term"
+                       id="srch-term-sm">
+                <div class="input-group-btn">
+                  <button class="btn btn-search-box" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+          </ul>
+        </div>
+        <!---->
+
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+

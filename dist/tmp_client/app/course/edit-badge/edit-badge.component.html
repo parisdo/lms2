@@ -1,0 +1,127 @@
+<div *ngIf="badges != null">
+    <div class="container">
+        <div class="row box-wrapper" style="padding: 2rem;">
+            <form style="max-width: 1000px" class="center">
+                <h5 style="margin-bottom: 15px">แก้ไขข้อมูลเหรียญรางวัล<hr></h5>
+                <div class="row">
+                    <div class="col-md-3" *ngFor="let badge of badges;let last = last">
+                        <div class="card card-block text-xs-center" style="max-width: 18rem;">
+                            <img class="center img-fluid img-circle " [src]="badge.image" style="margin-bottom: 5px; max-width: 80px">
+                            <p class="card-text" style="margin-bottom: 0">{{badge.name}}</p>
+                            <small class="card-text">+ {{badge.xp}} XP</small>
+                            <br>
+                            <small class="card-text link" data-toggle="modal" data-target="#editBadgeModal" (click)="editBadgeModal(badge)"><ins>แก้ไข</ins></small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card card-block text-xs-center link" style="max-width: 18rem; min-height: 12em" data-toggle="modal" data-target="#addBadgeModal">
+                            <h5 class="card-text text-xs-center" style="margin-top: 55px; margin-bottom: 0"><i class="zmdi zmdi-plus-circle-o"></i> เพิ่มเหรียญ</h5>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--Edit Badge Modal-->
+<div class="modal fade" id="editBadgeModal" tabindex="-1" role="dialog" aria-labelledby="editBadgeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h6 class="modal-title" id="editBadgeModalLabel">แก้ไขข้อมูลเหรียญรางวัล</h6>
+            </div>
+            <div class="modal-body">
+                <form style="max-width: 500px" class="center">
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <img class="img-fluid img-circle center" [src]="selectedBadge.image" [hidden]="!selectedBadge.image" style="margin-bottom: 15px; max-width: 80px">
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="file" image-upload
+                                   (imageSelected)="selectedBadgeImage($event)"
+                                   [resizeOptions]="resizeOptions">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="badgeName" class="col-sm-4 col-form-label ">ชื่อเหรียญ</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="badgeName" [(ngModel)]="selectedBadge.name" name="nameSelectedBadge">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="badgeXP" class="col-sm-4 col-form-label">ค่า XP ที่ให้</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="badgeXP" value="10" [(ngModel)]="selectedBadge.xp" name="xpSelectedBadge">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary pull-xs-left" (click)="deleteBadge()">ลบเหรียญนี้ทิ้ง</button>
+
+                <div class="pull-xs-right">
+                    <button type="button" id="closeEditBadgeModal" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+                    <button type="button" class="btn btn-info" (click)="editBadge()">บันทึก</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Add Badge Modal-->
+<div class="modal fade" id="addBadgeModal" tabindex="-1" role="dialog" aria-labelledby="addBadgeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h6 class="modal-title" id="addBadgeModalLabel">แก้ไข</h6>
+            </div>
+            <div class="modal-body">
+                <form style="max-width: 500px" class="center" [formGroup]="badgeForm">
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <img class="img-fluid img-circle center" src="http://fakeimg.pl/80/" [hidden]="image" style="margin-bottom: 15px; max-width: 80px" >
+                            <img class="img-fluid img-circle center" [src]="image" [hidden]="!image" style="margin-bottom: 15px; max-width: 80px">
+
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="file" image-upload
+                                   (imageSelected)="selected($event)"
+                                   [resizeOptions]="resizeOptions"
+                                   formControlName="image">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="badgeName" class="col-sm-4 col-form-label ">ชื่อเหรียญ</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="addbadgeName" formControlName="name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="badgeXP" class="col-sm-4 col-form-label">ค่า XP ที่ให้</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="addbadgeXP" formControlName="xp">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="pull-xs-right">
+                            <button type="button" id="closeModal" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+                            <button type="submit" class="btn btn-info" (click)="addBadge()">บันทึก</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

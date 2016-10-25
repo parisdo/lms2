@@ -1,0 +1,50 @@
+.btn{
+  border: none;
+  outline: none !important;
+}
+
+.btn-back{
+  margin-top: -5px;
+}
+
+.btn-gray{
+  background-color: $light-gray;
+  color: $black;
+}
+
+.btn-white{
+  background-color: $white;
+  color: $black;
+}
+
+.btn-green{
+  background-color: $green;
+  color: $white;
+}
+
+.btn-info{
+  background-color: $light-blue;
+  color: $white;
+}
+
+.progress, .progress-bar{
+  height: 10px !important;
+  font-size: 10px !important;
+  line-height: 10px !important;
+}
+
+.progress-bar-info{
+  background-color: $light-blue;
+}
+
+.progress-bar-success{
+  background-color: $green;
+}
+
+.progress-bar-warning{
+  background-color: $yellow;
+}
+
+.progress-bar-danger{
+  background-color: $red;
+}

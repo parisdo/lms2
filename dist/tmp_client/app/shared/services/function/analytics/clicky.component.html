@@ -1,0 +1,137 @@
+<p-growl [value]="msgs"></p-growl>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Analytics</h3>
+    <p-tabView *ngIf="!loading">
+      <div *ngFor="let product of products; let index = index;">
+        <p-tabPanel header="{{product.name}}" [selected]="index == 0 ? true : false">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Views Analytics</h4>
+              <p-chart type="line" [data]="data" (onDataSelect)="selectData($event)"></p-chart>
+            </div>
+            <div class="col-md-6"><h4>Click Analytics</h4>
+              <p-chart type="line" [data]="data" (onDataSelect)="selectData($event)"></p-chart>
+            </div>
+          </div>
+        </p-tabPanel>
+      </div>
+    </p-tabView>
+  </div>
+</div>
+
+<!--<div class="modal fade" id="myModal" role="dialog" *ngIf="!loading">-->
+  <!--<div class="modal-dialog">-->
+    <!--&lt;!&ndash; Modal content&ndash;&gt;-->
+    <!--<div class="modal-content">-->
+      <!--<div class="modal-header">-->
+        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+        <!--<h4 class="modal-title">{{'Log'| translate}}</h4>-->
+      <!--</div>-->
+      <!--<div class="modal-body">-->
+
+        <!--<div *ngFor="let log of logs; let i = index;" style="border-bottom: 1px solid #cccccc">-->
+          <!--<p><b>[{{i}}] {{log?.date}}</b> | {{'Listing'| translate}} {{log?.action}} {{'by'| translate}}-->
+            <!--{{log?.by}} {{'from' | translate}} {{log?.companyname}}</p>-->
+          <!--<p *ngIf="log?.action === 'moderated'"><b>{{'Sent back for Review'| translate}}</b><br>-->
+            <!--{{'Notes'| translate}}: {{log?.comment}}-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-primary" data-dismiss="modal" (click)="goToLogin()">{{'OK'|-->
+          <!--translate}}-->
+        <!--</button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="row" *ngIf="apps.length == 0 && !loading">-->
+  <!--<div class="well" style="text-align: center">-->
+    <!--<h3>Add a Listing</h3>-->
+    <!--<p>Upload your application or service information here.</p>-->
+    <!--<button class="btn btn-primary" (click)="goToAddService()">Add Listing</button>-->
+
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div *ngIf="apps.length > 0 && !loading">-->
+
+  <!--<div class="row">-->
+    <!--<div class="pull-right">-->
+      <!--<button class="btn btn-primary" (click)="goToAddService()"  style="margin-right: 15px;">{{'Add New Listing'| translate}}</button>-->
+      <!--<button class="btn btn-primary" (click)="goToViewAllListing()">{{'All Listings' | translate}}</button>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="row row&#45;&#45;tab">-->
+    <!--<div class="analytic">-->
+      <!--&lt;!&ndash; Nav tabs &ndash;&gt;-->
+      <!--<ul class="nav nav-tabs">-->
+        <!--<li class="{{app.id === selected ? 'active': ''}}" *ngFor="let app of apps">-->
+          <!--<a (click)="getAnalytics(app.id)">{{app.name}}</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="row&#45;&#45;tab&#45;&#45;content">-->
+    <!--<div class="row" *ngFor="let app of apps">-->
+      <!--<div *ngIf="app.id === selected">-->
+        <!--<div class="button-group pull-right">-->
+
+
+          <!--&lt;!&ndash;<button type="button" class="btn btn-default"&ndash;&gt;-->
+          <!--&lt;!&ndash;data-toggle="modal"&ndash;&gt;-->
+          <!--&lt;!&ndash;data-target="#myModal" (click)="showLog(app.log)">&ndash;&gt;-->
+          <!--&lt;!&ndash;<i class="fa fa-file-code-o fx-5x"&ndash;&gt;-->
+          <!--&lt;!&ndash;aria-hidden="true"&ndash;&gt;-->
+          <!--&lt;!&ndash;&gt;</i> {{'Note'|translate}} <span class="badge">&ndash;&gt;-->
+          <!--&lt;!&ndash;{{app.review_count}}</span></button>&ndash;&gt;-->
+          <!--<button class="pull-left btn btn-default" type="button" disabled style="margin-right: 15px;">{{app.status}}</button>-->
+          <!--<button *ngIf="app.status !== 'pending'"-->
+                  <!--class="btn btn-primary"-->
+                  <!--(click)="goToEditApp(app.id)">{{'Edit Listing'| translate}}-->
+          <!--</button>-->
+
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<br>-->
+    <!--<div class="row" *ngIf="onLoad" style="padding: 2px">-->
+      <!--<div class="col-md-6">-->
+       <!---->
+        <!--&lt;!&ndash;<base-chart class="chart"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[datasets]="lineChartData"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[labels]="lineChartLabels"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[options]="lineChartOptions"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[colors]="lineChartColours"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[legend]="lineChartLegend"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[chartType]="lineChartType"&ndash;&gt;-->
+                    <!--&lt;!&ndash;(chartHover)="chartHovered($event)"&ndash;&gt;-->
+                    <!--&lt;!&ndash;(chartClick)="chartClicked($event)"></base-chart>&ndash;&gt;-->
+      <!--</div>-->
+
+      <!--<div class="col-md-6">-->
+        <!--&lt;!&ndash;<base-chart class="chart"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[datasets]="lineChartData__2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[labels]="lineChartLabels__2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[options]="lineChartOptions__2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[colors]="lineChartColours__2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[legend]="lineChartLegend__2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;[chartType]="lineChartType__2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;(chartHover)="chartHovered($event)"&ndash;&gt;-->
+                    <!--&lt;!&ndash;(chartClick)="chartClicked($event)"></base-chart>&ndash;&gt;-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row" *ngIf="!onLoad">-->
+      <!--<div class="col-md-12">-->
+        <!--<h5 style="margin: 0 auto; text-align: center; margin-top: 100px; margin-bottom: 100px; color: #818a91">-->
+          <!--{{'Loading'| translate}}...</h5>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+<!--</div>-->

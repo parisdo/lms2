@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Analytics</h3>
+      <div  *ngIf="!loading">
+
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Views Analytics</h4>
+              <p-chart type="line" [data]="data" (onDataSelect)="selectData($event)"></p-chart>
+            </div>
+            <div class="col-md-6"><h4>Click Analytics</h4>
+              <p-chart type="line" [data]="data" (onDataSelect)="selectData($event)"></p-chart>
+            </div>
+          </div>
+
+      </div>
+
+  </div>
+</div>

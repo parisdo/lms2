@@ -1,0 +1,7 @@
+"use strict";
+exports.apiUrl = "http://52.221.240.34/api/v1/";
+module.exports = {
+    apiUrl: exports.apiUrl,
+};
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zaGFyZWQvY29uZmlnL2FwaS5jb25maWcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFhLGNBQU0sR0FBVyw4QkFBOEIsQ0FBQztBQUU3RCxNQUFNLENBQUMsT0FBTyxHQUFHO0lBQ2YsTUFBTSxFQUFFLGNBQU07Q0FDZixDQUFDIiwiZmlsZSI6ImFwcC9zaGFyZWQvY29uZmlnL2FwaS5jb25maWcuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgYXBpVXJsOiBzdHJpbmcgPSBcImh0dHA6Ly81Mi4yMjEuMjQwLjM0L2FwaS92MS9cIjtcblxubW9kdWxlLmV4cG9ydHMgPSB7XG4gIGFwaVVybDogYXBpVXJsLFxufTtcbiJdfQ==

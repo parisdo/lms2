@@ -1,0 +1,248 @@
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+
+<my-course-nav (webboard)="gotoWebboard()" (feedback)="giveAllFeedback()" (leaderboard)="viewLeaderboard()"></my-course-nav>
+
+<div class="container" style="margin-top: 15px; margin-bottom: 15px" *ngIf="course != null">
+
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12 col-xs-12" >
+
+           <h3> <i class="fa fa-chevron-left link" aria-hidden="true" (click)="goBack()" style="margin-right: 15px"></i>
+             {{course.name}} {{course.description}}
+
+             <div class="dropdown pull-right">
+
+               <i class="fa fa-cog link" aria-hidden="true" dropdown-toggle="dropdown"
+                  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></i>
+
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1"  style="right: 0; left: inherit">
+                 <li><a class="link" (click)="gotoPage('edit-course')">แก้ไขข้อมูลชั้นเรียน</a></li>
+                 <li><a class="link" (click)="gotoPage('edit-xp')">แก้ไขการแต้มเริ่มต้นและการเลื่อนชั้น</a></li>
+                 <li><a class="link" (click)="gotoPage('edit-badge')">แก้ไขข้อมูลเหรียญรางวัล</a></li>
+                 <li><a class="link" (click)="gotoPage('edit-student-score')">แก้ไขการแต้มสะสมของนักเรียน</a></li>
+                 <li><a class="link" href="">พิมพ์บัตรเข้าระบบของนักเรียน</a></li>
+               </ul>
+             </div>
+
+           </h3>
+
+
+        </div>
+    </div>
+
+<div class="row" style="margin-bottom: 45px">
+    <hr>
+    <div class="container">
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="form-check-inline" (click)="onCheckAll()">
+                    <input class="form-check-input form-control-sm" type="checkbox" value="checkAll" style="right: 5px" [(ngModel)]="checkAll" name="checkAll">
+                    เลือกทั้งหมด
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control form-control-sm" id="Search" placeholder="ค้นหา..." #term (keyup)="search(term.value)">
+            </div>
+            <div class="form-group">
+                <select class="form-control form-control-sm" [(ngModel)]="filterKeys" name="filterKeys">
+                    <option value="name">ชื่อนักเรียน</option>
+                    <option value="id">รหัสนักเรียน</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                เรียงข้อมูลตาม
+                <select class="form-control form-control-sm" id="inputPassword4" name="orderKeys" (change)="orderBy($event.target.value)">
+                    <option value="name">ชื่อนักเรียน</option>
+                    <option value="id">รหัสนักเรียน</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="row box-wrapper" style="padding: 2rem;">
+
+            <div class="scrollable-content">
+                <div class="row" style="max-height: 350px; overflow-y: auto; padding-top: 1rem">
+                    <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let student of students |filterData: searchValue: filterKeys; let index = index;" style="margin-bottom: 15px">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body link" data-toggle="modal" data-target="#giveFeedback" (click)="giveFeedback(student)">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <img class="pull-xs-left img-responsive img-circle" style="max-width: 80px; margin-top: 5px" [src]="student.image">
+                            </div>
+                            <div class="col-md-6">
+                              <p>Name: {{student.name}}</p>
+                              <p>ID: {{student.id}}</p>
+                              <p>Level: {{student.level}}</p>
+                              <div style="margin-top: 15px">
+                                <!--<progress class="progress progress-{{progressType}} progress-animated" style="margin-bottom: 0; height: .5rem;" [value]="student.overall_xp" max="100" aria-describedby="progress">-->
+                                <!--</progress>-->
+
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-{{student.progressType}}" role="progressbar"
+                                       [attr.aria-valuenow]="student.overall_xp" aria-valuemin="0" [attr.aria-valuemax]="100" [style.width]="student.overall_xp + '%'">
+                                    {{student.overall_xp}}
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel-footer">
+                          <small class="form-check-inline pull-xs-left text-muted link" (click)="onCheck(student)">
+                            <input class="form-check-input" type="checkbox" [(ngModel)]="student.selected" name="student.name"> เลือก
+                          </small>
+                          <small class="text-muted link pull-right" (click)="editStudentProfile(student.id)">ข้อมูลเพิ่มเติม</small>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+                <div class="pull-xs-right">
+                    <button type="button" class="btn btn-info" (click)="onDeleteStudent()">ลบนักเรียน</button>
+                    <button type="button" class="btn btn-info">ยกเลิก</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Give Feedback Modal -->
+<div class="modal fade" id="giveFeedback" tabindex="-1" role="dialog" aria-labelledby="giveFeedbacklLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="overflow-y: initial !important">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="giveFeedbacklLabel">มอบ {{feedbackState}} ให้กับ <span *ngFor="let student of selectedStudents;" class="text-muted" style="margin-right: 5px;">{{student.name}}</span></h4>
+            </div>
+
+            <div class="modal-body" style="max-height: 350px; overflow-y: auto; margin-bottom: 15px">
+                <div style="text-align: center; margin-bottom: 15px">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn {{ feedbackState == 'XP' ? 'btn-info': 'btn-secondary'}} link" style="min-width: 100px" (click)="chageFeedbackState('XP')">XP</button>
+                        <button type="button" class="btn {{ feedbackState == 'Badge' ? 'btn-info': 'btn-secondary'}} link"  style="min-width: 100px" (click)="chageFeedbackState('Badge')">Badge</button>
+                    </div>
+                </div>
+
+                <!--Badge-->
+                <div class="row" style="margin-bottom: 15px" *ngIf="feedbackState == 'Badge'">
+                    <div class="col-md-3" *ngFor="let badge of badges">
+                      <div class="panel panel-default link" (click)="updateBadgeScore(badge.xp)">
+                        <div class="panel-body text-center">
+                          <img class="center img-responsive img-circle " [src]="badge.image" style="margin-bottom: 5px">
+                          <p class="card-text" style="margin-bottom: 0">{{badge.name}}</p>
+                          <small class="card-text">+{{badge.xp}} XP</small>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!--XP-->
+                <div *ngIf="feedbackState == 'XP'">
+
+                    <div class="row" style="margin-bottom: 15px">
+                        <div class="col-md-4" *ngFor="let xp of exp;">
+                          <div class="panel panel-default link" (click)="updateBadgeScore(xp)">
+                            <div class="panel-body text-center">
+                              + {{xp}} XP
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="form-inline text-center" style="margin-right: 5px; margin-left: 5px">
+                            <div class="form-group">
+                                <p class="form-control-static">กำหนดค่า XP</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control form-control-sm" #dynamicXp>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-sm" (click)="updateBadgeScore(dynamicXp.value)">ตกลง</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="closeUpdateModal" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--View Leaderboard Modal-->
+<div class="modal fade" id="viewLeaderboard" tabindex="-1" role="dialog" aria-labelledby="giveFeedbackLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="overflow-y: initial !important; ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <div class="modal-title" id="viewLeaderboardlLabel">
+                    <form class="form-inline text-xs-center" style="margin-right: 15px; margin-left: 15px; margin-bottom: 0">
+                        <div class="form-group">
+                            <p class="form-control-static">แสดงข้อมูลเฉพาะ</p>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control form-control-sm">
+                                <option>5</option>
+                                <option>10</option>
+                                <option>20</option>
+                            </select>
+                        </div>
+                        <span>อันดับแรก</span>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-body" style="max-height: 350px; overflow-y: auto;">
+
+
+                <div class="row">
+
+                    <!--Student Card-->
+                    <div class="col-xs-12" style="padding-right: 25px; padding-left: 25px">
+                        <div class="card card-block">
+                            <div class="row" *ngFor="let student of highScoreStudents; let index = index">
+                                <div class="col-md-1 col-xs-12 text-xs-center">
+                                    <h3>{{index  + 1}}</h3>
+                                </div>
+                                <div class="col-md-2 col-xs-12 text-xs-center">
+                                    <img class="center img-responsive img-circle" [src]="'http://54.169.115.233/students/logo/'+ student.image">
+                                </div>
+                                <div class="col-md-5 col-xs-12 text-xs-center">
+                                    <h6 class="card-title" style="margin-top: 15px">{{student.student_id}} {{student.name}}</h6>
+                                </div>
+                                <div class="col-md-2 col-xs-12 text-xs-center">
+                                    <h6 style="margin-top: 15px">{{student.overall_xp}} XP</h6>
+                                </div>
+                                <div class="col-md-2 col-xs-12 text-xs-center">
+                                    <h6 style="margin-top: 15px">Level {{student.level}}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+            </div>
+        </div>
+    </div>
+</div>

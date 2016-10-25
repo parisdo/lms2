@@ -1,0 +1,29 @@
+<div class="navbar navbar-light bg-faded" style="margin-bottom: 45px;">
+    <div class="navbar-nav">
+        <div class="container" style="margin-top: 0px;">
+
+            <div class="pull-xs-right" style="color: #818a91; margin-right: 1rem">
+
+                <a class="link" (click)="gotoWebboard()" style="margin-right: 10px">
+                    <i class="zmdi zmdi-assignment zmdi-hc-lg"></i>
+                    <small>กระดานสนทนา</small>
+                </a>
+
+                <a class="link" data-toggle="modal" data-target="#viewLeaderboard" style="margin-right: 15px">
+                    <i class="zmdi zmdi-view-web zmdi-hc-lg"></i>
+                    <small>กระดานผู้นำ</small>
+                </a>
+
+                <div class="pull-xs-right dropdown">
+                    <a class="card-link link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="zmdi zmdi-settings zmdi-hc-lg" style="line-height: 1.2em;"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="right: 0; left: inherit">
+                        <a class="dropdown-item link" routerLink="/student/edit-profile-student" routerLinkActive="active">แก้ไขข้อมูลส่วนตัว</a>
+                        <a class="dropdown-item link" routerLink="/student/edit-profile-student" routerLinkActive="active">ช่วยเหลือ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

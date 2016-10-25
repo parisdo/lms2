@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58b78ec4-fdae-43b1-96bc-dea6117ad2ec" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/auth-guard.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/auth.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/auth.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/role-guard.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/signin.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/signin.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/signin.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/signup.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/signup.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/auth/signup.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/course.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-students/edit-students.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-students/edit-students.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/footer/footer.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/footer/footer.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/footer/footer.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/header/header.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/header/header.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/header/header.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/models/add_course.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/models/badge.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/models/course.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/models/edit_xp.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/models/level.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/models/student.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/models/teacher.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/shared/control-messages.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/shared/pipes/filterdata.pipe.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/edit-profile-student/edit-profile-student.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/edit-profile-student/edit-profile-student.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student-dashboard/student-dashboard.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student-dashboard/student-dashboard.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student-nav/student-nav.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student-nav/student-nav.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/student/student.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/teach/teach.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/new-post/new-post.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/new-post/new-post.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/post/post.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/post/post.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/webboard-list/webboard-list.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/webboard-list/webboard-list.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/webboard.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/webboard.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/webboard.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/webboard/webboard.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/styles/_default.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/services/function/product-status-service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/dev/client/assets/facebook_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/dev/client/assets/twitter_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/home/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/home/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/home/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/home/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/home/Trabila_pattern_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/home/Trabila_pattern_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/svg/facebook_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/svg/more.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/svg/trabila_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/assets/svg/twitter_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/js/analytic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/js/shims.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/css/font-awesome.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/animated.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/Font-Awesome/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap-sprockets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/button.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/styles/bootstrap-sass-official/sache.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/client/tsconfig.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/server/data/name.list.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/server/db/redis.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/server/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/server/routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/server/services/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/prod/server/services/name.list.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-dashboard/admin-dashboard.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-dashboard/admin-dashboard.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-dashboard/admin-dashboard.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-dashboard/admin-dashboard.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-listing/admin-listing.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-listing/admin-listing.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-listing/admin-listing.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-listing/admin-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-navbar/admin-navbar.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-navbar/admin-navbar.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-navbar/admin-navbar.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-navbar/admin-navbar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-product/admin-product.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-product/admin-product.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-product/admin-product.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-product/admin-product.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-setting/admin-setting.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-setting/admin-setting.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-setting/admin-setting.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-setting/admin-setting.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-vendor/admin-vendor.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-vendor/admin-vendor.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-vendor/admin-vendor.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin-vendor/admin-vendor.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin.routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/admin/admin.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/admin-guard.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/admin-guard.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/can-deactivate-guard.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/can-deactivate-guard.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-customer/register-customer.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-customer/register-customer.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-customer/register-customer.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-customer/register-customer.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-from/register-form.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-from/register-form.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-from/register-form.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-from/register-form.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-vendor/register-vendor.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-vendor/register-vendor.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-vendor/register-vendor.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/register-vendor/register-vendor.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/vendor-guard.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/vendor-guard.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/page-not-found.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/page-not-found.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/page-not-found.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/page-not-found.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/main-prod.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/main.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/operators.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/operators.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/browse-page/browse-page.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/browse-page/browse-page.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/browse-page/browse-page.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/browse-page/browse-page.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/category-page/category-page.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/category-page/category-page.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/category-page/category-page.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/category-page/category-page.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/product-item/product-item.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/product-item/product-item.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/product-item/product-item.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/product-item/product-item.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/public.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/public.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/public.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/public.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/public.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/public.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/public.routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/public.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/search-page/search-page.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/search-page/search-page.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/search-page/search-page.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/search-page/search-page.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/single-service/single-service.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/single-service/single-service.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/single-service/single-service.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/public/single-service/single-service.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/auth/auth-navbar.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/auth/auth-navbar.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/auth/auth-navbar.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/auth/auth-navbar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/carousel/carousel.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/carousel/carousel.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/carousel/carousel.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/carousel/carousel.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/config/api.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/config/api.config.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/config/env.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/config/env.config.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/footer/footer.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/footer/footer.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/footer/footer.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/footer/footer.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/helpers/request.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/helpers/request.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/helpers/storage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/helpers/storage.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/product-tag.model.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/product-tag.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/product.model.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/product.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/review.model.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/review.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/status-log.model.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/status-log.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/vendor-company.model.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/vendor-company.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/vendor.model.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/models/vendor.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/navbar/navbar.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/navbar/navbar.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/navbar/navbar.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/navbar/navbar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/pipes/searchaccout.pipe.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/pipes/searchaccout.pipe.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/review/review.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/review/review.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/review/review.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/review/review.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/admin/account-management.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/admin/account-management.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/admin/admin.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/admin/admin.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/auth/auth.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/auth/auth.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/product/product-status-service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/product/product-status-service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/product/product.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/product/product.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/review/review.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/review/review.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/vendor/vendor.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/api/vendor/vendor.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/add-product.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/add-product.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/analytics/clicky-admin.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/analytics/clicky-admin.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/analytics/clicky.compoenent.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/analytics/clicky.compoenent.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/analytics/clicky.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/analytics/clicky.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/analytics/clicky.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/analytics/clicky.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/city.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/city.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/country.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/country.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/country.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/country.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/state.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/state.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/state.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/country/state.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/filter-product.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/services/function/filter-product.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/shared.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/shared.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/lang-en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/lang-en.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/lnag-th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/lnag-th.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translate.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translate.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translate.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translate.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translate.pipe.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translate.pipe.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translate.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translate.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translations.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/translate/translations.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/validation/message-service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/validation/message-service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/validation/validation.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/validation/validation.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/validation/validation/control-messages.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/validation/validation/control-messages.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/validation/validation/control-messages.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/shared/validation/validation/control-messages.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/system-config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/system-config.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-add-listing/vendor-add-listing.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-add-listing/vendor-add-listing.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-add-listing/vendor-add-listing.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-add-listing/vendor-add-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-all-listing/vendor-all-listing.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-all-listing/vendor-all-listing.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-all-listing/vendor-all-listing.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-all-listing/vendor-all-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-dashboard/vendor-dashboard.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-dashboard/vendor-dashboard.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-dashboard/vendor-dashboard.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-dashboard/vendor-dashboard.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-navbar/vendor-navbar.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-navbar/vendor-navbar.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-navbar/vendor-navbar.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-navbar/vendor-navbar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-profile/vendor-profile.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-profile/vendor-profile.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-profile/vendor-profile.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor-profile/vendor-profile.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor.component.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor.component.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor.routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/app/vendor/vendor.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/Font-Awesome/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/Font-Awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/Font-Awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/Font-Awesome/scss/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/Font-Awesome/scss/font-awesome.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/bootstrap-sass-official/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/bootstrap-sass-official/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/bootstrap-sass-official/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/styles/bootstrap-sass-official/sache.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_client/tsconfig.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_server/db/redis.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_server/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_server/routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_server/services/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tmp_server/services/name.list.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-dashboard/admin-dashboard.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-dashboard/admin-dashboard.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-dashboard/admin-dashboard.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-listing/admin-listing.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-listing/admin-listing.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-listing/admin-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-navbar/admin-navbar.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-navbar/admin-navbar.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-navbar/admin-navbar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-product/admin-product.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-product/admin-product.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-product/admin-product.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-setting/admin-setting.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-setting/admin-setting.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-setting/admin-setting.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-vendor/admin-vendor.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-vendor/admin-vendor.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin-vendor/admin-vendor.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/admin/admin.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/admin-guard.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/auth.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-customer/register-customer.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-customer/register-customer.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-customer/register-customer.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-from/register-form.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-from/register-form.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-from/register-form.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-vendor/register-vendor.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-vendor/register-vendor.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/register-vendor/register-vendor.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/auth/vendor-guard.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/browse-page/browse-page.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/browse-page/browse-page.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/browse-page/browse-page.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/category-page/category-page.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/category-page/category-page.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/category-page/category-page.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/product-item/product-item.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/product-item/product-item.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/product-item/product-item.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/public.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/public.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/public.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/public.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/public.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/search-page/search-page.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/search-page/search-page.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/search-page/search-page.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/single-service/single-service.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/single-service/single-service.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/public/single-service/single-service.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/auth/auth-navbar.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/auth/auth-navbar.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/auth/auth-navbar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/carousel/carousel.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/carousel/carousel.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/carousel/carousel.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/footer/footer.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/footer/footer.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/footer/footer.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/helpers/request.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/helpers/storage.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/models/product-tag.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/models/product.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/models/review.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/models/status-log.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/models/vendor-company.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/models/vendor.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/navbar/navbar.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/navbar/navbar.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/navbar/navbar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/pipes/searchaccout.pipe.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/review/review.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/review/review.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/review/review.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/api/admin/account-management.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/api/admin/admin.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/api/auth/auth.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/api/product/product-status-service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/api/product/product.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/api/review/review.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/api/vendor/vendor.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/add-product.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/analytics/clicky-admin.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/analytics/clicky-admin.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/analytics/clicky.compoenent.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/analytics/clicky.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/analytics/clicky.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/analytics/clicky.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/country/city.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/country/country.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/country/country.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/country/state.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/country/state.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/services/function/filter-product.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/lang-en.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/lnag-th.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/translate.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/translate.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/translate.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/translate.pipe.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/translate.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/translate/translations.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/validation/validation.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/validation/validation/control-messages.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/validation/validation/control-messages.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/shared/validation/validation/control-messages.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-add-listing/vendor-add-listing.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-add-listing/vendor-add-listing.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-add-listing/vendor-add-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-all-listing/vendor-all-listing.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-all-listing/vendor-all-listing.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-all-listing/vendor-all-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-dashboard/vendor-dashboard.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-dashboard/vendor-dashboard.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-dashboard/vendor-dashboard.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-edit-listing/vendor-edt-listing.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-navbar/vendor-navbar.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-navbar/vendor-navbar.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-navbar/vendor-navbar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-profile/vendor-profile.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-profile/vendor-profile.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor-profile/vendor-profile.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor.component.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/vendor/vendor.routes.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/home/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/home/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/home/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/home/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/home/Trabila_pattern_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/home/Trabila_pattern_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/svg/facebook_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/svg/more.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/svg/trabila_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/assets/svg/twitter_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/js/analytic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/css/font-awesome.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/animated.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_animated.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/Font-Awesome/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/_checkbox.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/_fonts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/_form.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/_main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap-sprockets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/button.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/_bootstrap-mincer.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/_bootstrap-sprockets.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_alerts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_badges.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_breadcrumbs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_button-groups.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_carousel.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_close.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_code.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_dropdowns.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_glyphicons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_input-groups.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_labels.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_media.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_modals.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_pager.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_panels.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_popovers.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_progress-bars.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_responsive-embed.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_responsive-utilities.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_tables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_theme.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_thumbnails.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_tooltip.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_utilities.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/_wells.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_alerts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_background-variant.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_border-radius.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_center-block.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_gradients.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_grid-framework.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_hide-text.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_image.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_nav-divider.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_nav-vertical-align.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_opacity.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_panels.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_progress-bar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_reset-filter.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_resize.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_size.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_tab-focus.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_table-row.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_text-overflow.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/styles/bootstrap-sass-official/sache.json" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/trabila-new-template.iml" afterPath="$PROJECT_DIR$/.idea/lms-project.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/app/shared/validation/message-service.ts" afterPath="$PROJECT_DIR$/src/client/app/services/message-service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-dashboard/admin-dashboard.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-dashboard/admin-dashboard.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-dashboard/admin-dashboard.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-dashboard/admin-dashboard.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-listing/admin-listing.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-listing/admin-listing.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-listing/admin-listing.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-listing/admin-listing.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-navbar/admin-navbar.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-navbar/admin-navbar.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-navbar/admin-navbar.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-navbar/admin-navbar.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-product/admin-product.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-product/admin-product.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-product/admin-product.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-product/admin-product.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-setting/admin-setting.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-setting/admin-setting.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-setting/admin-setting.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin-setting/admin-setting.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/admin/admin.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/admin/admin.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/app.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/app.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/app.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/app.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/app.module.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/app.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/app.routes.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/app.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.module.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/can-deactivate-guard.service.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/can-deactivate-guard.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/register-customer/register-customer.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/register-customer/register-customer.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/register-customer/register-customer.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/register-customer/register-customer.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/register-from/register-form.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/register-from/register-form.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/register-from/register-form.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/register-from/register-form.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/register-vendor/register-vendor.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/register-vendor/register-vendor.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/register-vendor/register-vendor.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/register-vendor/register-vendor.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/home/page-not-found.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/home/page-not-found.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/home/page-not-found.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/home/page-not-found.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/browse-page/browse-page.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/browse-page/browse-page.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/browse-page/browse-page.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/browse-page/browse-page.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/category-page/category-page.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/category-page/category-page.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/category-page/category-page.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/category-page/category-page.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/product-item/product-item.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/product-item/product-item.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/product-item/product-item.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/product-item/product-item.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/public.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/public.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/public.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/public.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/search-page/search-page.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/search-page/search-page.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/search-page/search-page.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/search-page/search-page.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/single-service/single-service.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/single-service/single-service.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/public/single-service/single-service.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/public/single-service/single-service.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/auth/auth-navbar.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/auth/auth-navbar.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/auth/auth-navbar.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/auth/auth-navbar.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/carousel/carousel.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/carousel/carousel.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/carousel/carousel.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/carousel/carousel.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/footer/footer.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/footer/footer.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/footer/footer.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/footer/footer.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/navbar/navbar.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/navbar/navbar.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/navbar/navbar.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/navbar/navbar.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/review/review.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/review/review.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/review/review.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/review/review.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/shared.module.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/shared.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/translate/translate.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/translate/translate.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/translate/translate.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/translate/translate.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/validation/validation/control-messages.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/validation/validation/control-messages.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/shared/validation/validation/control-messages.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/shared/validation/validation/control-messages.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/system-config.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/system-config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-add-listing/vendor-add-listing.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-add-listing/vendor-add-listing.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-add-listing/vendor-add-listing.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-add-listing/vendor-add-listing.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-all-listing/vendor-all-listing.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-all-listing/vendor-all-listing.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-all-listing/vendor-all-listing.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-all-listing/vendor-all-listing.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-all-listing/vendor-listing/vendor-listing.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-dashboard/vendor-dashboard.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-dashboard/vendor-dashboard.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-dashboard/vendor-dashboard.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-dashboard/vendor-dashboard.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-edit-listing/vendor-edit-listing.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-navbar/vendor-navbar.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-navbar/vendor-navbar.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-navbar/vendor-navbar.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-navbar/vendor-navbar.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-profile/vendor-profile.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-profile/vendor-profile.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-profile/vendor-profile.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor-profile/vendor-profile.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/vendor/vendor.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/css/main.css" afterPath="$PROJECT_DIR$/dist/dev/client/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/index.html" afterPath="$PROJECT_DIR$/dist/dev/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/app.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/app.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/auth/auth.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/home/home.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/home/home.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/index.html" afterPath="$PROJECT_DIR$/dist/tmp_client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/app.component.html" afterPath="$PROJECT_DIR$/src/client/app/app.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/app.component.ts" afterPath="$PROJECT_DIR$/src/client/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/app.module.ts" afterPath="$PROJECT_DIR$/src/client/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/app.routes.ts" afterPath="$PROJECT_DIR$/src/client/app/app.routes.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/auth/auth.component.html" afterPath="$PROJECT_DIR$/src/client/app/auth/auth.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/auth/auth.component.scss" afterPath="$PROJECT_DIR$/src/client/app/auth/auth.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/auth/auth.module.ts" afterPath="$PROJECT_DIR$/src/client/app/auth/auth.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/auth/can-deactivate-guard.service.ts" afterPath="$PROJECT_DIR$/src/client/app/auth/can-deactivate-guard.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/home/home.component.html" afterPath="$PROJECT_DIR$/src/client/app/home/home.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/home/home.component.scss" afterPath="$PROJECT_DIR$/src/client/app/home/home.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/home/home.component.ts" afterPath="$PROJECT_DIR$/src/client/app/home/home.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/home/page-not-found.component.scss" afterPath="$PROJECT_DIR$/src/client/app/home/page-not-found.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/shared/shared.module.ts" afterPath="$PROJECT_DIR$/src/client/app/shared/shared.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/css/main.css" afterPath="$PROJECT_DIR$/src/client/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/index.html" afterPath="$PROJECT_DIR$/src/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/styles/_button.scss" afterPath="$PROJECT_DIR$/src/client/styles/_button.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/styles/_colors.scss" afterPath="$PROJECT_DIR$/src/client/styles/_colors.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/config/project.config.ts" afterPath="$PROJECT_DIR$/tools/config/project.config.ts" />
+    </list>
+    <ignored path="trabila-new-template.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="trabila-new-template" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="teach-nav.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="10" selection-start-line="4" selection-start-column="6" selection-end-line="5" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#12;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-course.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_button.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/styles/_button.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-course.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="184" column="35" selection-start-line="184" selection-start-column="35" selection-end-line="184" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/header/header.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signin.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/auth/signin.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="1" selection-start-line="6" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_default.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/styles/_default.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="105" column="14" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/client/app/models/course.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-students/edit-students.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/services/message-service.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/shared/shared.module.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/student/student-dashboard/student-dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course.routing.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/models/student.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach.module.ts" />
+        <option value="$PROJECT_DIR$/tools/config/project.config.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/auth.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/services/teacher.service.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/services/course.service.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/footer/footer.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/services/student.service.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/header/header.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/home/home.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/footer/footer.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/home/home.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/signin.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/css/main.css" />
+        <option value="$PROJECT_DIR$/src/client/index.html" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/signin.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/signin.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/signup.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/signup.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/signup.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/header/header.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach.routing.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/styles/_button.scss" />
+        <option value="$PROJECT_DIR$/src/client/styles/_default.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.ts</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType ProjectPane="true" />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teach-nav" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teach-list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="add-course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="header" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course-list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trabila-new-template" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/client/app/auth" />
+      <recent name="$PROJECT_DIR$/src/client/styles" />
+      <recent name="$PROJECT_DIR$/src/client/app/teach" />
+      <recent name="$PROJECT_DIR$/src/client/app/services" />
+      <recent name="$PROJECT_DIR$/src/client/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/client/app" />
+      <recent name="$PROJECT_DIR$/src/client/assets/svg" />
+      <recent name="$PROJECT_DIR$/src/client" />
+      <recent name="$PROJECT_DIR$/src/client/app/shared/services/api/product" />
+      <recent name="$PROJECT_DIR$/src/client/assets/home" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58b78ec4-fdae-43b1-96bc-dea6117ad2ec" name="Default" comment="" />
+      <created>1476352200463</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1476352200463</updated>
+      <workItem from="1476352201819" duration="5890000" />
+      <workItem from="1476362484567" duration="27211000" />
+      <workItem from="1476435350161" duration="83709000" />
+      <workItem from="1476670966695" duration="34878000" />
+      <workItem from="1476752541709" duration="52059000" />
+      <workItem from="1476886126344" duration="2201000" />
+      <workItem from="1476924114359" duration="19234000" />
+      <workItem from="1476965477589" duration="1764000" />
+      <workItem from="1477012393307" duration="10261000" />
+      <workItem from="1477027611146" duration="8548000" />
+      <workItem from="1477290598270" duration="2510000" />
+      <workItem from="1477293124351" duration="3165000" />
+      <workItem from="1477296488929" duration="156000" />
+      <workItem from="1477296671015" duration="230000" />
+      <workItem from="1477296971348" duration="124000" />
+      <workItem from="1477297140170" duration="22634000" />
+      <workItem from="1477364333647" duration="20000" />
+      <workItem from="1477391655049" duration="1263000" />
+      <workItem from="1477398061746" duration="13942000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="289799000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="810" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32658958" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23537703" sideWeight="0.5520231" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21916842" sideWeight="0.4479769" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24982457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2797745" sideWeight="0.35404626" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21916842" sideWeight="0.4479769" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32658958" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23537703" sideWeight="0.5520231" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24982457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2797745" sideWeight="0.35404626" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="trabila-new-template" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="trabila-new-template" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/models/teacher.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="122" column="91" selection-start-line="122" selection-start-column="91" selection-end-line="122" selection-end-column="91" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-students/edit-students.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/services/teacher.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/home/home.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/header/header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="256" column="46" selection-start-line="256" selection-start-column="46" selection-end-line="256" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="128" column="26" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/services/course.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="93" column="33" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/services/student.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#59#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/footer/footer.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1477407649000" expanded="true" signature="40:182" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/footer/footer.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/home/home.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/styles/_colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#small#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signin.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/header/header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="0" column="50" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="86" column="67" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
+          <folding>
+            <element signature="n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signin.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="6" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/header/header.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="4" selection-start-column="6" selection-end-line="5" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/styles/_button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/styles/_default.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="105" column="14" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="184" column="35" selection-start-line="184" selection-start-column="35" selection-end-line="184" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

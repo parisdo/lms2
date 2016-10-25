@@ -1,0 +1,204 @@
+<div *ngIf="product_en != null">
+  <div class="tb-body">
+
+    <div class="first">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-xs-12">
+            <div class="row">
+              <div class="col-md-3 col-xs-6">
+                <img class="img-responsive" [src]="product_en?.logo" alt="">
+              </div>
+              <div class="col-md-9 col-xs-6">
+                <h2 class="first-title">{{product_en?.name}}</h2>
+                <h4>{{product_en?.user.name}}</h4>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <span class="first-tag tb-tag" *ngFor="let tag of tags.category">{{tag?.name}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12"><h4>{{product_en?.shortdescription}}</h4></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12">
+
+              <div class="first-pricing">
+                <h4 class="first-pricing-title">PRICING</h4>
+                <div *ngFor="let data of data.pricingmodels">
+                  <div class="">{{data.model}}</div>
+                  <div class="" *ngIf="data.id == 1">
+                    <h4>{{data.day}} Days</h4>
+                  </div>
+                  <div class="" *ngIf="data.id == 5">
+                    <h4>{{data.plan}}</h4>
+                  </div>
+                  <div class="" *ngIf="data.id != 1">
+                    <h4>{{data.plan}} {{data.price_start}} - {{data.price_end}} {{data.currency}}</h4>
+                  </div>
+                </div>
+
+              </div>
+
+            <div class="first-purchase">
+              <h4 class="first-purchase-title">PURCHASE</h4>
+              <a class="outerLink" href="{{product_en?.purchase_link}}" target="_blank">
+                <button class="btn btn-primary-inverse" (click)="visitWebsite()">
+                  Visit Website
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="second">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <h4>{{product_en?.description}}</h4>
+            <div class="second-feature">
+              <h3 class="second-title">FEATURES</h3>
+              <div class="second-list">
+                <ul *ngFor="let feature of data.features_en">
+                  <li><span><i class="fa fa-circle" aria-hidden="true" style="margin-right: 5px"></i></span> <h4>{{feature.text}}</h4></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+              <!--<tb-carousel [screenshots]="thumbnail" [selected]="selected"></tb-carousel>-->
+
+
+            <!--screen shot-->
+            <div class="row">
+              <div class="col-md-12">
+                <span class="arrow arrow-left" (click)="onControl('minus')"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                <img [src]="selected" class="big-screenshot img-responsive">
+                <span class="arrow arrow-right" (click)="onControl('plus')"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+            <!--myCarousel-->
+            <div id="myCarousel" class="carousel slide">
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="{{i == 0 ? 'item active': 'item'}}" *ngFor="let th of thumbnail; let i = index;">
+                  <div class="row">
+                    <div class="col-xs-3 col-md-3 col-md-3 carousel-thumbnail" *ngFor="let thum of thumbnail[i]; let j = index">
+                      <a><img [src]="thum" class="{{selected == thum ? 'selected': ''}} img-responsive" (click)="onSelect(thum, i, j)"></a>
+                    </div>
+                  </div>
+                  <!--/row-->
+                </div>
+              </div>
+              <!--/carousel-inner-->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev" (click)="onControl('minus')">
+                <span class="carousel-control-arrow arrow arrow-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next" (click)="onControl('plus')">
+                <span class="carousel-control-arrow arrow arrow-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>  </a>
+            </div>
+            <!--/myCarousel-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="third">
+      <div class="container">
+        <div class="col-md-6">
+          <h3 class="link third-title" (click)="isCollapsedRequiremnt = !isCollapsedRequiremnt">Minimum Requirement
+            <i class="fa" [ngClass]="{'fa-chevron-right': isCollapsedRequiremnt, 'fa-chevron-down': !isCollapsedRequiremnt}" aria-hidden="true"></i></h3>
+            <div (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isCollapsedRequiremnt" class="card card-block card-header">
+                <h4>{{product_en?.minrequirement}}</h4>
+            </div>
+          </div>
+        <div class="col-md-6">
+          <h3 class="link third-title" (click)="isCollapsedTerms = !isCollapsedTerms">Terms & Conditions
+            <i class="fa" [ngClass]="{'fa-chevron-right': isCollapsedTerms, 'fa-chevron-down': !isCollapsedTerms}" aria-hidden="true"></i></h3>
+            <div (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isCollapsedTerms" class="card card-block card-header">
+             <h4>{{product_en?.termsncond}}</h4>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fourth">
+      <div class="container">
+        <h3>About the Developer</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-xs-3">
+                <img class="img-responsive" [src]="product_en?.user.logo" alt="">
+              </div>
+              <div class="col-xs-9">
+                <h3>{{product_en?.user.name}}</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4 class="fourth-location"><strong>Base in </strong>{{product_en?.user.country}}</h4>
+          </div>
+          <div class="col-md-4">
+            <button class="fourth-button btn btn-secondary">More About Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fifth">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-xs-12">
+            <h3 class="fifth-title">REVIEWS</h3>
+            <tb-review (success)="onSuccess($event)" [productId]="product_en.id"></tb-review>
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <div class="fifth-auth">
+              <div class="row">
+                <button class="btn btn-primary-inverse">Login</button> <span style="margin-left: 15px">Or</span>
+              </div>
+              <div class="row">
+                <button class="btn btn-primary-inverse" routerLink="/auth/register-vendor">Create Account</button>
+              </div>
+              <div class="row">
+                <h4>To see more reviews</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sixth">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 46px;" *ngFor="let product of product_recommend">
+            <tb-product-item [title]="product.name" [logo]="product.logo" [shortdescription]="product.shortdescription"
+                             [id]="product.id"></tb-product-item>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seventh">
+      <div class="container">
+          <h3>DOM IS TAGGED</h3>
+          <div class="row">
+            <div class="col-md-3"><h4>Category</h4></div>
+            <div class="col-md-9">
+              <span class="tb-tag-inverse" *ngFor="let tag of tags.category">{{tag.name}}</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+

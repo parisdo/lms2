@@ -1,0 +1,29 @@
+<!--screen shot-->
+<div class="row">
+  <div class="col-md-12">
+    <span class="arrow arrow-left" (click)="onControl('minus')"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+    <img src="{{selected}}" class="big-screenshot img-responsive">
+    <span class="arrow arrow-right" (click)="onControl('plus')"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+  </div>
+</div>
+<!--myCarousel-->
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="{{i == 0 ? 'item active': 'item'}}" *ngFor="let th of thumbnail; let i = index;">
+      <div class="row">
+        <div class="col-xs-3 col-md-3 col-md-3 carousel-thumbnail" *ngFor="let thum of thumbnail[i]; let j = index">
+          <a><img [src]="thum" class="{{selected == thum ? 'selected': ''}} img-responsive" (click)="onSelect(thum, i, j)"></a>
+        </div>
+      </div>
+      <!--/row-->
+    </div>
+  </div>
+  <!--/carousel-inner-->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev" (click)="onControl('minus')">
+    <span class="carousel-control-arrow arrow arrow-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next" (click)="onControl('plus')">
+    <span class="carousel-control-arrow arrow arrow-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>  </a>
+</div>
+<!--/myCarousel-->

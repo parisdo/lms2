@@ -1,0 +1,25 @@
+<div class="tb-body">
+  <div class="tb-container">
+
+    <div class="tb-regis-about">
+      <div class="tb-subtitle">
+        Benefits
+      </div>
+      <div class="tb-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
+        sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et
+        magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis
+        tellus mollis orci, sed rhoncus sapien nunc eget.
+      </div>
+    </div>
+
+    <tb-register-form
+      [role]="'customer'"
+      [titleform]="'Register for an account Customer'"
+      (customerSubmit)="onSubmit($event)">
+    </tb-register-form>
+
+  </div>
+</div>
+
+<p-growl [value]="msgs" sticky="sticky"></p-growl>

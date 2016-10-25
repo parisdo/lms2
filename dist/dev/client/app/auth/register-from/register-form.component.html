@@ -1,0 +1,110 @@
+<div class="tb-regis-form">
+
+  <div class="tb-subtitle">
+   {{titleform}}
+  </div>
+
+
+  <div class="tb-form">
+    <form class="form-horizontal" [formGroup]="registrationForm" novalidate autocomplete="off">
+      <div class="form-group">
+        <label for="name" class="col-sm-4 control-label">Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="name" placeholder="Name" formControlName="personal_name">
+          <control-messages [control]="registrationForm.controls.personal_name"></control-messages>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-4 control-label">Email</label>
+        <div class="col-sm-8">
+          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+          <control-messages [control]="registrationForm.controls.email"></control-messages>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-4 control-label">Password</label>
+        <div class="col-sm-8">
+          <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+          <control-messages [control]="registrationForm.controls.password"></control-messages>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password_confirmation" class="col-sm-4 control-label">Password Confirmation</label>
+        <div class="col-sm-8">
+          <input type="password" class="form-control" id="password_confirmation" placeholder="Password Confirmation" formControlName="password_confirmation">
+          <control-messages [control]="registrationForm.controls.password_confirmation"></control-messages>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="company" class="col-sm-4 control-label">Company</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="company" placeholder="Company" formControlName="company_name">
+          <control-messages [control]="registrationForm.controls.company_name"></control-messages>
+        </div>
+      </div>
+    </form>
+
+    <div class="form-group">
+      <label class="col-sm-4 control-label labelSelect">Country</label>
+      <div class="col-sm-8 " style="padding: 2px 0px">
+        <p-dropdown [options]="countries" [(ngModel)]="selectedCounty" [style]="{'width':'99%'}" filter="filter">
+          <template let-country>
+            <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+              <div style="font-size:14px;float:right;margin-top:4px">{{country.label}}</div>
+            </div>
+          </template>
+        </p-dropdown>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div *ngIf="selectedCounty == 'US'">
+        <label class="col-sm-4 control-label labelSelect">State</label>
+        <div class="col-sm-8 " style="padding: 2px 0px">
+          <div class="form-group">
+            <p-dropdown [options]="states" [(ngModel)]="selectedState" [style]="{'width':'150px'}" filter="filter">
+              <template let-states>
+                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                  <div style="font-size:14px;float:right;margin-top:4px">{{states.label}}</div>
+                </div>
+              </template>
+            </p-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div *ngIf="selectedCounty == 'TH'">
+        <label class="col-sm-4 control-label labelSelect">City</label>
+        <div class="col-sm-8 " style="padding: 2px 0px">
+          <div class="form-group">
+            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" [style]="{'width':'150px'}" filter="filter">
+              <template let-city>
+                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                  <div style="font-size:14px;float:right;margin-top:4px">{{city.label}}</div>
+                </div>
+              </template>
+            </p-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="submit-form">
+            <button type="button" (click)="onSubmit()" [disabled]='!registrationForm.valid' class="btn btn-primary pull-right">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
