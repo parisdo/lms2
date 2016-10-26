@@ -1,9 +1,9 @@
 @import "../../../styles/default";
 
-.center{
-  margin: 0 auto;
+.box-title{
+  color: $dark-blue;
+  margin-bottom: 15px;
 }
-
 
 .section-header{
   padding-top: 15px;
@@ -20,4 +20,26 @@
   &-icon{
     color: $gray !important;
   }
+}
+
+
+.fa{
+  color: $gray;
+  cursor: pointer;
+}
+
+.box-wrapper{
+  padding: 45px;
+}
+
+
+.panel{
+  max-height: none;
+  min-height: inherit;
+}
+
+.panel-body{
+  text-align: left;
+  cursor: pointer;
+  min-height: inherit;
 }

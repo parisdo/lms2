@@ -5,6 +5,11 @@
 }
 
 
+.box-wrapper{
+  background-color: transparent;
+  border: none;
+}
+
 .section-header{
   padding-top: 15px;
   background-color: $white;
@@ -21,3 +26,4 @@
     color: $gray !important;
   }
 }
+

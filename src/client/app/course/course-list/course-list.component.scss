@@ -4,6 +4,11 @@
   margin-top: 15px;
 }
 
+.box-wrapper{
+  background-color: transparent;
+  border: none;
+}
+
 .section-header{
   padding-top: 15px;
   background-color: transparent;
@@ -13,7 +18,7 @@
   }
 
   &-link{
-    color: $gray;
+    color:  $gray;
   }
 
   &-icon{
@@ -54,10 +59,21 @@
 }
 
 .fa-cog{
-  font-size: 18px;
+  color: $gray;
 }
 
 .information{
   cursor: pointer;
   text-decoration: underline;
+}
+
+
+.panel{
+  max-height: none;
+  min-height: inherit;
+}
+
+.panel-body{
+  cursor: pointer;
+  min-height: inherit;
 }

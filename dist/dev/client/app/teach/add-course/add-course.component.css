@@ -47,6 +47,38 @@ html {
 .progress-bar-danger {
   background-color: #ff4a46; }
 
+.panel-default {
+  max-height: 150px;
+  min-height: 150px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px; }
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  text-align: center; }
+
+.panel-title {
+  font-weight: 700;
+  margin-bottom: 5px; }
+
+.panel-body {
+  text-align: center; }
+
+.panel-footer {
+  background-color: transparent;
+  border: none; }
+
+.badge {
+  color: #fff;
+  background-color: #eec820 !important; }
+
+.on-checked {
+  cursor: pointer; }
+
 .lms-body, body {
   font-family: "proxima-nova", sans-serif;
   overflow-x: hidden;
@@ -71,9 +103,7 @@ html {
   margin: 0 auto; }
 
 a, a:hover {
-  color: #848484;
-  cursor: pointer;
-  opacity: .85; }
+  cursor: pointer; }
 
 .leader-tag {
   position: absolute;
@@ -102,8 +132,9 @@ a, a:hover {
   outline: none !important; }
 
 .box-wrapper {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-bottom: 45px;
-  padding: 45px;
+  padding: 15px;
   background-color: #fff;
   border: 1px solid;
   border-color: #e5e6e9 #dfe0e4 #d0d1d5;
@@ -111,11 +142,6 @@ a, a:hover {
   display: block;
   margin: 0 auto;
   overflow-y: hidden; }
-
-.card-block {
-  /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
-  border-radius: 10px !important;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 textarea {
   resize: none !important; }
@@ -166,5 +192,8 @@ textarea {
 .fa {
   color: #848484;
   cursor: pointer; }
+
+.box-wrapper {
+  padding: 45px; }
 
 /*# sourceMappingURL=add-course.component.css.map */

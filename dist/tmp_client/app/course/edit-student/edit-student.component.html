@@ -69,7 +69,6 @@
             <hr>
             <div class="form-group row pull-xs-right">
               <div class="col-xs-12">
-                <button type="button" class="btn btn-secondary">ยกเลิก</button>
                 <button type="submit" class="btn btn-info" (click)="save()" [disabled]="!userForm.valid">บันทึก</button>
               </div>
             </div>
@@ -92,8 +91,8 @@
         <div class="row box-wrapper" style="padding: 2rem; max-height: 300px; overflow-y: auto; margin-bottom: 15px;">
           <div class="row">
             <div class="col-md-3" *ngFor="let badge of badges;">
-              <div class="card card-block text-xs-center" style="max-width: 18rem;">
-                <img class="center img-fluid img-circle " src="{{badge.image}}"
+              <div class="card card-block text-center" style="max-width: 18rem;">
+                <img class="center img-responsive img-circle " src="{{badge.image}}"
                      style="margin-bottom: 5px; max-width: 80px">
                 <p class="card-text" style="margin-bottom: 0">{{badge.name}}</p>
                 <p class="form-check-inline text-muted link" style="margin-top:  5px; margin-bottom: 15px" (click)="onCheck(badge)">
@@ -109,9 +108,8 @@
 
       <div class="row " style="padding: 1rem; margin-bottom: 15px;">
 
-        <div class="pull-xs-right">
-          <button type="button" class="btn btn-secondary" (click)="onDeleteStudentBadge()">ลบเหรียญที่ได้รับ</button>
-          <button type="button" class="btn btn-secondary">ยกเลิก</button>
+        <div class="pull-right">
+          <button type="button" class="btn btn-danger" (click)="onDeleteStudentBadge()">ลบเหรียญที่ได้รับ</button>
         </div>
       </div>
 

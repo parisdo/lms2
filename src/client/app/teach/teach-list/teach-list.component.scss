@@ -1,11 +1,19 @@
 @import "../../../styles/default";
 
+
+.box-wrapper{
+  background-color: transparent;
+  border: none;
+}
+
+
 .section-header{
   padding-top: 15px;
   background-color: $white;
 
   &-title{
     color: $gray;
+    text-align: center;
   }
 
   &-link{
@@ -48,9 +56,14 @@
 
 }
 
+.panel{
+  max-height: 180px;
+  min-height: 180px;
+}
 
 .panel-body{
   cursor: pointer;
+  min-height: 120px;
 }
 
 .panel-footer {
@@ -63,8 +76,16 @@
 
 .fa-cog{
   cursor: pointer;
+  font-size: 18px;
+  color: $green;
 }
 
 .dropdown-menu{
   position: relative;
+}
+
+
+.list-group-item:hover{
+  cursor: pointer;
+  background-color: $light-gray;
 }

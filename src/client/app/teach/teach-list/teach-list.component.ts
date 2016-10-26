@@ -43,7 +43,7 @@ export class TeachListComponent{
         .subscribe(
             teacher => {
               this.teacher = teacher;
-              this.teacher.image = 'http://54.169.115.233/teachers/logo/' + teacher.image;
+              // this.teacher.image = 'http://54.169.115.233/teachers/logo/' + teacher.image;
               this.teacherService.teacher = this.teacher;
             },
             error =>  this.errorMessage = <any>error);

@@ -7,6 +7,7 @@ import {Course} from "../../models/course";
     moduleId: module.id,
     selector: 'edit-student-score',
     templateUrl: 'edit-student-score.component.html',
+    styleUrls:['edit-student-score.component.css']
 })
 export class EditStudentScoreComponent {
 

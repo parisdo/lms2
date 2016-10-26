@@ -89,14 +89,15 @@ export class CourseListComponent {
                     this.levels = data.levels;
                     this.badges = data.badges;
 
-                    this.badges.map((badge) => {
-                      badge.image = 'http://54.169.115.233/students/badges/' + badge.image
-                    });
 
                     this.courseService.course = data.course;
                     this.courseService.levels = data.levels;
                     this.courseService.badges = this.badges;
 
+
+                    this.badges.map((badge) => {
+                      badge.image = 'http://54.169.115.233/students/badges/' + badge.image
+                    });
 
                     // console.log(data.students);
 
@@ -279,7 +280,11 @@ export class CourseListComponent {
       );
 
   }
-  
+
+
+  updateStudent(){
+      this.router.navigate(['/course/update-student']);
+  }
 
   showMessage(msg: any){
     this.msgs = [];

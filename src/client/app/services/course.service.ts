@@ -50,6 +50,13 @@ export class CourseService {
         .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
+  updateStudent(student: any): Observable<any>{
+    let body = JSON.stringify(student);
+    return this.http.post(`${apiUrl}course/add/students?token=${this.authService.token}`, body, xhrHeaders())
+      .map((res) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
   editCourse(course: Course): Observable<Course>{
     let body = JSON.stringify(course);
     return this.http.put(`${apiUrl}course/edit?token=${this.authService.token}`, body, xhrHeaders())

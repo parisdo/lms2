@@ -10,24 +10,34 @@
   </div>
 </div>
 
+
 <div class="lms-body" *ngIf="badges != null">
 
     <div class="container">
         <div class="row box-wrapper">
-            <form style="max-width: 1000px" class="center">
-              <button data-toggle="modal" data-target="#addBadgeModal" class="btn btn-info">เพิ่มเหรียญ</button>
-                <div class="row">
-                    <div class="col-md-3" *ngFor="let badge of badges;let last = last">
-                        <div class="card card-block text-xs-center" style="max-width: 18rem;">
-                            <img class="center img-fluid img-circle " [src]="badge.image" style="margin-bottom: 5px; max-width: 80px">
-                            <p class="card-text" style="margin-bottom: 0">{{badge.name}}</p>
-                            <small class="card-text">+ {{badge.xp}} XP</small>
-                            <br>
-                            <small class="card-text link" data-toggle="modal" data-target="#editBadgeModal" (click)="editBadgeModal(badge)"><ins>แก้ไข</ins></small>
-                        </div>
-                    </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <button style="float: right" data-toggle="modal" data-target="#addBadgeModal" class="btn btn-green">เพิ่มเหรียญ</button>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-3" *ngFor="let badge of badges;let last = last">
+
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <img class="center img-responsive img-circle " [src]="badge.image" style="margin-bottom: 5px; max-width: 80px">
+                    <p>{{badge.name}}</p>
+                    <small class="card-text">+ {{badge.xp}} XP</small>
+                  </div>
+                  <div class="panel-footer">
+                    <p class="card-text link" data-toggle="modal" data-target="#editBadgeModal" (click)="editBadgeModal(badge)"><ins>แก้ไข</ins></p>
+                  </div>
                 </div>
-            </form>
+              </div>
+          </div>
+
         </div>
     </div>
 </div>
@@ -47,7 +57,7 @@
                 <form style="max-width: 500px" class="center">
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <img class="img-fluid img-circle center" [src]="selectedBadge.image" [hidden]="!selectedBadge.image" style="margin-bottom: 15px; max-width: 80px">
+                            <img class="img-responsive img-circle center" [src]="selectedBadge.image" [hidden]="!selectedBadge.image" style="margin-bottom: 15px; max-width: 80px">
                         </div>
                         <div class="col-sm-8">
                             <input type="file" image-upload
@@ -71,7 +81,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary pull-xs-left" (click)="deleteBadge()">ลบเหรียญนี้ทิ้ง</button>
+                <button type="button" class="btn btn-danger pull-left" (click)="deleteBadge()">ลบเหรียญนี้ทิ้ง</button>
 
                 <div class="pull-xs-right">
                     <button type="button" id="closeEditBadgeModal" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
@@ -93,11 +103,11 @@
                 <h6 class="modal-title" id="addBadgeModalLabel">แก้ไข</h6>
             </div>
             <div class="modal-body">
-                <form style="max-width: 500px" class="center" [formGroup]="badgeForm">
+                <form style="max-width: 500px" class="center"[formGroup]="badgeForm">
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <img class="img-fluid img-circle center" src="http://fakeimg.pl/80/" [hidden]="image" style="margin-bottom: 15px; max-width: 80px" >
-                            <img class="img-fluid img-circle center" [src]="image" [hidden]="!image" style="margin-bottom: 15px; max-width: 80px">
+                            <img class="img-responsive img-circle center" src="http://fakeimg.pl/80/" [hidden]="image" style="margin-bottom: 15px; max-width: 80px" >
+                            <img class="img-responsive img-circle center" [src]="image" [hidden]="!image" style="margin-bottom: 15px; max-width: 80px">
 
                         </div>
                         <div class="col-sm-8">

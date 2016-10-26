@@ -12,22 +12,26 @@
 
 <div class="lms-body">
   <div class="container">
+
+
     <div class="row box-wrapper">
 
-      <h3 class="section-header-title">ไม่มีนักเรียนในชั้นเรียนนี้</h3>
-      <div *ngIf="students != null">
+      <div class="row">
+        <div class="col-xs-12">
+          <button style="float: right" class="btn btn-green">พิมพ์</button>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="students != null">
         <div class="col-md-3" *ngFor="let student of students">
 
           <div class="panel panel-default">
             <div class="panel-body">
-              <h4>รหัสนักเรียน {{student.student_id}}</h4>
-              <h4>ชื่อ {{student.name}}</h4>
+              <h4 class="panel-title">ID: {{student.student_id}}</h4>
+              <h4 class="panel-title">Name: {{student.name}}</h4>
               <hr>
-              <p>ขั้นตอนการเข้าดูข้อมูล</p>
-              <p>1. เข้าดูข้อมูลที่ www.happyclass.com</p>
-              <p>2. เข้าสู่ระบบด้วย username และ password</p>
-              <p>username: {{student.username}}</p>
-              <p>{{student.password}} </p>
+              <p><strong>username:</strong> {{student.username}}</p>
+              <p><strong>password:</strong> {{student.password}} </p>
             </div>
           </div>
 

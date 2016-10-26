@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b78ec4-fdae-43b1-96bc-dea6117ad2ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.ts" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/app/services/badge.service.ts" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/auth.component.css.map" />
@@ -14,66 +15,104 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/signin.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/signin.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/signup.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/signup.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/signup.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/signup.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/auth/signup.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/auth/signup.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course-list/course-list.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course-list/course-list.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course-list/course-list.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course-list/course-list.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course-list/course-list.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course-list/course-list.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course-list/course-list.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course-list/course-list.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course-nav/course-nav.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course-nav/course-nav.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course-nav/course-nav.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course-nav/course-nav.component.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course.module.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course.module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/course.routing.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/course.routing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-badge/edit-badge.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-badge/edit-badge.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-badge/edit-badge.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-badge/edit-badge.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-badge/edit-badge.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-badge/edit-badge.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-badge/edit-badge.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-badge/edit-badge.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-course/edit-course.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-course/edit-course.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-course/edit-course.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-course/edit-course.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student-score/edit-student-score.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student-score/edit-student-score.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student-score/edit-student-score.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student-score/edit-student-score.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student/edit-student.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student/edit-student.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student/edit-student.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student/edit-student.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student/edit-student.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student/edit-student.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student/edit-student.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-student/edit-student.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-xp/edit-xp.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-xp/edit-xp.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/edit-xp/edit-xp.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/edit-xp/edit-xp.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/print-students/print-students.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/print-students/print-students.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/print-students/print-students.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/print-students/print-students.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/print-students/print-students.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/print-students/print-students.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/course/print-students/print-students.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/course/print-students/print-students.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/footer/footer.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/footer/footer.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/footer/footer.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/footer/footer.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/header/header.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/header/header.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/header/header.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/header/header.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/home/home.component.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/models/badge.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/models/badge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/models/level.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/models/level.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/services/course.service.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/services/course.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/services/student.service.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/services/student.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/student/student-signin/student-signin.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/student/student-signin/student-signin.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/student/student-signin/student-signin.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/student/student-signin/student-signin.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/add-course/add-course.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/add-course/add-course.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/add-course/add-course.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/add-course/add-course.component.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/add-course/add-course.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/add-course/add-course.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/add-course/add-course.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/add-course/add-course.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/edit-teacher/edit-teacher.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/edit-teacher/edit-teacher.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/edit-teacher/edit-teacher.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/edit-teacher/edit-teacher.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-list/teach-list.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-list/teach-list.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-list/teach-list.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-list/teach-list.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-list/teach-list.component.html" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-list/teach-list.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-list/teach-list.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-list/teach-list.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-nav/teach-nav.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-nav/teach-nav.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-nav/teach-nav.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-nav/teach-nav.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-nav/teach-nav.component.js" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach-nav/teach-nav.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach.component.css" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/app/teach/teach.component.css.map" afterPath="$PROJECT_DIR$/dist/dev/client/app/teach/teach.component.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/dev/client/index.html" afterPath="$PROJECT_DIR$/dist/dev/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/auth/signup.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/auth/signup.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/course/course-list/course-list.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/course/course-list/course-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/course/course.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/course/course.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-badge/edit-badge.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-badge/edit-badge.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-course/edit-course.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-course/edit-course.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-student-score/edit-student-score.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-student-score/edit-student-score.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-student/edit-student.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-student/edit-student.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-xp/edit-xp.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/course/edit-xp/edit-xp.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/course/print-students/print-students.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/course/print-students/print-students.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/teach/add-course/add-course.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/teach/add-course/add-course.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/app/teach/teach-list/teach-list.component.html" afterPath="$PROJECT_DIR$/dist/tmp_client/app/teach/teach-list/teach-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp_client/index.html" afterPath="$PROJECT_DIR$/dist/tmp_client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/auth/signup.component.html" afterPath="$PROJECT_DIR$/src/client/app/auth/signup.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/auth/signup.component.scss" afterPath="$PROJECT_DIR$/src/client/app/auth/signup.component.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html" afterPath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss" afterPath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.ts" afterPath="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/course.component.html" afterPath="$PROJECT_DIR$/src/client/app/course/course.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.scss" afterPath="$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/course.module.ts" afterPath="$PROJECT_DIR$/src/client/app/course/course.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/course.routing.ts" afterPath="$PROJECT_DIR$/src/client/app/course/course.routing.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.html" afterPath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.scss" afterPath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.ts" afterPath="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.html" afterPath="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.ts" afterPath="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.html" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.ts" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.scss" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.ts" afterPath="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/models/badge.ts" afterPath="$PROJECT_DIR$/src/client/app/models/badge.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.html" afterPath="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.ts" afterPath="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.html" afterPath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.scss" afterPath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.ts" afterPath="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/models/level.ts" afterPath="$PROJECT_DIR$/src/client/app/models/level.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/services/course.service.ts" afterPath="$PROJECT_DIR$/src/client/app/services/course.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/services/student.service.ts" afterPath="$PROJECT_DIR$/src/client/app/services/student.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html" afterPath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss" afterPath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.ts" afterPath="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.html" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts" afterPath="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/index.html" afterPath="$PROJECT_DIR$/src/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/styles/_button.scss" afterPath="$PROJECT_DIR$/src/client/styles/_button.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/styles/_default.scss" afterPath="$PROJECT_DIR$/src/client/styles/_default.scss" />
     </list>
     <ignored path="trabila-new-template.iws" />
@@ -100,30 +139,110 @@
       <file leaf-file-name="course-list.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="51" />
+            <state relative-caret-position="2295">
+              <caret line="153" column="61" selection-start-line="153" selection-start-column="61" selection-end-line="153" selection-end-column="61" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="student.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/app/services/student.service.ts">
+      <file leaf-file-name="edit-student.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="1425">
+              <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-student.component.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course-list.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit-student-score.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course-list.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="281" column="2" selection-start-line="281" selection-start-column="2" selection-end-line="281" selection-end-column="2" />
+            <state relative-caret-position="1665">
+              <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-xp.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="print-students.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course-nav.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-student-score.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="74" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course-list.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -137,57 +256,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/client/app/home/home.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/footer/footer.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/home/home.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/css/main.css" />
-        <option value="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/student/student-signin/student-signin.component.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/auth/signin.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/header/header.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/teach.routing.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/styles/_colors.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/auth/signin.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/auth/signin.component.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/teach.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html" />
         <option value="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.html" />
         <option value="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/auth/signup.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/auth/signup.component.scss" />
         <option value="$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.ts" />
         <option value="$PROJECT_DIR$/src/client/app/auth/signup.component.ts" />
-        <option value="$PROJECT_DIR$/src/client/styles/_button.scss" />
         <option value="$PROJECT_DIR$/src/client/app/auth/auth.service.ts" />
         <option value="$PROJECT_DIR$/src/client/app/auth/auth-guard.service.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts" />
         <option value="$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss" />
         <option value="$PROJECT_DIR$/src/client/index.html" />
         <option value="$PROJECT_DIR$/src/client/app/course/course.component.html" />
         <option value="$PROJECT_DIR$/src/client/app/services/badge.service.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/models/badge.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course.routing.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course.module.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/services/course.service.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/models/level.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/signup.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/auth/signup.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/styles/_default.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.html" />
+        <option value="$PROJECT_DIR$/src/client/styles/_button.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/services/student.service.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.scss" />
+        <option value="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.html" />
         <option value="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.scss" />
         <option value="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.html" />
         <option value="$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/course/course.module.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/course/course.routing.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/models/badge.ts" />
-        <option value="$PROJECT_DIR$/src/client/styles/_default.scss" />
-        <option value="$PROJECT_DIR$/src/client/app/services/student.service.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.ts" />
-        <option value="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html" />
-        <option value="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.html" />
         <option value="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html" />
+        <option value="$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.scss" />
       </list>
     </option>
   </component>
@@ -238,7 +357,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -441,8 +559,219 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="print-students" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edit-xp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edit-students" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edit-student-score" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edit-student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course-nav" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course-list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,26 +780,26 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../g-test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editor.config.accepted" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/client/app/course/print-students" />
-      <recent name="$PROJECT_DIR$/src/client/app/course" />
-      <recent name="$PROJECT_DIR$/src/client/app/course/edit-student" />
-      <recent name="$PROJECT_DIR$/src/client/app/auth" />
-      <recent name="$PROJECT_DIR$/src/client/styles" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/client/app" />
       <recent name="$PROJECT_DIR$/src/client/assets/svg" />
       <recent name="$PROJECT_DIR$/src/client" />
       <recent name="$PROJECT_DIR$/src/client/app/shared/services/api/product" />
       <recent name="$PROJECT_DIR$/src/client/assets/home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/client/app/course/update-student" />
+      <recent name="$PROJECT_DIR$/src/client/app/course/print-students" />
+      <recent name="$PROJECT_DIR$/src/client/app/course" />
+      <recent name="$PROJECT_DIR$/src/client/app/course/edit-student" />
+      <recent name="$PROJECT_DIR$/src/client/app/auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -567,11 +896,13 @@
       <workItem from="1477446601349" duration="2275000" />
       <workItem from="1477458431397" duration="11590000" />
       <workItem from="1477472668734" duration="13000" />
+      <workItem from="1477473470539" duration="13877000" />
+      <workItem from="1477496967350" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311697000" />
+    <option name="totallyTimeSpent" value="325588000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,7 +918,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5520231" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33474278" sideWeight="0.5520231" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21916842" sideWeight="0.4479769" order="2" side_tool="true" content_ui="tabs" />
@@ -676,287 +1007,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signin.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="215" column="5" selection-start-line="213" selection-start-column="3" selection-end-line="215" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/styles/_button.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="44" column="0" selection-start-line="33" selection-start-column="1" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signin.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/home/home.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/can-deactivate-guard.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/auth/auth-guard.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/course.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/services/badge.service.ts" />
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="132" column="10" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="133" column="58" selection-start-line="133" selection-start-column="6" selection-end-line="133" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/services/course.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-761">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/course.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/course.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1511">
-          <caret line="147" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-students/edit-students.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -971,10 +1021,209 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-students/edit-students.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/course.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/course.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/services/course.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="170" column="8" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/models/level.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-nav/teach-nav.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/edit-teacher/edit-teacher.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-790">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/auth/signup.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/styles/_default.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="74" column="2" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/update-student/update-student.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/add-course/add-course.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="27" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-course/edit-course.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="66" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/styles/_button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -985,49 +1234,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html">
+    <entry file="file://$PROJECT_DIR$/src/client/app/services/student.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="780">
+          <caret line="63" column="43" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/services/config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="60" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/app/teach/teach-list/teach-list.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="345">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="87" column="81" selection-start-line="87" selection-start-column="72" selection-end-line="87" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-badge/edit-badge.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="72" column="23" selection-start-line="70" selection-start-column="19" selection-end-line="72" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state relative-caret-position="155">
+          <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/services/student.service.ts">
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="51" />
+        <state relative-caret-position="210">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="37" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="74" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="281" column="2" selection-start-line="281" selection-start-column="2" selection-end-line="281" selection-end-column="2" />
+        <state relative-caret-position="1665">
+          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="153" column="61" selection-start-line="153" selection-start-column="61" selection-end-line="153" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-xp/edit-xp.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/print-students/print-students.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-nav/course-nav.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/course-list/course-list.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student-score/edit-student-score.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/course/edit-student/edit-student.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
           <folding />
         </state>
       </provider>

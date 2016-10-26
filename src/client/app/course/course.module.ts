@@ -13,6 +13,7 @@ import {EditStudentsComponent} from "./edit-students/edit-students.component";
 import {EditStudentComponent} from "./edit-student/edit-student.component";
 import {CourseNavComponent} from "./course-nav/course-nav.component";
 import {PrintStudentsComponent} from "./print-students/print-students.component";
+import {UpdateStudentComponent} from "./update-student/update-student.component";
 
 
 @NgModule({
@@ -20,7 +21,6 @@ import {PrintStudentsComponent} from "./print-students/print-students.component"
     CommonModule,
     FormsModule,
     SharedModule,
-
     courseRouting
   ],
   declarations: [
@@ -33,6 +33,7 @@ import {PrintStudentsComponent} from "./print-students/print-students.component"
     EditStudentScoreComponent,
     EditStudentComponent,
     CourseNavComponent,
+    UpdateStudentComponent,
     PrintStudentsComponent
   ]
 })

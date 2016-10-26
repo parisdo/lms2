@@ -10,6 +10,7 @@ import {EditStudentScoreComponent} from "./edit-student-score/edit-student-score
 import {EditStudentsComponent} from "./edit-students/edit-students.component";
 import {EditStudentComponent} from "./edit-student/edit-student.component";
 import {PrintStudentsComponent} from "./print-students/print-students.component";
+import {UpdateStudentComponent} from "./update-student/update-student.component";
 
 const courseRoutes: Routes = [
   {
@@ -23,6 +24,7 @@ const courseRoutes: Routes = [
       {path: 'edit-students',       component: EditStudentsComponent },
       {path: 'edit-student',        component: EditStudentComponent },
       {path: 'edit-student-score',  component: EditStudentScoreComponent },
+      {path: 'update-student',      component: UpdateStudentComponent },
       {path: 'print-students',      component: PrintStudentsComponent }
     ]
   }

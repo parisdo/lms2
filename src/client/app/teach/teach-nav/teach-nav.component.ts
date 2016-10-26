@@ -35,7 +35,7 @@ export class TeachNavComponent {
         data => {
           //console.log(data);
           this.teacher = data;
-          this.teacher.image = 'http://54.169.115.233/teachers/logo' + data.image;
+          this.teacher.image = data.image;
         },
         error => {
           console.log(error);

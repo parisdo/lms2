@@ -69,7 +69,7 @@ export class EditBadgeComponent {
                     this.badges = data.badge;
 
                     this.badges.map((badge) => {
-                       badge.image = 'http://54.169.115.233/students/badges/' + badge.image
+                       // badge.image = 'http://54.169.115.233/students/badges/' + badge.image
                     });
                 },
                 error =>  console.log(error))

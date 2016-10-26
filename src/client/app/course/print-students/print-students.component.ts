@@ -26,9 +26,11 @@ export class PrintStudentsComponent implements OnInit{
 
     ngOnInit(){
 
-      if(this.studentService.students != null){
+      if(this.studentService.students.length != 0){
         this.students = this.studentService.students;
         console.log(this.students);
+      }else {
+        this.router.navigate(['/teach']);
       }
 
 

@@ -176,6 +176,12 @@ export class AddCourseComponent {
     //Submit All Form
     submit(){
 
+      if(this.levels.length == 0){
+        let level = new Level('1','1',10);
+        this.levels.push(level)
+      }
+
+
         let studentLevel: any;
 
         this.levels.forEach((level) => {

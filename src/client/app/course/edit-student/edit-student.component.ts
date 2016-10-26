@@ -70,7 +70,7 @@ export class EditStudentComponent implements OnInit {
           this.studentService.getStudentBadge(this.selectedId)
             .subscribe(
               (data: any) => {
-                //console.log(data);
+                console.log(data);
                 //this.badges = data;
                 data.forEach((badge: any) => {
                   badge.image = 'http://54.169.115.233/students/badges/' + badge.image;
@@ -154,10 +154,10 @@ export class EditStudentComponent implements OnInit {
     });
 
     let badges = new deleteBadge(
-      this.course_id,
+      this.student.id,
       tempBadges
     );
-    //console.log(students);
+    console.log(badges);
 
     this.studentService.deleteStudentBadge(badges)
       .subscribe(
