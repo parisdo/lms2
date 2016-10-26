@@ -1,18 +1,20 @@
-<div class="container">
-  <h2 class="teachList-header">{{'classroom' | uppercase}}</h2>
-
-  <div class="row">
-
-    <div class="col-md-3 col-sm-12 col-xs-12" >
-      <h5>ชั้นเรียน
-        <a class="text-muted link" data-toggle="modal" data-target=".hide-class-modal-sm" ><ins>ดูชั้นเรียนที่ถูกซ่อน</ins></a>
-        <a class="text-muted link" (click)="addCourse()"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มชั้นเรียน</a>
-      </h5>
+<div class="section-header">
+  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="section-header-title">ชั้นเรียน</h3>
+        <hr>
+        <div class="section-header-link link">
+          <a class="text-muted link" style="margin-right: 15px" data-toggle="modal" data-target=".hide-class-modal-sm" ><ins>ดูชั้นเรียนที่ถูกซ่อน</ins></a>
+          <a class="text-muted link" (click)="addCourse()"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มชั้นเรียน</a>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
-  <hr>
-
+<div class="lms-body">
+<div class="container">
   <div class="row box-wrapper">
 
   <div class="row scrollable-content">
@@ -69,4 +71,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

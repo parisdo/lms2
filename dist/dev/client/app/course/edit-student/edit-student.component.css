@@ -153,12 +153,12 @@ textarea {
 
 .section-header {
   padding-top: 15px;
-  background-color: #83c7d4; }
+  background-color: #fff; }
   .section-header-title {
-    color: #fff; }
+    color: #848484; }
   .section-header-link {
-    color: #fff; }
+    color: #848484; }
   .section-header-icon {
-    color: #fff !important; }
+    color: #848484 !important; }
 
-/*# sourceMappingURL=signup.component.css.map */
+/*# sourceMappingURL=edit-student.component.css.map */

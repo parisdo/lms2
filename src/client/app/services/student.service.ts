@@ -36,6 +36,7 @@ export class StudentService {
 
   deleteStudent(student: any): Observable<any>{
     let body = JSON.stringify(student);
+    console.log(body);
     return this.http.post(`${apiUrl}students/delete?token=${this.authService.token}`, body, xhrHeaders())
       .map((res) => res.json())
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));

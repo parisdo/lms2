@@ -28,10 +28,12 @@ export class TeachListComponent{
 
   ngOnInit() {
 
-    if(this.authService.token != null){
-      this.getTeacher();
-      this.getCourse();
-    }
+
+      if (this.authService.checkRole()) {
+        this.getTeacher();
+        this.getCourse();
+      }
+
 
   }
 
@@ -95,6 +97,10 @@ export class TeachListComponent{
 
   addCourse(){
     this.router.navigate(['/teach/add-course']);
+  }
+
+  cancel(){
+    window.history.back();
   }
 
 }

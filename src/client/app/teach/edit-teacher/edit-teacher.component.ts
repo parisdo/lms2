@@ -91,6 +91,10 @@ export class EditTeacherComponent implements OnInit{
         );
     }
 
+    cancel(){
+      window.history.back();
+    }
+
     ngOnDestroy() {}
 
 

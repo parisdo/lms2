@@ -12,6 +12,7 @@ import {ImageResult, ResizeOptions} from "ng2-imageupload";
     moduleId: module.id,
     selector: 'edit-student',
     templateUrl: 'edit-student.component.html',
+  styleUrls: ['edit-student.component.css'],
 })
 export class EditStudentComponent implements OnInit{
 
@@ -104,9 +105,8 @@ export class EditStudentComponent implements OnInit{
         );
     }
 
-    ngOnDestroy() {
-      this.sub.unsubscribe();
-    }
-
+  cancel(){
+    window.history.back();
+  }
 
 }

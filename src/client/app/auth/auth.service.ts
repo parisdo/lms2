@@ -7,6 +7,7 @@ import 'rxjs/add/operator/catch';
 import {Teacher} from "../models/teacher";
 import {xhrHeaders} from "../services/xhr-headers";
 import {Student} from "../models/student";
+import {Router} from "@angular/router";
 
 @Injectable()
 export class AuthService {
@@ -17,7 +18,7 @@ export class AuthService {
     token: string;
     redirectUrl: string;
 
-    constructor (private http: Http) {
+    constructor (private http: Http, private  router: Router) {
         this.token = localStorage.getItem('token');
     }
 

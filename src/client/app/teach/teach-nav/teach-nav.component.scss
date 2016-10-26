@@ -8,17 +8,20 @@
   position: fixed;
   opacity: .99;
   z-index: 999;
-  background-color: $light-blue;
+  background-color: $blue;
   color: $white;
 }
 
+.navbar-nav>li>a{
+  color: $white;
+}
 
 .navbar-nav{
   float: none;
 }
 
 .btn-toggle{
-  color: $black;
+  color: $white;
 }
 
 .btn-logout{

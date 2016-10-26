@@ -269,6 +269,11 @@ export class CourseListComponent {
 
   }
 
+
+  cancel(){
+    window.history.back();
+  }
+
   ngOnDestroy() {
     this.sub.unsubscribe();
   }

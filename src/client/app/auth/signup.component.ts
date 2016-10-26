@@ -94,6 +94,11 @@ export class SignupComponent {
         error =>  console.log(error)
     );
   }
+
+  cancel(){
+    window.history.back();
+  }
+
 }
 
 

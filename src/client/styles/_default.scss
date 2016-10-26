@@ -7,10 +7,16 @@
   font-family: "proxima-nova", sans-serif;
   overflow-x: hidden;
   background-color: $light-gray !important;
+  color: $dark-blue;
+}
+
+.lms-body{
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 .container{
-  margin-top: 90px;
+  //margin-top: 45px;
 }
 
 .line-breaks{
@@ -30,21 +36,8 @@
   margin: 0 auto;
 }
 
-button[disabled] {
-  opacity: .65;
-  cursor: not-allowed;
-}
-
-a.btn.btn-primary{
-  color: white;
-}
-
-.link{
-  color:  #818a91;
-}
-
-.link:hover{
-  color:  #818a91;
+a, a:hover{
+  color: $gray;
   cursor: pointer;
   opacity: .85;
 }

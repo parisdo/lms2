@@ -1,9 +1,19 @@
+<div class="section-header">
+  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
+          <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
+        <h3 class="section-header-title">ลงทะเบียน</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="lms-body">
   <div class="container">
     <div class="row box-wrapper">
-
-      <h2>ลงทะเบียน</h2>
-      <hr>
       <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)" style="padding: 15px; " autocomplete="off"
             novalidate>
         <div class="col-md-4">

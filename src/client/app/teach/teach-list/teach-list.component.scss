@@ -1,5 +1,23 @@
 @import "../../../styles/default";
 
+.section-header{
+  padding-top: 15px;
+  background-color: $white;
+
+  &-title{
+    color: $gray;
+  }
+
+  &-link{
+    color: $gray;
+  }
+
+  &-icon{
+    color: $gray !important;
+  }
+}
+
+
 .modal-dialog{
   overflow-y: initial !important
 }
@@ -42,4 +60,6 @@
   cursor: pointer;
 }
 
-
+.dropdown-menu{
+  position: relative;
+}

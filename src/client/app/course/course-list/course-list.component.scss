@@ -1,5 +1,26 @@
 @import "../../../styles/default";
 
+.lms-body{
+  margin-top: 15px;
+}
+
+.section-header{
+  padding-top: 15px;
+  background-color: transparent;
+
+  &-title{
+    color: $gray;
+  }
+
+  &-link{
+    color: $gray;
+  }
+
+  &-icon{
+    color: $gray !important;
+  }
+}
+
 
 .goBack{
   float: left;
@@ -32,12 +53,6 @@
   z-index: 2000;
 }
 
-:host /deep/ .ui-progressbar-label {
-  color: $light-gray;
-  margin-top: -1.5px;
-  font-size: x-small;
-}
-
-:host /deep/ .ui-progressbar .ui-progressbar-value {
-  background: aquamarine !important;
+.fa-cog{
+  font-size: 18px;
 }

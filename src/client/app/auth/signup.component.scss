@@ -4,12 +4,19 @@
   margin: 0 auto;
 }
 
-.box-wrapper{
-  margin-top: 45px;
-  margin-bottom: 45px;
-  padding: 45px;
-  background-color: $white;
-  border: 1px solid;
-  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
-  border-radius: 3px;
+.section-header{
+  padding-top: 15px;
+  background-color: $blue;
+
+  &-title{
+    color: $white;
+  }
+
+  &-link{
+    color: $white;
+  }
+
+  &-icon{
+    color: $white !important;
+  }
 }

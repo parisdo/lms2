@@ -49,10 +49,7 @@ export class SigninComponent {
                 if(data.status == 'success'){
                   // console.log(data.data.token);
                   this.authService.setToken(data.data.token, 'teacher');
-
-                  setTimeout(() => {
-                    this.router.navigate(['./teach']);
-                  },1000);
+                  this.router.navigate(['./teach']);
 
                 }else {
                   //console.log(data);

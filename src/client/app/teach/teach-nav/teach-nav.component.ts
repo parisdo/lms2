@@ -24,12 +24,9 @@ export class TeachNavComponent {
 
   ngOnInit() {
 
-    if (this.authService.isLoggedIn()) {
       if (this.authService.checkRole()) {
         this.getTeacher();
       }
-    }
-
   }
 
   getTeacher() {
