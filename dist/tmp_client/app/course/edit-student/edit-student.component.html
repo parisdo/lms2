@@ -1,3 +1,5 @@
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+
 <div class="section-header">
   <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
     <div class="row">
@@ -80,21 +82,23 @@
         <hr>
       </h5>
       <div class="form-group">
-        <p class="form-check-inline">
-          <input class="form-check-input" type="checkbox" name="choose" value="option1" style="right: 15px">
+        <label class="form-check-inline" (click)="onCheckAll()">
+          <input class="form-check-input form-control-sm" type="checkbox" value="checkAll" style="right: 5px"
+                 [(ngModel)]="checkAll" name="checkAll">
           เลือกทั้งหมด
-        </p>
+        </label>
       </div>
       <div *ngIf="badges != null">
         <div class="row box-wrapper" style="padding: 2rem; max-height: 300px; overflow-y: auto; margin-bottom: 15px;">
           <div class="row">
-            <div class="col-md-3" *ngFor="let badge of badges;let last = last">
+            <div class="col-md-3" *ngFor="let badge of badges;">
               <div class="card card-block text-xs-center" style="max-width: 18rem;">
                 <img class="center img-fluid img-circle " src="{{badge.image}}"
                      style="margin-bottom: 5px; max-width: 80px">
                 <p class="card-text" style="margin-bottom: 0">{{badge.name}}</p>
-                <p class="form-check-inline text-muted link" style="margin-top:  5px; margin-bottom: 15px">
-                  <input class="form-check-input" type="checkbox" name="choose" value="option1"> เลือก
+                <p class="form-check-inline text-muted link" style="margin-top:  5px; margin-bottom: 15px" (click)="onCheck(badge)">
+                  <input class="form-check-input" type="checkbox" [(ngModel)]="badge.selected"
+                         name="badge.name"> เลือก
                 </p>
               </div>
             </div>
@@ -106,7 +110,7 @@
       <div class="row " style="padding: 1rem; margin-bottom: 15px;">
 
         <div class="pull-xs-right">
-          <button type="button" class="btn btn-secondary">ลบเหรียญที่ได้รับ</button>
+          <button type="button" class="btn btn-secondary" (click)="onDeleteStudentBadge()">ลบเหรียญที่ได้รับ</button>
           <button type="button" class="btn btn-secondary">ยกเลิก</button>
         </div>
       </div>
@@ -115,3 +119,4 @@
     </div>
   </div>
 </div>
+

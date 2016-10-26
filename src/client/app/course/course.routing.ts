@@ -9,6 +9,7 @@ import {EditBadgeComponent} from "./edit-badge/edit-badge.component";
 import {EditStudentScoreComponent} from "./edit-student-score/edit-student-score.component";
 import {EditStudentsComponent} from "./edit-students/edit-students.component";
 import {EditStudentComponent} from "./edit-student/edit-student.component";
+import {PrintStudentsComponent} from "./print-students/print-students.component";
 
 const courseRoutes: Routes = [
   {
@@ -21,7 +22,8 @@ const courseRoutes: Routes = [
       {path: 'edit-badge',          component: EditBadgeComponent},
       {path: 'edit-students',       component: EditStudentsComponent },
       {path: 'edit-student',        component: EditStudentComponent },
-      {path: 'edit-student-score',  component: EditStudentScoreComponent }
+      {path: 'edit-student-score',  component: EditStudentScoreComponent },
+      {path: 'print-students',      component: PrintStudentsComponent }
     ]
   }
 ];

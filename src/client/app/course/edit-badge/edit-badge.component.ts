@@ -2,7 +2,6 @@ import {Component} from "@angular/core";
 import {Subscription} from "rxjs";
 import {ActivatedRoute, Router, NavigationExtras} from "@angular/router";
 import {ResizeOptions, ImageResult} from "ng2-imageupload";
-import {BadgeService} from "../../services/badge.service";
 import {Badge} from "../../models/badge";
 import {FormBuilder, Validators} from "@angular/forms";
 import {CourseService} from "../../services/course.service";
@@ -14,6 +13,7 @@ declare var $:any;
     moduleId: module.id,
     selector: 'edit-badge',
     templateUrl: 'edit-badge.component.html',
+    styleUrls:['edit-badge.component.css']
 })
 export class EditBadgeComponent {
 
@@ -36,9 +36,15 @@ export class EditBadgeComponent {
         private formBuilder: FormBuilder) {}
 
     ngOnInit(){
+
+      if(this.courseService.course != null){
         this.course = this.courseService.course;
         this.getBadges(this.course.id);
         this.createBadgeForm();
+      }else {
+        this.router.navigate(['teach']);
+      }
+
     }
 
     createBadgeForm(){
@@ -71,7 +77,7 @@ export class EditBadgeComponent {
 
     addBadge(){
 
-        let badge = new Badge('',this.course.id, this.badgeForm.value.name, this.image, this.badgeForm.value.xp);
+        let badge = new Badge(this.course.id, '', this.badgeForm.value.name, this.image, this.badgeForm.value.xp);
         console.log(badge);
 
         this.courseService.createBadge(badge)
@@ -124,7 +130,10 @@ export class EditBadgeComponent {
 
 
     deleteBadge(){
-        this.courseService.deleteBadge(this.selectedBadge.id)
+
+      this.selectedBadge.badge_id = this.selectedBadge.id;
+      console.log(this.selectedBadge);
+        this.courseService.deleteBadge(this.selectedBadge.badge_id)
             .subscribe(
                 (data: any) => {
                     //console.log(data);
@@ -140,6 +149,10 @@ export class EditBadgeComponent {
 
     resetEditForm(){
         $('#closeEditBadgeModal').click();
+    }
+
+    cancel(){
+      window.history.back();
     }
 
     ngOnDestroy() {

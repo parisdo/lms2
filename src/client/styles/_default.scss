@@ -81,6 +81,7 @@ a, a:hover{
   border-radius: 3px;
   display: block;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
 .card-block{
@@ -112,8 +113,8 @@ textarea {
 .scrollable-content {
   overflow-x:hidden;
   max-height: 350px;
-  overflow-y: hidden;
   padding: 2rem;
+  overflow-y: scroll;
 }
 .scrollable-content::-webkit-scrollbar {
   width:10px;

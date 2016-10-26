@@ -19,9 +19,24 @@ export class StudentService {
 
   constructor (private http: Http,  private authService: AuthService) {}
 
+
+  getStudentBadge (id: any): Observable<any> {
+    return this.http.get(`${apiUrl}student/${id}/badge?token=${this.authService.token}`)
+      .map((res) => res.json().data.badge)
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+
   updateStudentsScore(students: any): Observable<any>{
     let body = JSON.stringify(students);
-    return this.http.put(`${apiUrl}students/update/score?token=${this.authService.token}`, body, xhrHeaders())
+    return this.http.post(`${apiUrl}students/update/score?token=${this.authService.token}`, body, xhrHeaders())
+      .map((res) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  updateStudentsBadge(students: any): Observable<any>{
+    let body = JSON.stringify(students);
+    return this.http.post(`${apiUrl}students/update/scoreandbadge?token=${this.authService.token}`, body, xhrHeaders())
       .map((res) => res.json())
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
@@ -42,6 +57,14 @@ export class StudentService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
+
+  deleteStudentBadge(badge: any): Observable<any>{
+    let body = JSON.stringify(badge);
+    console.log(body);
+    return this.http.post(`${apiUrl}student/delete/badge?token=${this.authService.token}`, body, xhrHeaders())
+      .map((res) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
 
 
 }

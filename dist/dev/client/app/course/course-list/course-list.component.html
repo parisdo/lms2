@@ -2,8 +2,7 @@
 
 
 <div class="section-header" *ngIf="course != null">
-  <my-course-nav (webboard)="gotoWebboard()" (feedback)="giveAllFeedback()"
-                 (leaderboard)="viewLeaderboard()"></my-course-nav>
+  <my-course-nav (webboard)="gotoWebboard()" (feedback)="giveAllFeedback()" (leaderboard)="viewLeaderboard()"></my-course-nav>
   <div class="container" style="margin-top: 45px;">
     <div class="row">
       <div class="col-xs-12">
@@ -19,11 +18,14 @@
               <li><a class="link" (click)="gotoPage('edit-xp')">แก้ไขการแต้มเริ่มต้นและการเลื่อนชั้น</a></li>
               <li><a class="link" (click)="gotoPage('edit-badge')">แก้ไขข้อมูลเหรียญรางวัล</a></li>
               <li><a class="link" (click)="gotoPage('edit-student-score')">แก้ไขการแต้มสะสมของนักเรียน</a></li>
-              <li><a class="link" href="">พิมพ์บัตรเข้าระบบของนักเรียน</a></li>
+              <li><a class="link" (click)="gotoPage('print-students')">พิมพ์บัตรเข้าระบบของนักเรียน</a></li>
             </ul>
           </div>
         </a>
         <h3 class="section-header-title">{{course.name}}</h3>
+        <div class="section-header-link link">
+          <a class="text-muted link" (click)="addStudent()"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มนักเรียน</a>
+        </div>
       </div>
     </div>
   </div>
@@ -66,7 +68,7 @@
     <div class="row box-wrapper">
 
       <div class="scrollable-content">
-        <div class="row" style="max-height: 350px; overflow-y: auto; padding-top: 1rem">
+        <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-12"
                *ngFor="let student of students |filterData: searchValue: filterKeys; let index = index;"
                style="margin-bottom: 15px">
@@ -104,7 +106,7 @@
                   <input class="form-check-input" type="checkbox" [(ngModel)]="student.selected"
                          name="student.name"> เลือก
                 </small>
-                <small class="text-muted link pull-right" (click)="editStudentProfile(student.id)">ข้อมูลเพิ่มเติม
+                <small class="text-muted information pull-right" (click)="editStudentProfile(student.id)">ข้อมูลเพิ่มเติม
                 </small>
               </div>
             </div>
@@ -155,7 +157,7 @@
         <!--Badge-->
         <div class="row" style="margin-bottom: 15px" *ngIf="feedbackState == 'Badge'">
           <div class="col-md-3" *ngFor="let badge of badges">
-            <div class="panel panel-default link" (click)="updateBadgeScore(badge.xp)">
+            <div class="panel panel-default link" (click)="onUpdateStudentBadge(badge)">
               <div class="panel-body text-center">
                 <img class="center img-responsive img-circle " [src]="badge.image" style="margin-bottom: 5px">
                 <p class="card-text" style="margin-bottom: 0">{{badge.name}}</p>
@@ -169,7 +171,7 @@
 
           <div class="row" style="margin-bottom: 15px">
             <div class="col-md-4" *ngFor="let xp of exp;">
-              <div class="panel panel-default link" (click)="updateBadgeScore(xp)">
+              <div class="panel panel-default link" (click)="onUpdateStudentScore(xp)">
                 <div class="panel-body text-center">
                   + {{xp}} XP
                 </div>
@@ -184,7 +186,7 @@
               <div class="form-group">
                 <input type="number" class="form-control form-control-sm" #dynamicXp>
               </div>
-              <button type="submit" class="btn btn-info btn-sm" (click)="updateBadgeScore(dynamicXp.value)">ตกลง
+              <button type="submit" class="btn btn-info btn-sm" (click)="onUpdateStudentScore(dynamicXp.value)">ตกลง
               </button>
             </form>
           </div>

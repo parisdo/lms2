@@ -1,0 +1,40 @@
+<div class="section-header">
+  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
+          <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
+        <h3 class="section-header-title">พิมพ์บัตรเข้าระบบของนักเรียน</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lms-body">
+  <div class="container">
+    <div class="row box-wrapper">
+
+      <h3 class="section-header-title">ไม่มีนักเรียนในชั้นเรียนนี้</h3>
+      <div *ngIf="students != null">
+        <div class="col-md-3" *ngFor="let student of students">
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4>รหัสนักเรียน {{student.student_id}}</h4>
+              <h4>ชื่อ {{student.name}}</h4>
+              <hr>
+              <p>ขั้นตอนการเข้าดูข้อมูล</p>
+              <p>1. เข้าดูข้อมูลที่ www.happyclass.com</p>
+              <p>2. เข้าสู่ระบบด้วย username และ password</p>
+              <p>username: {{student.username}}</p>
+              <p>{{student.password}} </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

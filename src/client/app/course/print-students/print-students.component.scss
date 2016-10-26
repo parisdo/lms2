@@ -1,0 +1,23 @@
+@import "../../../styles/default";
+
+.center{
+  margin: 0 auto;
+}
+
+
+.section-header{
+  padding-top: 15px;
+  background-color: $white;
+
+  &-title{
+    color: $gray;
+  }
+
+  &-link{
+    color: $gray;
+  }
+
+  &-icon{
+    color: $gray !important;
+  }
+}

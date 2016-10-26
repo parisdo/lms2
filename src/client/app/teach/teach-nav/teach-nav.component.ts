@@ -33,7 +33,7 @@ export class TeachNavComponent {
     this.teacherService.getTeacher()
       .subscribe(
         data => {
-          console.log(data);
+          //console.log(data);
           this.teacher = data;
           this.teacher.image = 'http://54.169.115.233/teachers/logo' + data.image;
         },

@@ -12,6 +12,7 @@ import {EditStudentScoreComponent} from "./edit-student-score/edit-student-score
 import {EditStudentsComponent} from "./edit-students/edit-students.component";
 import {EditStudentComponent} from "./edit-student/edit-student.component";
 import {CourseNavComponent} from "./course-nav/course-nav.component";
+import {PrintStudentsComponent} from "./print-students/print-students.component";
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {CourseNavComponent} from "./course-nav/course-nav.component";
     EditStudentsComponent,
     EditStudentScoreComponent,
     EditStudentComponent,
-    CourseNavComponent
+    CourseNavComponent,
+    PrintStudentsComponent
   ]
 })
 export class CourseModule {}

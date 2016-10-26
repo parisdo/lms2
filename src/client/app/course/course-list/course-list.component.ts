@@ -1,37 +1,30 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router, NavigationExtras} from "@angular/router";
-
 import {Student} from "../../models/student";
 import {StudentService} from "../../services/student.service";
 import {Subscription} from "rxjs";
 import {msg} from '../../services/message-service';
-
-declare var _: any;
 import {CourseService} from "../../services/course.service";
 import {Course} from "../../models/course";
-
 import {publicUrl} from "../../services/config"
 import {Badge} from "../../models/badge";
 import {Message} from "primeng/components/common/api";
 import {Level} from "../../models/level";
-declare var  $: any;
 
+declare var  $: any;
+declare var _: any;
 
 export class updateStudentsScore {
-
-  constructor(
-    public course_id?: any,
-    public score?: any,
-    public students?: any,
-  ) { }
-
+  constructor(public course_id?: any, public score?: any, public students?: any) { }
 }
 
+export class updateStudentsBadge {
+  constructor(public course_id?: any, public badge_id?: any, public score?: any, public students?: any) { }
+}
+
+
 export class deleteStudent{
-  constructor(
-    public course_id?: any,
-    public students?: any,
-  ) { }
+  constructor(public course_id?: any, public students?: any) { }
 }
 
 @Component({
@@ -84,13 +77,13 @@ export class CourseListComponent {
         .subscribe(params => {
 
           this.selectedId = +params['id'];
-          console.log(this.selectedId);
+          //console.log(this.selectedId);
 
           this.courseService.getCourse(this.selectedId)
               .subscribe(
                   (data:any) => {
 
-                    console.log(data);
+                    //console.log(data);
 
                     this.course = data.course;
                     this.levels = data.levels;
@@ -104,6 +97,8 @@ export class CourseListComponent {
                     this.courseService.levels = data.levels;
                     this.courseService.badges = this.badges;
 
+
+                    // console.log(data.students);
 
                     this.students = data.students;
                     this.students.forEach(
@@ -166,7 +161,7 @@ export class CourseListComponent {
     this.selectedStudents.push(student);
   }
 
-  updateBadgeScore(score: any){
+  onUpdateStudentScore(score: any){
 
     let students = new updateStudentsScore(
       this.course.id,
@@ -189,15 +184,31 @@ export class CourseListComponent {
       );
   }
 
+  onUpdateStudentBadge(badge: any){
 
-  showMessage(msg: any){
-    this.msgs = [];
-    this.msgs.push(msg);
-    setTimeout(() => {
-      this.msgs = [];
-    }, 3000);
+    let students = new updateStudentsBadge(
+      this.course.id,
+      badge.id,
+      badge.xp,
+      this.selectedStudents
+    );
+
+    //console.log(students);
+
+    this.studentService.updateStudentsBadge(students)
+      .subscribe(
+        (data: any) => {
+          if(data.status == 'success'){
+            this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            $("#giveFeedback").modal('toggle');
+            this.ngOnInit();
+          }else {
+            this.showMessage(msg.getUpdateStudentsScoreMessage(500));
+          }
+        },
+        (error) => console.log(error)
+      );
   }
-
 
   onCheck(student: Student){
     student.selected = !student.selected;
@@ -252,7 +263,7 @@ export class CourseListComponent {
       this.course.id,
       tempStudents
     );
-    console.log(students);
+    //console.log(students);
 
     this.studentService.deleteStudent(students)
       .subscribe(
@@ -267,6 +278,15 @@ export class CourseListComponent {
         (error) => console.log(error)
       );
 
+  }
+  
+
+  showMessage(msg: any){
+    this.msgs = [];
+    this.msgs.push(msg);
+    setTimeout(() => {
+      this.msgs = [];
+    }, 3000);
   }
 
 
