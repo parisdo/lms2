@@ -67,6 +67,8 @@ export class EditStudentComponent implements OnInit {
             student.id == this.selectedId ? this.student = student : null;
           });
 
+           this.image = this.student.image;
+
           this.studentService.getStudentBadge(this.selectedId)
             .subscribe(
               (data: any) => {
@@ -90,7 +92,7 @@ export class EditStudentComponent implements OnInit {
   }
 
   selected(imageResult: ImageResult) {
-    this.student.image = imageResult.resized
+    this.image = imageResult.resized
       && imageResult.resized.dataURL
       || imageResult.dataURL;
   }
@@ -111,6 +113,7 @@ export class EditStudentComponent implements OnInit {
   save(student: Student) {
 
     this.student.course_id = this.course_id;
+    this.student.image = this.image;
     console.log(this.student);
 
     this.studentService.editStudentProfile(this.student)
@@ -118,9 +121,9 @@ export class EditStudentComponent implements OnInit {
         (data: any) => {
           console.log(data);
           if (data.status == 'success') {
-            //this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            this.showMessage(msg.getUpdateStudentsScoreMessage(200));
           } else {
-            //this.showMessage(msg.getUpdateStudentsScoreMessage(500));
+            this.showMessage(msg.getUpdateStudentsScoreMessage(500));
           }
         },
         (error) => console.log(error)

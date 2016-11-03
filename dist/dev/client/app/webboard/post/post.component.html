@@ -1,129 +1,110 @@
-<div class="container">
-        <div class="card" style="margin-bottom: 15px; background-color: #dddddd">
-            <div class="card-block">
-                <h4 class="card-title">Special title treatment
-                    <a *ngIf="this.authService.checkRole()" class="pull-xs-right link"><i class="zmdi zmdi-settings"></i></a>
-                </h4>
+<div class="section-header">
+  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
+          <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
+        <h3 class="section-header-title">กระดานสนทนา</h3>
+      </div>
+    </div>
+  </div>
+</div>
 
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <div class="text-muted">
-                    2 days ago
+
+<div class="lms-body" *ngIf="post != null">
+  <div class="container">
+    <div class="row box-wrapper">
+
+      <div class="panel panel-default">
+        <div class="panel-heading" style="text-align: left">
+          <p><i class="fa fa-user" aria-hidden="true"></i> Nattaya.M</p>
+        </div>
+        <div class="panel-body">
+          <h3 class="panel-title" style="margin-bottom: 15px;">{{post.title}}</h3>
+          <p>{{post.detail}}</p>
+        </div>
+        <div class="panel-footer" style="text-align: right">
+          <small style="margin-right: 15px">{{post.updated_at}}</small>
+          <div class="dropdown pull-right" *ngIf="role">
+            <span dropdown-toggle="dropdown"
+                  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <i class="fa fa-cog link" aria-hidden="true" ></i>
+            </span>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="right: 0; left: inherit">
+              <li><a class="link" (click)="editPost()">แก้ไขข้อความ</a></li>
+              <li><a class="link" (click)="deletePost()">ลบข้อความ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <small class="text-muted"><i class="fa fa-comments-o" aria-hidden="true"></i> {{comments.length}} ความคิดเห็น</small>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-12" *ngFor="let comment of comments">
+          <div class="panel panel-default panel-comment">
+
+            <div class="panel-heading" style="text-align: left">
+              <p><i class="fa fa-user" aria-hidden="true"></i></p>
+            </div>
+            <div class="panel-body">
+              <p *ngIf="edit_comment_id != comment.id">{{comment.detail}}</p>
+              <div *ngIf="edit_comment_id == comment.id">
+                <textarea rows="3"class="form-control" id="comment_detail" name="comment_detail" #comment_detail
+                style="margin-bottom: 15px;">
+                {{comment.detail}}
+                </textarea>
+
+                <div class="pull-right">
+                  <button type="button" class="btn btn-secondary" (click)="cancleEdit()">ยกเลิก</button>
+                  <button class="btn btn-green" (click)="editPost(comment.id, comment_detail.value)">แก้ไข</button>
                 </div>
-            </div>
-        </div>
 
-    <div style="margin-bottom: 15px;">
+              </div>
+            </div>
+            <div class="panel-footer" style="text-align: right">
+              <small style="margin-right: 15px">{{comment.updated_at}}</small>
+              <div class="dropdown pull-right" *ngIf="role">
+
+                <span dropdown-toggle="dropdown" [id]="comment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <i class="fa fa-cog link" aria-hidden="true" ></i>
+            </span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="right: 0; left: inherit">
+                  <li><a class="link" (click)="editModeComment(comment.id)">แก้ไขข้อความ</a></li>
+                  <li><a class="link" (click)="deletePost(comment.id)">ลบข้อความ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="center" [formGroup]="commentForm" novalidate autocomplete="off">
         <hr>
-        <small class="text-muted" ><i class="zmdi zmdi-comment-alt"></i> 4 ความคิดเห็น</small>
-        <hr>
-    </div>
+        <h6 class="text-muted" style="margin-bottom: 15px"><i class="zmdi zmdi-comment-alt"></i> แสดงความคิดเห็น
+          <hr>
+        </h6>
 
-
-    <div class="card">
-
-        <div class="pull-xs-right dropdown" *ngIf="this.authService.checkRole()">
-            <a class="pull-xs-right link" style="padding: 1.25rem; padding-bottom: 0" id="dropdownMenuButton"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="zmdi zmdi-settings"></i>
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="right: 1.25rem; left: inherit">
-                <a class="dropdown-item" href="#">แก้ไขข้อความ</a>
-                <a class="dropdown-item" href="#">ลบข้อความ</a>
-            </div>
-        </div>
-
-
-        <div class="card-block">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="text-muted">
-                ชูใจ รักชาติ 2 days ago
-            </div>
-        </div>
-    </div>
-    <div class="card">
-
-        <div class="pull-xs-right dropdown" *ngIf="this.authService.checkRole()">
-            <a class="pull-xs-right link" style="padding: 1.25rem; padding-bottom: 0" id="dropdownMenuButton"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="zmdi zmdi-settings"></i>
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="right: 1.25rem; left: inherit">
-                <a class="dropdown-item" href="#">แก้ไขข้อความ</a>
-                <a class="dropdown-item" href="#">ลบข้อความ</a>
-            </div>
-        </div>
-
-
-        <div class="card-block">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="text-muted">
-                ชูใจ รักชาติ 2 days ago
-            </div>
-        </div>
-    </div>
-    <div class="card">
-
-        <div class="pull-xs-right dropdown" *ngIf="this.authService.checkRole()">
-            <a class="pull-xs-right link" style="padding: 1.25rem; padding-bottom: 0" id="dropdownMenuButton"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="zmdi zmdi-settings"></i>
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="right: 1.25rem; left: inherit">
-                <a class="dropdown-item" href="#">แก้ไขข้อความ</a>
-                <a class="dropdown-item" href="#">ลบข้อความ</a>
-            </div>
-        </div>
-
-
-        <div class="card-block">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="text-muted">
-                ชูใจ รักชาติ 2 days ago
-            </div>
-        </div>
-    </div>
-    <div class="card">
-
-        <div class="pull-xs-right dropdown" *ngIf="this.authService.checkRole()">
-            <a class="pull-xs-right link" style="padding: 1.25rem; padding-bottom: 0" id="dropdownMenuButton"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="zmdi zmdi-settings"></i>
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="right: 1.25rem; left: inherit">
-                <a class="dropdown-item" href="#">แก้ไขข้อความ</a>
-                <a class="dropdown-item" href="#">ลบข้อความ</a>
-            </div>
-        </div>
-
-
-        <div class="card-block">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="text-muted">
-                ชูใจ รักชาติ 2 days ago
-            </div>
-        </div>
-    </div>
-
-
-
-    <form class="center">
-        <hr>
-        <h6 class="text-muted" style="margin-bottom: 15px"><i class="zmdi zmdi-comment-alt"></i> แสดงความคิดเห็น<hr></h6>
         <div class="form-group row">
-            <div class="col-sm-12">
-                <textarea rows="5" class="form-control" id="courseDescription" name="courseDescription"></textarea>
-            </div>
+          <div class="col-sm-12">
+        <textarea rows="5" class="form-control" id="detail" name="detail"
+                  formControlName="detail" [(ngModel)]="commentForm.detail">
+        </textarea>
+          </div>
         </div>
+
         <hr>
-        <div class="form-group row pull-xs-right">
-            <div class="col-sm-12">
-                <button type="button" class="btn btn-secondary">ยกเลิก</button>
-                <button type="submit" class="btn btn-info">ส่งข้อความ</button>
-            </div>
+        <div class="form-group row pull-right">
+          <div class="col-sm-12">
+            <button type="button" class="btn btn-secondary" (click)="reset()">ยกเลิก</button>
+            <button type="submit" class="btn btn-green" (click)="postComment()">ส่งข้อความ</button>
+          </div>
         </div>
-    </form>
+      </form>
+
+    </div>
+  </div>
 </div>

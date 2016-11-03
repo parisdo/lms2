@@ -1,35 +1,42 @@
-<div class="container">
-    <div class="row box-wrapper" style="padding: 2rem;">
-        <form style="max-width: 800px" class="center">
-            <h5 style="margin-bottom: 15px">สร้างข้อความ  <hr></h5>
-            <div class="form-group row">
-                <label for="courseName" class="col-sm-2 col-form-label"> ชื่อเรื่อง</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="courseName">
-                </div>
+<div class="section-header">
+  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
+          <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
+        <h3 class="section-header-title">สร้างข้อความ</h3>
+      </div>
+    </div>
+  </div>
+</div>
 
-            </div>
-            <div class="form-group row">
-                <label for="courseDescription" class="col-sm-2 col-form-label">รายละเอียด</label>
-                <div class="col-sm-10">
-                    <textarea rows="5" class="form-control" id="courseDescription" name="courseDescription"></textarea>
-                </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="courseDescription" class="col-sm-2 col-form-label">ไฟล์แนบ</label>
-                <div class="col-sm-10">
-                    <input type="file" class="form-control" style="border: none">
-                </div>
-            </div>
-            
-            <hr>
-            <div class="form-group row pull-xs-right">
-                <div class="col-sm-12">
-                    <button type="button" class="btn btn-secondary">ยกเลิก</button>
-                    <button type="submit" class="btn btn-info">ส่งข้อความ</button>
-                </div>
-            </div>
-        </form>
+<div class="lms-body">
+  <div class="container">
+    <div class="row box-wrapper">
+
+      <form class="center" [formGroup]="postForm" novalidate autocomplete="off">
+        <div class="form-group row">
+          <label for="title" class="col-sm-3 col-form-label">ชื่อเรื่อง</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="title" name="title" formControlName="title" [(ngModel)]="postForm.title">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="detail" class="col-sm-3 col-form-label">ข้อความ</label>
+          <div class="col-sm-9">
+            <textarea class="form-control" rows="5" id="detail" name="detail" formControlName="detail" [(ngModel)]="postForm.detail"></textarea>
+          </div>
+        </div>
+        <hr>
+        <div class="form-group row pull-xs-right">
+          <div class="col-xs-12">
+            <button type="button" class="btn btn-orenge" (click)="cancel()">ยกเลิก</button>
+            <button type="submit" class="btn btn-info" (click)="createPost()" [disabled]="!postForm.valid">บันทึก</button>
+          </div>
+        </div>
+      </form>
     </div>
 </div>
+</div>
+

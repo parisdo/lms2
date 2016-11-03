@@ -1,0 +1,33 @@
+@import "../../../styles/default";
+
+.container{
+  margin-top: 0 !important;
+}
+
+.navbar{
+  position: fixed;
+  opacity: .99;
+  z-index: 999;
+  background-color: $green;
+  color: $white;
+}
+
+.navbar-nav>li>a{
+  color: $white;
+}
+
+.navbar-nav{
+  float: none;
+}
+
+.btn-toggle{
+  color: $white;
+}
+
+.btn-logout{
+  cursor: pointer;
+}
+
+.navbar-default .navbar-nav>.open>a{
+  background-color: transparent;
+}

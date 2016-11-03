@@ -57,7 +57,7 @@
                 <form style="max-width: 500px" class="center">
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <img class="img-responsive img-circle center" [src]="selectedBadge.image" [hidden]="!selectedBadge.image" style="margin-bottom: 15px; max-width: 80px">
+                            <img class="img-responsive img-circle center" [src]="editBadgeImage" [hidden]="!editBadgeImage" style="margin-bottom: 15px; max-width: 80px">
                         </div>
                         <div class="col-sm-8">
                             <input type="file" image-upload
@@ -103,10 +103,10 @@
                 <h6 class="modal-title" id="addBadgeModalLabel">แก้ไข</h6>
             </div>
             <div class="modal-body">
-                <form style="max-width: 500px" class="center"[formGroup]="badgeForm">
+                <form style="max-width: 500px" class="center" [formGroup]="badgeForm">
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <img class="img-responsive img-circle center" src="http://fakeimg.pl/80/" [hidden]="image" style="margin-bottom: 15px; max-width: 80px" >
+                            <!--<img class="img-responsive img-circle center" src="http://fakeimg.pl/80/" hidden="{{image}}" style="margin-bottom: 15px; max-width: 80px" >-->
                             <img class="img-responsive img-circle center" [src]="image" [hidden]="!image" style="margin-bottom: 15px; max-width: 80px">
 
                         </div>

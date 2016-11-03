@@ -1,5 +1,0 @@
-<span *ngFor="let lang of supportedLanguages; let index = index"
-      (click)="selectLang(lang.value)" class="{{index == 0 ? 'lang-left' : 'lang-right' }}"
-      [class.lang-active]="isCurrentLang(lang.value)">
-      {{ lang.display }}
-</span>

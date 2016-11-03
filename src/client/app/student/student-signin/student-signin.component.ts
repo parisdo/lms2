@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
+import {Router, NavigationExtras} from "@angular/router";
 import {FormBuilder, Validator, Validators} from "@angular/forms";
 import {AuthService} from "../../auth/auth.service";
 import {Student} from "../../models/student";
+import {StudentService} from "../../services/student.service";
+
+export class studentSignin{
+  constructor(public email? :any, public password?: any){}
+}
 
 @Component({
     moduleId: module.id,
@@ -17,7 +22,10 @@ export class StudentSigninComponent {
     userForm: any;
     student = new Student();
 
-    constructor(private authService: AuthService, private formBuilder: FormBuilder, private router: Router) {
+    constructor(private studentService: StudentService,
+                private authService: AuthService,
+                private formBuilder: FormBuilder,
+                private router: Router) {
         this.setMessage();
         this.createForm();
     }
@@ -39,10 +47,30 @@ export class StudentSigninComponent {
 
     signin(student: Student) {
         this.message = 'Trying to log in ...';
-        this.student = new Student(student.name, student.password);
+        this.student = new studentSignin(student.username, student.password);
         console.log(this.student);
-        this.authService.setToken(student.password, 'student');
-        this.router.navigate(['./student/dashboard']);
+
+      this.authService.signin(this.student)
+        .subscribe(
+          (data: any) => {
+            if(data.status == 'success'){
+              console.log(data.data.id);
+              let navigationExtras: NavigationExtras = {
+                queryParams: { 'id': data.data.id },
+              };
+
+              this.authService.setToken(data.data.token, 'student');
+              this.router.navigate(['./student/dashboard'], navigationExtras);
+
+            }else {
+              //console.log(data);
+              this.errorMessage = data.errormessage;
+            }
+          },
+          (error) => { console.log(error); }
+        );
+
+
     }
 
 }

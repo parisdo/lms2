@@ -4,6 +4,8 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {ImageResult, ResizeOptions} from "ng2-imageupload";
 import {Student} from "../../models/student";
+import {Message} from "primeng/components/common/api";
+import {msg} from '../../services/message-service';
 
 declare var _ : any;
 
@@ -33,6 +35,8 @@ export class UpdateStudentComponent {
     new Tab(1, 'เพิ่มนักเรียน'),
     new Tab(2, 'เพิ่มรูปนักเรียน'),
   ];
+
+  msgs: Message[] = [];
 
   constructor(private formBuilder: FormBuilder, private router: Router,
               private courseService: CourseService){
@@ -125,11 +129,23 @@ export class UpdateStudentComponent {
     this.courseService.updateStudent(newStudents)
       .subscribe(
         (data: any) => {
-          console.log(data);
-          console.log(data.status);
+          if(data.status == 'success'){
+            this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            window.history.back();
+          }else {
+            this.showMessage(msg.getUpdateStudentsScoreMessage(500));
+          }
         },
         (error) => console.log(error)
       );
+  }
+
+  showMessage(msg: any){
+    this.msgs = [];
+    this.msgs.push(msg);
+    setTimeout(() => {
+      this.msgs = [];
+    }, 3000);
   }
 
   cancel(){

@@ -1,5 +1,0 @@
-"use strict";
-exports.apiUrl = "http://54.169.115.233/api/v1/";
-exports.publicUrl = "http://54.169.115.233/";
-
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9ob21lL3NlcnZpY2VzL2NvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQWEsY0FBTSxHQUFXLCtCQUErQixDQUFDO0FBQ2pELGlCQUFTLEdBQVcsd0JBQXdCLENBQUMiLCJmaWxlIjoiYXBwL2hvbWUvc2VydmljZXMvY29uZmlnLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IGFwaVVybDogc3RyaW5nID0gXCJodHRwOi8vNTQuMTY5LjExNS4yMzMvYXBpL3YxL1wiO1xuZXhwb3J0IGNvbnN0IHB1YmxpY1VybDogc3RyaW5nID0gXCJodHRwOi8vNTQuMTY5LjExNS4yMzMvXCI7XG5cbiJdfQ==

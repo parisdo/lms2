@@ -1,0 +1,87 @@
+@import "../../../styles/default";
+
+.container{
+  margin-top: 0 !important;
+}
+
+
+.lms-body{
+  margin-top: 0;
+}
+
+.scrollable-content{
+  overflow-y: hidden;
+  max-height: inherit;
+}
+
+.navbar{
+  position: fixed;
+  opacity: .99;
+  z-index: 999;
+  background-color: $green;
+  color: $white;
+}
+
+.navbar-nav>li>a{
+  color: $white;
+}
+
+.navbar-nav{
+  float: none;
+}
+
+.btn-toggle{
+  color: $white;
+}
+
+.btn-logout{
+  cursor: pointer;
+}
+
+.navbar-default .navbar-nav>.open>a{
+  background-color: transparent;
+}
+
+
+.jumbotron{
+  max-height: 100px;
+  margin-bottom: 5px;
+  padding-top: 55px;
+  padding-bottom: 0;
+}
+
+.container{
+  margin-top: 0;
+}
+
+.courseNav{
+  background-color: $white;
+  color: $black;
+}
+
+
+.courseNavLink{
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 5px solid transparent;
+}
+
+.courseNavLink:hover{
+  color: $light-blue;
+  border-bottom: 5px solid $light-blue;
+}
+
+
+.link{
+  margin: 0.5rem;
+}
+.link:hover{
+  color: $light-blue;
+}
+
+.progress, .progress-bar{
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  width: 50% ;
+}

@@ -74,8 +74,8 @@
 
       <div class="scrollable-content">
 
-          <div class="col-md-4 col-sm-6 col-xs-12"
-               *ngFor="let student of students |filterData: searchValue: filterKeys; let index = index;"
+        <div class="row">
+          <div class="col-md-4" *ngFor="let student of students |filterData: searchValue: filterKeys; let index = index;"
                style="margin-bottom: 15px">
 
             <div class="panel panel-default">
@@ -89,7 +89,7 @@
                   </div>
                   <div class="col-md-6" style="padding-top: 15px">
                     <p >Name: {{student.name}}</p>
-                    <p>ID: {{student.id}}</p>
+                    <p>ID: {{student.student_id}}</p>
                     <!--<p>Level: {{student.level}}</p>-->
                     <div style="margin-top: 15px">
                       <div class="progress">
@@ -115,6 +115,8 @@
             </div>
 
           </div>
+        </div>
+
         </div>
 
     </div>
@@ -208,16 +210,15 @@
         </button>
 
         <div class="modal-title" id="viewLeaderboardlLabel">
-          <form class="form-inline text-xs-center" style="margin-right: 15px; margin-left: 15px; margin-bottom: 0">
+          <form class="form-inline text-center" style="margin-right: 15px; margin-left: 15px; margin-bottom: 0">
             <div class="form-group">
               <p class="form-control-static">แสดงข้อมูลเฉพาะ</p>
             </div>
             <div class="form-group">
-              <select class="form-control form-control-sm">
-                <option>5</option>
-                <option>10</option>
-                <option>20</option>
-              </select>
+              <!--<select class="form-control form-control-sm">-->
+                <!--<option>{{showHighScore}}</option>-->
+              <!--</select>-->
+              {{showHighScore}}
             </div>
             <span>อันดับแรก</span>
           </form>
@@ -228,26 +229,27 @@
 
 
         <div class="row">
-
           <!--Student Card-->
           <div class="col-xs-12" style="padding-right: 25px; padding-left: 25px">
             <div class="card card-block">
               <div class="row" *ngFor="let student of highScoreStudents; let index = index">
-                <div class="col-md-1 col-xs-12 text-xs-center">
-                  <h3>{{index + 1}}</h3>
-                </div>
-                <div class="col-md-2 col-xs-12 text-xs-center">
-                  <img class="center img-responsive img-circle"
-                       [src]="'http://54.169.115.233/students/logo/'+ student.image">
-                </div>
-                <div class="col-md-5 col-xs-12 text-xs-center">
-                  <h6 class="card-title" style="margin-top: 15px">{{student.student_id}} {{student.name}}</h6>
-                </div>
-                <div class="col-md-2 col-xs-12 text-xs-center">
-                  <h6 style="margin-top: 15px">{{student.overall_xp}} XP</h6>
-                </div>
-                <div class="col-md-2 col-xs-12 text-xs-center">
-                  <h6 style="margin-top: 15px">Level {{student.level}}</h6>
+                <div *ngIf="index < showHighScore">
+                  <div class="col-md-1 col-xs-12 text-center">
+                    <h3>{{index + 1}}</h3>
+                  </div>
+                  <div class="col-md-2 col-xs-12 text-xs-center">
+                    <img class="center img-responsive img-circle"
+                         [src]="'http://54.169.115.233/students/logo/'+ student.image">
+                  </div>
+                  <div class="col-md-5 col-xs-12 text-xs-center">
+                    <h6 class="card-title" style="margin-top: 15px">{{student.student_id}} {{student.name}}</h6>
+                  </div>
+                  <div class="col-md-2 col-xs-12 text-xs-center">
+                    <h6 style="margin-top: 15px">{{student.overall_xp}} XP</h6>
+                  </div>
+                  <div class="col-md-2 col-xs-12 text-xs-center">
+                    <h6 style="margin-top: 15px">Level {{student.level}}</h6>
+                  </div>
                 </div>
               </div>
             </div>

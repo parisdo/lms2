@@ -94,13 +94,13 @@ export class EditXPComponent {
       this.levels.push(level)
     }
 
-    let students_level: any;
+    let students_level = 1;
 
-    this.levels.forEach((level) => {
-      if (_.inRange(this.xpForm.value.start_xp, level.floor_xp, level.ceiling_xp)) {
-        students_level = level;
-      }
-    });
+    // this.levels.forEach((level) => {
+    //   if (_.inRange(this.xpForm.value.start_xp, level.floor_xp, level.ceiling_xp)) {
+    //     students_level = level;
+    //   }
+    // });
 
 
     let editXp = new EditXpCourse(

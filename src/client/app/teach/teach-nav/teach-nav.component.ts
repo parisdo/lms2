@@ -4,8 +4,6 @@ import {AuthService} from "../../auth/auth.service";
 import {Router} from "@angular/router";
 import {TeacherService} from "../../services/teacher.service";
 
-import {publicUrl} from "../../services/config"
-
 @Component({
   moduleId: module.id,
   selector: 'my-teach-nav',
@@ -16,14 +14,10 @@ import {publicUrl} from "../../services/config"
 export class TeachNavComponent {
 
   private teacher: Teacher;
-  private profileImage: string = '';
 
-  constructor(public authService: AuthService,
-              public router: Router,
-              private teacherService: TeacherService) {}
+  constructor(public authService: AuthService, public router: Router, private teacherService: TeacherService) {}
 
   ngOnInit() {
-
       if (this.authService.checkRole()) {
         this.getTeacher();
       }
@@ -33,7 +27,6 @@ export class TeachNavComponent {
     this.teacherService.getTeacher()
       .subscribe(
         data => {
-          //console.log(data);
           this.teacher = data;
           this.teacher.image = data.image;
         },

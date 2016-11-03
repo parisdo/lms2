@@ -5,9 +5,9 @@
       <p style="margin-bottom: 15px"><small *ngIf="this.authService.isLoggedIn()" class="text-muted" >{{message}}</small></p>
       <form [formGroup]="userForm"  (ngSubmit)="signin(userForm.value)" novalidate >
         <div class="form-group row">
-          <label for="username" class="col-sm-3 col-form-label">Email</label>
+          <label for="username" class="col-sm-3 col-form-label">Username</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" id="username" placeholder="Email"  name="username" formControlName="username">
+            <input type="text" class="form-control" id="username" placeholder="Username"  name="username" formControlName="username">
             <control-messages [control]="userForm.controls.username"></control-messages>
           </div>
         </div>

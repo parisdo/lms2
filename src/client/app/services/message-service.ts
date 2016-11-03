@@ -9,14 +9,15 @@ class MessageService {
   }
 
 
-  getUpdateStudentsScoreMessage(status : any){
+  //teacher module
+  getUpdateTeacherProfile(status : any){
 
     const success: any = {
-      summary: 'Updated Success', detail: 'Updated students score success'
+      summary: 'สำเร็จ', detail: 'บันทึกการแก้ไขข้อมูล'
     };
 
     const error: any = {
-      summary: 'Updated Failed', detail: 'Updated students score failed'
+      summary: 'Failed', detail: 'แก้ไขข้อมูลเรียบร้อย'
     };
 
     let summary: any;
@@ -33,7 +34,29 @@ class MessageService {
     return {severity: this.getSeverity(status), summary:summary, detail:detail}
   }
 
+  getUpdateStudentsScoreMessage(status : any){
 
+    const success: any = {
+      summary: 'Updated Success', detail: 'Updated success'
+    };
+
+    const error: any = {
+      summary: 'Updated Failed', detail: 'Updated failed'
+    };
+
+    let summary: any;
+    let detail: any;
+
+    if(status == 200){
+      summary = success.summary;
+      detail = success.detail;
+    }else {
+      summary = error.summary;
+      detail = error.detail;
+    }
+
+    return {severity: this.getSeverity(status), summary:summary, detail:detail}
+  }
 
   getLoginMessage(status : any){
 

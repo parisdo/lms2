@@ -8,12 +8,10 @@ import {Teacher} from "../models/teacher";
 import {xhrHeaders} from "../services/xhr-headers";
 import {Student} from "../models/student";
 import {Router} from "@angular/router";
+import {apiUrl} from '../services/config';
 
 @Injectable()
 export class AuthService {
-
-    private teacherUrl = 'http://54.169.115.233/api/v1/user/signin';
-    private studentUrl = '';
 
     token: string;
     redirectUrl: string;
@@ -53,14 +51,14 @@ export class AuthService {
 
     signin (teacher: Teacher): Observable<any> {
         let body = JSON.stringify(teacher);
-        return this.http.post(`${this.teacherUrl}`, body, xhrHeaders())
+        return this.http.post(`${apiUrl}user/signin`, body, xhrHeaders())
             .map((res) => res.json())
             .cache();
     }
 
     studentSigin(student: Student){
         let body = JSON.stringify(student);
-        return this.http.post(`${this.teacherUrl}`, body, xhrHeaders())
+        return this.http.post(`${apiUrl}user/signin`, body, xhrHeaders())
             .map((res) => res.json())
             .cache();
     }

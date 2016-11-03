@@ -7,6 +7,8 @@ import {TeacherService} from "../../services/teacher.service";
 import {AuthService} from "../../auth/auth.service";
 import {ValidationService} from "../../services/validation.service";
 import {CourseService} from "../../services/course.service";
+import {msg} from '../../services/message-service';
+import {Message} from "primeng/components/common/api";
 
 @Component({
     moduleId: module.id,
@@ -18,10 +20,9 @@ export class EditTeacherComponent implements OnInit{
 
     //Get parameter
     errorMessage: string;
-
     course_id: any;
-
     teacher = new Teacher;
+    msgs: Message[] = [];
 
     userForm: any;
     fakeImage: any = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoL…FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/2Q==';
@@ -41,14 +42,20 @@ export class EditTeacherComponent implements OnInit{
 
       if (this.teacherService.teacher != null) {
         this.teacher = this.teacherService.teacher;
+        this.teacher.image = 'http://54.255.138.5/teachers/logo/' + this.teacher.image;
+        this.image =  this.teacher.image;
 
       } else {
         this.router.navigate(['/teach']);
       }
     }
 
+    newImage: boolean = false;
+
     selected(imageResult: ImageResult) {
-      this.teacher.image = imageResult.resized
+
+      this.newImage = true;
+      this.image = imageResult.resized
         && imageResult.resized.dataURL
         || imageResult.dataURL;
     }
@@ -57,7 +64,7 @@ export class EditTeacherComponent implements OnInit{
 
       this.userForm = this.formBuilder.group({
         'name': ['', [Validators.required]],
-        'image': ['',],
+        'image': [''],
         'title': ['นาย'],
         'position': ['ครูอัตราจ้าง'],
         'id_card': ['', [Validators.required, ValidationService.isNumber, Validators.minLength(13), Validators.maxLength(13)]],
@@ -75,27 +82,43 @@ export class EditTeacherComponent implements OnInit{
 
     onSubmit(teacher: Teacher) {
 
-      console.log(this.teacher);
+      if(this.newImage){
+        this.teacher.image = this.image;
+      }else {
+        this.teacher.image = this.teacher.image.substring(34);
+      }
+
+      //this.teacher.image = this.teacher.image.substring(34);
+      console.log( this.teacher.image);
 
       this.teacherService.editTeacherProfile(this.teacher)
         .subscribe(
           (data: any) => {
-            console.log(data);
-            if(data.status == 'success'){
-              //this.showMessage(msg.getUpdateTeachersScoreMessage(200));
+            //console.log(data);
+            if(data.status == "success"){
+              this.showMessage(msg.getRegisterMessage(200));
             }else {
-              //this.showMessage(msg.getUpdateTeachersScoreMessage(500));
+              this.showMessage(msg.getRegisterMessage(500));
             }
           },
           (error) => console.log(error)
         );
     }
 
-    cancel(){
-      window.history.back();
-    }
+  showMessage(msg: any){
+    this.msgs = [];
+    this.msgs.push(msg);
+    setTimeout(() => {
+      this.msgs = [];
+    }, 3000);
+  }
 
-    ngOnDestroy() {}
+
+  cancel(){
+      window.history.back();
+  }
+
+  ngOnDestroy() {}
 
 
 }

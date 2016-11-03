@@ -1,11 +1,7 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
-import {Observable, Subscription} from "rxjs";
 import {Router} from "@angular/router";
 import {AuthService} from "../auth/auth.service";
 
-/**
- * This class represents the lazy loaded HomeComponent.
- */
 @Component({
   moduleId: module.id,
   selector: 'tb-home',

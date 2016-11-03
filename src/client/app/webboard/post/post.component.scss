@@ -1,0 +1,85 @@
+@import "../../../styles/default";
+
+.lms-body{
+  margin-top: 15px;
+}
+
+.box-wrapper{
+  background-color: transparent;
+  border: none;
+}
+
+.section-header{
+  padding-top: 15px;
+  margin-top: -45px;
+  background-color: $blue;
+
+  &-title{
+    color: $white;
+  }
+
+  &-link{
+    color:  $white;
+  }
+
+  &-icon{
+    color: $white !important;
+  }
+}
+
+.panel.panel-default.panel-comment {
+  background-color: #e5e6e9;
+}
+
+
+.goBack{
+  float: left;
+  margin-right: 15px;
+  margin-top: -5px;
+}
+
+.dropdown{
+  float: right;
+}
+
+.dropdown-setting{
+  margin-top: -5px;
+}
+
+
+.level-tag{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  /* padding: 10px 10px 0px 10px; */
+  border-radius: 1em;
+  width: 40px;
+  border: solid 4px white;
+  color: $white;
+  background-color: $yellow;
+}
+
+:host/deep/.ui-growl, .ui-widget{
+  z-index: 2000;
+}
+
+.fa-cog{
+  cursor: pointer;
+  color: $gray;
+}
+
+.information{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.panel{
+  max-height: none;
+  min-height: inherit;
+}
+
+.panel-body{
+  cursor: pointer;
+  min-height: inherit;
+}
