@@ -1,7 +1,11 @@
 @import "../../../styles/default";
 
+
 .lms-body{
-  margin-top: 15px;
+  margin-top: 0;
+}
+.container{
+  margin-top: 45px;
 }
 
 .box-wrapper{
@@ -11,7 +15,7 @@
 
 .section-header{
   padding-top: 15px;
-  background-color: transparent;
+  background-color: $light-gray;
 
   &-title{
     color: $gray;
@@ -76,4 +80,34 @@
 .panel-body{
   cursor: pointer;
   min-height: inherit;
+}
+
+
+.showHighScore{
+  float: none;
+  text-align: center;
+}
+
+.showHighScore-menu{
+  float: none;
+  text-align: center;
+  right: 0;
+  left: -10px;
+  width: 50px;
+  margin: 0 auto;
+}
+
+
+.highScoreRow{
+  padding: 5px;
+}
+
+.odd{
+  @extend .highScoreRow;
+  background-color: $light-gray;
+}
+
+.even {
+  @extend .highScoreRow;
+  background-color: $white;
 }

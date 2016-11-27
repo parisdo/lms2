@@ -1,7 +1,7 @@
 <p-growl [value]="msgs" sticky="sticky"></p-growl>
 
 <div class="section-header">
-  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+  <div class="container" style="margin-top: 55px;">
     <div class="row">
       <div class="col-xs-12">
         <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
@@ -17,7 +17,7 @@
         <div class="row box-wrapper">
         <form style="max-width: 800px" class="center"  [formGroup]="courseForm">
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label"> ชื่อชั้นเรียน</label>
+                <label for="name" class="col-sm-2 col-form-label"> ชื่อชั้นเรียน *</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="name" formControlName="name" name="name">
                 </div>

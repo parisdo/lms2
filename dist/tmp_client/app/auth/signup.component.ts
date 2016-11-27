@@ -6,7 +6,6 @@ import {TeacherService} from "../services/teacher.service";
 import {AuthService} from "./auth.service";
 import {ImageResult, ResizeOptions} from "ng2-imageupload";
 import {ValidationService} from "../services/validation.service";
-import { CustomValidators } from 'ng2-validation';
 
 @Component({
   moduleId: module.id,
@@ -44,24 +43,21 @@ export class SignupComponent {
   }
 
   createForm(){
-    //var password = new FormControl('', [Validators.required, ValidationService.passwordValidator]);
-    // var certainPassword = new FormControl('', [Validators.required, CustomValidators.equalTo(password)]);
 
     this.userForm = this.formBuilder.group({
       'email': ['', [Validators.required, ValidationService.emailValidator]],
       'password': ['', [Validators.required, ValidationService.passwordValidator]],
-      // password: password,
-      // certainPassword: certainPassword,
+      'password_confirmation': [''],
       'name': ['', [Validators.required]],
-      'image': ['',],
+      'image': [''],
       'title': ['นาย'],
       'position': ['ครูอัตราจ้าง'],
       'id_card': ['', [Validators.required, ValidationService.isNumber, Validators.minLength(13), Validators.maxLength(13)]],
-      'phone': ['', [Validators.required, ValidationService.isNumber]],
-      'address': ['', [Validators.required]],
-      'teaching_level': ['', [Validators.required]],
-      'institution': ['', [Validators.required]],
-      'province': ['', [Validators.required]]
+      'phone': [''],
+      'address': [''],
+      'teaching_level': [''],
+      'institution': [''],
+      'province': ['']
     });
   }
 

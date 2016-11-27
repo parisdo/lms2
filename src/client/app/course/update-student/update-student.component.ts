@@ -125,7 +125,7 @@ export class UpdateStudentComponent {
       this.course_id,
       this.students
     );
-    console.log(newStudents);
+    //console.log(newStudents);
     this.courseService.updateStudent(newStudents)
       .subscribe(
         (data: any) => {

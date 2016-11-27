@@ -1,6 +1,6 @@
 "use strict";
 var Student = (function () {
-    function Student(student_id, title, name, image, overall_xp, level, course_id, username, password, id, selected, progressType) {
+    function Student(student_id, title, name, image, overall_xp, level, course_id, username, password, id, selected, progressType, maxXP, badges) {
         this.student_id = student_id;
         this.title = title;
         this.name = name;
@@ -13,6 +13,8 @@ var Student = (function () {
         this.id = id;
         this.selected = selected;
         this.progressType = progressType;
+        this.maxXP = maxXP;
+        this.badges = badges;
     }
     return Student;
 }());

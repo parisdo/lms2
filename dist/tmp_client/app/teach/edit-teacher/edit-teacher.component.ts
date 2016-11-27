@@ -42,15 +42,20 @@ export class EditTeacherComponent implements OnInit{
 
       if (this.teacherService.teacher != null) {
         this.teacher = this.teacherService.teacher;
-        this.teacher.image = 'http://54.169.115.233/teachers/logo/' + this.teacher.image;
+        this.teacher.image = 'http://54.255.138.5/teachers/logo/' + this.teacher.image;
+        this.image =  this.teacher.image;
 
       } else {
         this.router.navigate(['/teach']);
       }
     }
 
+    newImage: boolean = false;
+
     selected(imageResult: ImageResult) {
-      this.teacher.image = imageResult.resized
+
+      this.newImage = true;
+      this.image = imageResult.resized
         && imageResult.resized.dataURL
         || imageResult.dataURL;
     }
@@ -59,7 +64,7 @@ export class EditTeacherComponent implements OnInit{
 
       this.userForm = this.formBuilder.group({
         'name': ['', [Validators.required]],
-        'image': ['',],
+        'image': [''],
         'title': ['นาย'],
         'position': ['ครูอัตราจ้าง'],
         'id_card': ['', [Validators.required, ValidationService.isNumber, Validators.minLength(13), Validators.maxLength(13)]],
@@ -77,12 +82,18 @@ export class EditTeacherComponent implements OnInit{
 
     onSubmit(teacher: Teacher) {
 
-      console.log(this.teacher);
+      if(this.newImage){
+        this.teacher.image = this.image;
+      }else {
+        this.teacher.image = this.teacher.image.substring(34);
+      }
+
+      console.log( this.teacher.image);
 
       this.teacherService.editTeacherProfile(this.teacher)
         .subscribe(
           (data: any) => {
-            console.log(data);
+            //console.log(data);
             if(data.status == "success"){
               this.showMessage(msg.getRegisterMessage(200));
             }else {
@@ -104,9 +115,9 @@ export class EditTeacherComponent implements OnInit{
 
   cancel(){
       window.history.back();
-    }
+  }
 
-    ngOnDestroy() {}
+  ngOnDestroy() {}
 
 
 }

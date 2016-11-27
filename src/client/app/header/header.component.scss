@@ -37,6 +37,12 @@
   color: $white;
 }
 
+.navbar-brand>img {
+  display: block;
+  max-height: 25px;
+  float: left;
+  margin-right: 15px;
+}
 
 .navbar-default .navbar-nav>.open>a{
   background-color: transparent;

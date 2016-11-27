@@ -6,7 +6,7 @@ import {Badge} from "../../models/badge";
 import {FormBuilder, Validators} from "@angular/forms";
 import {CourseService} from "../../services/course.service";
 import {Course} from "../../models/course";
-
+import {publicUrl} from "../../services/config";
 declare var $:any;
 
 @Component({
@@ -15,6 +15,7 @@ declare var $:any;
     templateUrl: 'edit-badge.component.html',
     styleUrls:['edit-badge.component.css']
 })
+
 export class EditBadgeComponent {
 
     course: Course;
@@ -37,12 +38,16 @@ export class EditBadgeComponent {
 
     ngOnInit(){
 
-      if(this.courseService.course != null){
-        this.course = this.courseService.course;
-        this.getBadges(this.course.id);
-        this.createBadgeForm();
+      this.createBadgeForm();
+
+      if(localStorage.getItem('course_id') != undefined){
+        this.courseService.getCourse(localStorage.getItem('course_id'))
+          .subscribe((data: any) => {
+            this.course = data.course;
+            this.getBadges(this.course.id);
+          }, error => console.log(error));
       }else {
-        this.router.navigate(['teach']);
+        this.router.navigate(['/teach']);
       }
 
     }
@@ -61,15 +66,16 @@ export class EditBadgeComponent {
         this.image = null;
     }
 
+
     getBadges(id: any) {
         this.courseService.getAllBadge(id)
             .subscribe(
                 (data:any) => {
-                    console.log(data.badge);
+                    //console.log(data);
                     this.badges = data.badge;
 
                     this.badges.map((badge) => {
-                       badge.image = 'http://54.169.115.233/students/badges/' + badge.image
+                       badge.image = `${publicUrl}students/badges/${badge.image}`
                     });
                 },
                 error =>  console.log(error))
@@ -84,7 +90,7 @@ export class EditBadgeComponent {
             .subscribe(
                 (data: any) => {
                     //console.log(data);
-                    console.log(data.status);
+                    //console.log(data.status);
                     if(data.status == 'success'){
                         this.ngOnInit();
                         this.resetCreateForm();
@@ -96,17 +102,26 @@ export class EditBadgeComponent {
 
 
     editBadgeModal(badge: Badge){
-        this.selectedBadge = badge;
+
+      this.selectedBadge = badge;
+      this.editBadgeImage = badge.image;
     }
 
     editBadge(){
 
-        //console.log(this.selectedBadge);
-        this.courseService.editBadge(this.selectedBadge)
+      if(this.isEdited){
+        this.selectedBadge.image = this.editBadgeImage;
+      }else {
+        this.selectedBadge.image = this.selectedBadge.image.substring(36);
+      }
+
+      this.isEdited = false;
+      console.log(this.selectedBadge);
+
+      this.courseService.editBadge(this.selectedBadge)
             .subscribe(
                 (data: any) => {
-                    console.log(data);
-                    //console.log(data.status);
+                    //console.log(data);
                     if(data.status == 'success'){
                         this.ngOnInit();
                         this.resetEditForm();
@@ -122,8 +137,13 @@ export class EditBadgeComponent {
             || imageResult.dataURL;
     }
 
+
+    isEdited: boolean = false;
+    editBadgeImage: string = "";
+
     selectedBadgeImage(imageResult: ImageResult) {
-        this.selectedBadge.image = imageResult.resized
+        this.isEdited = true;
+        this.editBadgeImage = imageResult.resized
             && imageResult.resized.dataURL
             || imageResult.dataURL;
     }
@@ -148,16 +168,13 @@ export class EditBadgeComponent {
     }
 
     resetEditForm(){
-        $('#closeEditBadgeModal').click();
+      $('#closeEditBadgeModal').click();
     }
 
     cancel(){
       window.history.back();
     }
 
-    ngOnDestroy() {
-
-    }
-
+    ngOnDestroy() {}
 
 }

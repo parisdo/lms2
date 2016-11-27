@@ -27,6 +27,7 @@ var filterdata_pipe_1 = require("./pipes/filterdata.pipe");
 var student_service_1 = require("../services/student.service");
 var progressbar_1 = require("primeng/components/progressbar/progressbar");
 var webboard_service_1 = require("../services/webboard.service");
+var equal_validator_directive_1 = require("../services/equal-validator.directive");
 var SharedModule = (function () {
     function SharedModule() {
     }
@@ -39,7 +40,7 @@ var SharedModule = (function () {
                 teacher_service_1.TeacherService,
                 course_service_1.CourseService,
                 student_service_1.StudentService,
-                webboard_service_1.WebboardService
+                webboard_service_1.WebboardService,
             ]
         };
     };
@@ -61,7 +62,8 @@ var SharedModule = (function () {
                 footer_component_1.FooterComponent,
                 teach_nav_component_1.TeachNavComponent,
                 control_messages_component_1.ControlMessagesComponent,
-                filterdata_pipe_1.FilterData
+                filterdata_pipe_1.FilterData,
+                equal_validator_directive_1.EqualValidator
             ],
             exports: [
                 common_1.CommonModule,
@@ -78,7 +80,8 @@ var SharedModule = (function () {
                 footer_component_1.FooterComponent,
                 teach_nav_component_1.TeachNavComponent,
                 control_messages_component_1.ControlMessagesComponent,
-                filterdata_pipe_1.FilterData
+                filterdata_pipe_1.FilterData,
+                equal_validator_directive_1.EqualValidator
             ]
         }), 
         __metadata('design:paramtypes', [])

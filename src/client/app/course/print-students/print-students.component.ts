@@ -17,23 +17,51 @@ import {ImageResult, ResizeOptions} from "ng2-imageupload";
 export class PrintStudentsComponent implements OnInit{
 
     //Get parameter
-
-
     errorMessage: string;
+    courseName: any;
     students: Student[] = [];
 
-    constructor(private router: Router, private studentService: StudentService){}
+    newpage: boolean = false;
+
+
+    constructor(private router: Router, private courseService: CourseService){}
 
     ngOnInit(){
 
-      if(this.studentService.students.length != 0){
-        this.students = this.studentService.students;
-        console.log(this.students);
+      if(localStorage.getItem('course_id') != undefined){
+        this.courseService.getCourse(localStorage.getItem('course_id'))
+          .subscribe((data: any) => {
+            this.courseName = data.course.name;
+            this.students = data.students;
+            this.setPage();
+          }, error => console.log(error));
       }else {
         this.router.navigate(['/teach']);
       }
+    }
 
 
+    thum: any = [];
+    count: number = 0;
+
+    setPage() {
+
+      for (let i: number = 0; i < Math.ceil((this.students.length / 15)); i++) {
+        this.thum[i] = [];
+
+        for (let j: number = 0; j < 15; j++) {
+          if (this.count < this.students.length) {
+            this.thum[i][j] = this.students[this.count];
+            this.count++;
+          }
+        }
+      }
+
+    }
+
+
+    print(){
+      window.print();
     }
 
     cancel(){

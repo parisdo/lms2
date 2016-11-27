@@ -16,11 +16,13 @@ export class ProjectConfig extends SeedConfig {
   constructor() {
     super();
 
-    this.APP_TITLE = 'LMS Directory';
+    this.APP_TITLE = 'LMS';
     this.SYSTEM_CONFIG_DEV.paths['ng2-imageupload'] = `${this.APP_BASE}node_modules/ng2-imageupload`;
     this.SYSTEM_BUILDER_CONFIG.packages['ng2-imageupload'] = { main: 'index.js', defaultExtension : 'js'};
     this.SYSTEM_CONFIG_DEV.paths['ng2-validation'] = `${this.APP_BASE}node_modules/ng2-validation`;
     this.SYSTEM_BUILDER_CONFIG.packages['ng2-validation'] = { main: 'index.js', defaultExtension : 'js'};
+    // this.SYSTEM_CONFIG_DEV.paths['angular2-jwt'] = `${this.APP_BASE}node_modules/angular2-jwt`;
+    // this.SYSTEM_BUILDER_CONFIG.packages['angular2-jwt'] = { main: 'angular2-jwt.js', defaultExtension : 'js'};
 
 
     // Add `NPM` third-party libraries to be injected/bundled.

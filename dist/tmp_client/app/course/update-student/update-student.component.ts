@@ -125,12 +125,13 @@ export class UpdateStudentComponent {
       this.course_id,
       this.students
     );
-    console.log(newStudents);
+    //console.log(newStudents);
     this.courseService.updateStudent(newStudents)
       .subscribe(
         (data: any) => {
           if(data.status == 'success'){
             this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            window.history.back();
           }else {
             this.showMessage(msg.getUpdateStudentsScoreMessage(500));
           }

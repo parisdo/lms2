@@ -6,6 +6,7 @@ import {Level} from "../../models/level";
 import {msg} from '../../services/message-service';
 import {EditXpCourse} from "../../models/edit_xp";
 import {Message} from "primeng/components/common/api";
+import {Router} from "@angular/router";
 declare var _: any;
 
 @Component({
@@ -27,21 +28,30 @@ export class EditXPComponent {
   current_levelEnd: number = 0;
   msgs: Message[] = [];
 
-  constructor(private formBuilder: FormBuilder,
-              private courseService: CourseService) {
-  }
+  constructor(private formBuilder: FormBuilder, private courseService: CourseService, private router: Router) {}
 
   ngOnInit() {
-    this.course = this.courseService.course;
-    //console.log(this.course);
 
-    this.course.id = this.courseService.course.id;
-    this.levels = this.courseService.levels;
-    this.current_level = this.courseService.levels[this.courseService.levels.length - 1].level_id;
-    this.current_levelEnd = this.courseService.levels[this.courseService.levels.length - 1].ceiling_xp;
 
-    this.createXpForm();
-    this.createLevelsForm();
+    if(localStorage.getItem('course_id') != undefined){
+      this.courseService.getCourse(localStorage.getItem('course_id'))
+        .subscribe((data: any) => {
+          this.course = data.course;
+          this.levels = data.levels;
+
+          this.current_level = this.courseService.levels[this.courseService.levels.length - 1].level_id;
+          this.current_levelEnd = this.courseService.levels[this.courseService.levels.length - 1].ceiling_xp;
+
+          this.createXpForm();
+          this.createLevelsForm();
+
+        }, error => console.log(error));
+    }else {
+      this.router.navigate(['/teach']);
+    }
+
+
+
   }
 
   createXpForm() {
@@ -94,8 +104,8 @@ export class EditXPComponent {
       this.levels.push(level)
     }
 
-    let students_level = 1;
-
+    // let students_level = 1;
+    //
     // this.levels.forEach((level) => {
     //   if (_.inRange(this.xpForm.value.start_xp, level.floor_xp, level.ceiling_xp)) {
     //     students_level = level;
@@ -107,11 +117,10 @@ export class EditXPComponent {
       this.course.id,
       this.xpForm.value.start_xp,
       this.xpForm.value.leader_board,
-      this.levels,
-      students_level
+      this.levels
     );
 
-    console.log(editXp);
+    //console.log(editXp);
     this.courseService.settingCourse(editXp)
       .subscribe(
         (data: any) => {

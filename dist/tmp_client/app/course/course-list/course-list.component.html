@@ -3,7 +3,7 @@
 
 <div class="section-header" *ngIf="course != null">
   <my-course-nav (webboard)="gotoWebboard()" (feedback)="giveAllFeedback()" (leaderboard)="viewLeaderboard()"></my-course-nav>
-  <div class="container" style="margin-top: 45px;">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <a class="section-header-link">
@@ -16,9 +16,9 @@
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="right: 0; left: inherit">
               <li><a class="link" (click)="gotoPage('edit-course')">แก้ไขข้อมูลชั้นเรียน</a></li>
-              <li><a class="link" (click)="gotoPage('edit-xp')">แก้ไขการแต้มเริ่มต้นและการเลื่อนชั้น</a></li>
+              <li><a class="link" (click)="gotoPage('edit-xp')">แก้ไข  XP เริ่มต้นและการเลื่อนขั้น</a></li>
               <li><a class="link" (click)="gotoPage('edit-badge')">แก้ไขข้อมูลเหรียญรางวัล</a></li>
-              <li><a class="link" (click)="gotoPage('edit-student-score')">แก้ไขการแต้มสะสมของนักเรียน</a></li>
+              <li><a class="link" (click)="gotoPage('edit-student-score')">แก้ไข XP ของนักเรียน</a></li>
               <li><a class="link" (click)="gotoPage('print-students')">พิมพ์บัตรเข้าระบบของนักเรียน</a></li>
             </ul>
           </div>
@@ -34,10 +34,9 @@
   <div class="container" *ngIf="course != null">
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-8">
         <form class="form-inline">
           <div class="form-group">
-
             <p class="form-check-inline pull-left text-muted on-checked"  (click)="onCheckAll()" style="margin-right: 45px">
               <input class="form-check-input" type="checkbox" value="checkAll"
                      [(ngModel)]="checkAll" name="checkAll"> เลือกทั้งหมด
@@ -56,13 +55,22 @@
             </select>
           </div>
 
+          <div class="form-group">
+            เรียงลำดับข้อมูลตาม
+            <select class="form-control form-control-sm" name="orderKeys" (change)="orderBy($event.target.value)">
+              <option value="student_id">รหัสนักเรียน</option>
+              <option value="name">ชื่อนักเรียน</option>
+              <option value="xp">ค่า XP</option>
+            </select>
+          </div>
+
         </form>
       </div>
-      <div class="col-md-6">
-        <form class="form-inline" style="float: right">
-          <div class="form-group">
+      <div class="col-md-4">
+        <form class="form-inline">
+          <div class="form-group pull-right">
+            <button class="btn btn-orenge" type="button" (click)="onDeleteStudent()"><i class="fa fa-minus-circle" aria-hidden="true"></i> ลบนักเรียน</button>
             <button class="btn btn-green" type="button" (click)="updateStudent()"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มนักเรียน</button>
-            <button class="btn btn-green" type="button" (click)="onDeleteStudent()"><i class="fa fa-minus-circle" aria-hidden="true"></i> ลบนักเรียน</button>
           </div>
         </form>
 
@@ -80,7 +88,7 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <div class="pull-right"><span class="badge">{{student.level}}</span></div>
+                <div class="pull-right">Level <span class="badge">{{student.level}}</span></div>
               </div>
               <div class="panel-body" data-toggle="modal" data-target="#giveFeedback" (click)="giveFeedback(student)">
                 <div class="row">
@@ -90,15 +98,14 @@
                   <div class="col-md-6" style="padding-top: 15px">
                     <p >Name: {{student.name}}</p>
                     <p>ID: {{student.student_id}}</p>
-                    <!--<p>Level: {{student.level}}</p>-->
                     <div style="margin-top: 15px">
                       <div class="progress">
                         <div class="progress-bar progress-bar-{{student.progressType}}" role="progressbar"
                              [attr.aria-valuenow]="student.overall_xp" aria-valuemin="0" [attr.aria-valuemax]="100"
-                             [style.width]="student.overall_xp + '%'">
-                          {{student.overall_xp}}
+                             [style.width]="(student.overall_xp)+ '%'">
                         </div>
                       </div>
+                      <small>{{student.overall_xp}} <span>/ {{student.maxXP}} XP</span></small>
 
                     </div>
                   </div>
@@ -135,8 +142,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <h4 class="modal-title" id="giveFeedbacklLabel">มอบ {{feedbackState}} ให้กับ <span
-          *ngFor="let student of selectedStudents;" class="text-muted"
-          style="margin-right: 5px;">{{student.name}}</span></h4>
+          *ngFor="let student of selectedStudents; let last = last" class="text-muted"
+          style="margin-right: 5px;">{{student.name}} {{student.student_id}}<span *ngIf="selectedStudents.length > 1 && !last">,</span></span></h4>
       </div>
 
       <div class="modal-body" style="max-height: 350px; overflow-y: auto; margin-bottom: 15px">
@@ -171,7 +178,7 @@
             <div class="col-md-4" *ngFor="let xp of exp;">
               <div class="panel panel-default link" (click)="onUpdateStudentScore(xp)">
                 <div class="panel-body text-center">
-                  + {{xp}} XP
+                  + {{xp.toLocaleString()}} XP
                 </div>
               </div>
             </div>
@@ -215,15 +222,18 @@
               <p class="form-control-static">แสดงข้อมูลเฉพาะ</p>
             </div>
             <div class="form-group">
-              <!--<select class="form-control form-control-sm">-->
-                <!--<option>{{showHighScore}}</option>-->
-              <!--</select>-->
+              <select class="form-control form-control-sm" (change)="selectHighScore($event.target.value)">
+                <option value="{{defaultHighScore}}">{{defaultHighScore}}</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">15</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+              </select>
               {{showHighScore}}
             </div>
             <span>อันดับแรก</span>
           </form>
-        </div>
-
       </div>
       <div class="modal-body" style="max-height: 350px; overflow-y: auto;">
 
@@ -232,25 +242,37 @@
           <!--Student Card-->
           <div class="col-xs-12" style="padding-right: 25px; padding-left: 25px">
             <div class="card card-block">
-              <div class="row" *ngFor="let student of highScoreStudents; let index = index">
+              <div class="row {{index % 2 != 0 ? 'odd': 'even'}}" *ngFor="let student of highScoreStudents; let index = index">
                 <div *ngIf="index < showHighScore">
-                  <div class="col-md-1 col-xs-12 text-center">
-                    <h3>{{index + 1}}</h3>
+                  <div class="row">
+                    <div class="col-md-1 col-xs-12 text-center">
+                      <h3>{{index + 1}}</h3>
+                    </div>
+                    <div class="col-md-2 col-xs-12 text-xs-center">
+                      <img class="center img-responsive img-circle" [src]="student.image">
+                    </div>
+                    <div class="col-md-5 col-xs-12 text-xs-center">
+                      <p class="card-title" style="margin-top: 15px">{{student.student_id}} {{student.name}}</p>
+                    </div>
+                    <div class="col-md-2 col-xs-12 text-xs-center">
+                      <p style="margin-top: 15px">{{student.overall_xp}} XP</p>
+                    </div>
+                    <div class="col-md-2 col-xs-12 text-xs-center">
+                      <p style="margin-top: 15px">Level {{student.level}}</p>
+                    </div>
                   </div>
-                  <div class="col-md-2 col-xs-12 text-xs-center">
-                    <img class="center img-responsive img-circle"
-                         [src]="'http://54.169.115.233/students/logo/'+ student.image">
+                  <div class="row">
+                    <div class="col-md-offset-3 col-md-5">
+                      <div class="row">
+                        <div class="col-md-3" *ngFor="let badge of student.badges;">
+                          <img class="center img-responsive img-circle " [src]="badge.image" style="margin-bottom: 5px; max-width: 40px">
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-5 col-xs-12 text-xs-center">
-                    <h6 class="card-title" style="margin-top: 15px">{{student.student_id}} {{student.name}}</h6>
-                  </div>
-                  <div class="col-md-2 col-xs-12 text-xs-center">
-                    <h6 style="margin-top: 15px">{{student.overall_xp}} XP</h6>
-                  </div>
-                  <div class="col-md-2 col-xs-12 text-xs-center">
-                    <h6 style="margin-top: 15px">Level {{student.level}}</h6>
-                  </div>
+
                 </div>
+
               </div>
             </div>
           </div>

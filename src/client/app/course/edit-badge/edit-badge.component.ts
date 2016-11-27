@@ -38,12 +38,16 @@ export class EditBadgeComponent {
 
     ngOnInit(){
 
-      if(this.courseService.course != null){
-        this.course = this.courseService.course;
-        this.getBadges(this.course.id);
-        this.createBadgeForm();
+      this.createBadgeForm();
+
+      if(localStorage.getItem('course_id') != undefined){
+        this.courseService.getCourse(localStorage.getItem('course_id'))
+          .subscribe((data: any) => {
+            this.course = data.course;
+            this.getBadges(this.course.id);
+          }, error => console.log(error));
       }else {
-        this.router.navigate(['teach']);
+        this.router.navigate(['/teach']);
       }
 
     }
@@ -111,7 +115,7 @@ export class EditBadgeComponent {
         this.selectedBadge.image = this.selectedBadge.image.substring(36);
       }
 
-      this.editBadgeImage = false;
+      this.isEdited = false;
       console.log(this.selectedBadge);
 
       this.courseService.editBadge(this.selectedBadge)

@@ -55,12 +55,12 @@ export class StudentSigninComponent {
           (data: any) => {
             if(data.status == 'success'){
               //console.log(data.data.id);
-              let navigationExtras: NavigationExtras = {
-                queryParams: { 'id': data.data.id },
-              };
+              // let navigationExtras: NavigationExtras = {
+              //   queryParams: { 'id': data.data.id },
+              // };
 
-              this.authService.setToken(data.data.token, 'student');
-              this.router.navigate(['./student/dashboard'], navigationExtras);
+              this.authService.setToken(data.data.token, 'student',  data.data.id);
+              this.router.navigate(['./student/dashboard']);
 
             }else {
               //console.log(data);

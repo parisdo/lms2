@@ -40,7 +40,7 @@
         <p class="link">Leaderboard</p>
       </div>
       <div class="col-xs-4 courseNavLink" (click)="gotoWebboard()">
-        <p class="link">Chat</p>
+        <p class="link">Webboard</p>
       </div>
       <div class="col-xs-4 courseNavLink">
         <p class="link">Help</p>
@@ -85,7 +85,7 @@
               </div>
               <div class="row">
                 <div class="col-xs-12">
-                  <p><strong>ชื่อ</strong> {{student.name}}</p>
+                  <p><strong>ชื่อ-นามสกุล</strong> {{student.name}}</p>
                   <p><strong>รหัส</strong> {{student.student_id}}</p>
                   <p><strong>XP</strong> {{student.overall_xp}}</p>
 
@@ -155,7 +155,7 @@
               <div class="row" *ngIf="badges">
                 <div class="col-md-3" *ngFor="let badge of badges;">
                   <div class="card card-block text-center" style="max-width: 18rem;">
-                    <img class="center img-responsive img-circle " src="{{badge.image}}"
+                    <img class="center img-responsive img-circle " [src]="badge.image"
                          style="margin-bottom: 5px; max-width: 80px">
                     <p class="card-text" style="margin-bottom: 0">{{badge.name}}</p>
                   </div>
@@ -204,24 +204,40 @@
               <div class="card card-block" *ngIf="highScoreStudents.length > 0">
                 <div class="row" *ngFor="let student of highScoreStudents; let index = index">
                   <div *ngIf="index < showHighScore">
-                    <div class="col-md-1 col-xs-12 text-center">
-                      <h3>{{index + 1}}</h3>
+
+                    <div class="row">
+                      <div class="col-md-1 col-xs-12 text-center">
+                        <h3>{{index + 1}}</h3>
+                      </div>
+                      <div class="col-md-2 col-xs-12 text-xs-center">
+                        <img class="center img-responsive img-circle"
+                             [src]="student.student.image">
+                      </div>
+                      <div class="col-md-5 col-xs-12 text-xs-center">
+                        <h6 class="card-title" style="margin-top: 15px">{{student.student_id}} {{student.name}}</h6>
+                      </div>
+                      <div class="col-md-2 col-xs-12 text-xs-center">
+                        <h6 style="margin-top: 15px">{{student.student.overall_xp}} XP</h6>
+                      </div>
+                      <div class="col-md-2 col-xs-12 text-xs-center">
+                        <h6 style="margin-top: 15px">Level {{student.student.level}}</h6>
+                      </div>
                     </div>
-                    <div class="col-md-2 col-xs-12 text-xs-center">
-                      <img class="center img-responsive img-circle"
-                           [src]="student.image">
+
+                    <div class="row">
+                      <div class="col-md-offset-3 col-md-5">
+                        <div class="row">
+                          <div class="col-md-3" *ngFor="let badge of student.badge;">
+                            <img class="center img-responsive img-circle " [src]="badge.image" style="margin-bottom: 5px; max-width: 40px">
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-md-5 col-xs-12 text-xs-center">
-                      <h6 class="card-title" style="margin-top: 15px">{{student.student_id}} {{student.name}}</h6>
-                    </div>
-                    <div class="col-md-2 col-xs-12 text-xs-center">
-                      <h6 style="margin-top: 15px">{{student.overall_xp}} XP</h6>
-                    </div>
-                    <div class="col-md-2 col-xs-12 text-xs-center">
-                      <h6 style="margin-top: 15px">Level {{student.level}}</h6>
-                    </div>
+
                   </div>
                 </div>
+
+
               </div>
             </div>
 

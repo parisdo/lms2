@@ -15,13 +15,13 @@ require('rxjs/add/operator/map');
 require('rxjs/add/operator/catch');
 var xhr_headers_1 = require("../services/xhr-headers");
 var router_1 = require("@angular/router");
+var config_1 = require('../services/config');
 var AuthService = (function () {
     function AuthService(http, router) {
         this.http = http;
         this.router = router;
-        this.teacherUrl = 'http://54.169.115.233/api/v1/user/signin';
-        this.studentUrl = '';
         this.token = localStorage.getItem('token');
+        this.id = localStorage.getItem('id');
     }
     AuthService.prototype.upload = function (data) {
         console.log(data);
@@ -47,29 +47,33 @@ var AuthService = (function () {
     };
     AuthService.prototype.signin = function (teacher) {
         var body = JSON.stringify(teacher);
-        return this.http.post("" + this.teacherUrl, body, xhr_headers_1.xhrHeaders())
+        return this.http.post(config_1.apiUrl + "user/signin", body, xhr_headers_1.xhrHeaders())
             .map(function (res) { return res.json(); })
             .cache();
     };
     AuthService.prototype.studentSigin = function (student) {
         var body = JSON.stringify(student);
-        return this.http.post("" + this.teacherUrl, body, xhr_headers_1.xhrHeaders())
+        return this.http.post(config_1.apiUrl + "user/signin", body, xhr_headers_1.xhrHeaders())
             .map(function (res) { return res.json(); })
             .cache();
     };
     AuthService.prototype.signout = function () {
         this.token = undefined;
+        this.id = undefined;
         localStorage.removeItem('token');
         localStorage.removeItem('role');
+        localStorage.removeItem('id');
         return Rx_1.Observable.of(true);
     };
     AuthService.prototype.isLoggedIn = function () {
         return !!localStorage.getItem('token');
     };
-    AuthService.prototype.setToken = function (token, role) {
+    AuthService.prototype.setToken = function (token, role, id) {
         this.token = token;
+        this.id = id;
         localStorage.setItem('token', this.token);
         localStorage.setItem('role', role);
+        localStorage.setItem('id', id);
         return Rx_1.Observable.of('token');
     };
     AuthService.prototype.checkRole = function () {

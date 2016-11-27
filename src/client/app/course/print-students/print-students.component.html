@@ -1,5 +1,5 @@
 <div class="section-header">
-  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+  <div class="container container-header">
     <div class="row">
       <div class="col-xs-12">
         <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
@@ -10,20 +10,27 @@
   </div>
 </div>
 
-<div class="lms-body">
+<div class="lms-body" *ngIf="students != null">
   <div class="container">
 
 
     <div class="row box-wrapper">
 
-      <div class="row">
-        <div class="col-xs-12">
-          <button style="float: right" class="btn btn-green">พิมพ์</button>
+      <div class="row rowPrint">
+        <div class="col-xs-6">
+          <h3>{{courseName}}</h3>
+        </div>
+        <div class="col-xs-6">
+          <div class="pull-right">
+            <button class="btn-print btn btn-green" (click)="print()">พิมพ์</button>
+          </div>
         </div>
       </div>
 
-      <div class="row" *ngIf="students != null">
-        <div class="col-md-3" *ngFor="let student of students">
+
+      <div class="row {{i > 0 ? 'page-break': ''}}" *ngFor="let outer of thum; let i = index;">
+
+        <div class="col-xs-4 col-md-4" *ngFor="let student of thum[i]; let j = index">
 
           <div class="panel panel-default">
             <div class="panel-body">

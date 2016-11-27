@@ -101,6 +101,7 @@ export class CourseService {
         .map((res) => res.json())
         .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
+
   deleteBadge(id:any){
     return this.http.delete(`${apiUrl}course/delete/badge/${id}?token=${this.authService.token}`)
         .map((res: Response) => res.json())
@@ -114,5 +115,14 @@ export class CourseService {
       .map((res) => res.json().data)
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
+
+
+  //updated score
+
+  downloadExcel(id: any): Observable<any>{
+    return this.http.get(`${apiUrl}downloadExcel/${id}`)
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
 
 }

@@ -11,7 +11,7 @@
 </div>
 
 <div class="lms-body">
-  <div class="container" style="max-width: 800px; display: block">
+  <div class="container" style="display: block">
     <div class="row box-wrapper">
 
       <h4>ขั้นตอนที่ {{tabIndex}} {{tabName}}</h4>
@@ -68,30 +68,30 @@
         </div>
 
         <div class="row thTable">
-          <div class="col-md-3">รหัสนักเรียน</div>
-          <div class="col-md-3">คำนำหน้า</div>
-          <div class="col-md-3">ชื่อ-นามสกุล</div>
-          <div class="col-md-3">แก้ไข</div>
+          <div class="col-xs-3">รหัสนักเรียน</div>
+          <div class="col-xs-3">คำนำหน้า</div>
+          <div class="col-xs-3">ชื่อ-นามสกุล</div>
+          <div class="col-xs-3">แก้ไข</div>
         </div>
 
         <div *ngIf="students != null">
           <div class="row tdTable"  *ngFor="let student of students; let index = index">
 
             <div *ngIf="!editStudentMode || selectedIndex != index">
-              <div class="col-md-3">{{student.student_id}}</div>
-              <div class="col-md-2">{{student.title == 'mr' || student.title == 'boy' ? 'นาย': 'นางสาว'}}</div>
-              <div class="col-md-4">{{student.name}}</div>
-              <div class="col-md-3">
+              <div class="col-xs-3">{{student.student_id}}</div>
+              <div class="col-xs-2">{{student.title == 'mr' || student.title == 'boy' ? 'นาย': 'นางสาว'}}</div>
+              <div class="col-xs-4">{{student.name}}</div>
+              <div class="col-xs-3">
                 <button class="btn btn-info btn-sm" type="button" (click)="editStudent(index)">แก้ไข</button>
                 <button class="btn btn-danger btn-sm" type="button" (click)="deleteStudent(student)">ลบ</button>
               </div>
             </div>
 
             <div *ngIf="editStudentMode && selectedIndex == index">
-              <div class="col-md-3"><input type="text" class="form-control" [(ngModel)]="student.student_id" ></div>
-              <div class="col-md-2" scope="row">{{student.title == 'mr' || student.title == 'boy' ? 'นาย': 'นางสาว'}}</div>
-              <div class="col-md-4"><input type="text" class="form-control" [(ngModel)]="student.name" ></div>
-              <div class="col-md-3">
+              <div class="col-xs-3"><input type="text" class="form-control" [(ngModel)]="student.student_id" ></div>
+              <div class="col-xs-2" scope="row">{{student.title == 'mr' || student.title == 'boy' ? 'นาย': 'นางสาว'}}</div>
+              <div class="col-xs-4"><input type="text" class="form-control" [(ngModel)]="student.name" ></div>
+              <div class="col-xs-3">
                 <button class="btn btn-info btn-sm" type="button" (click)="editStudent(null)">ยกเลิก</button>
                 <button class="btn btn-danger btn-sm" type="button" (click)="deleteStudent(student)">ลบ</button>
               </div>
@@ -114,13 +114,13 @@
           <div class="row">
             <form [formGroup]="studentsForm">
               <div style="padding-bottom: 45px">
-                <div class="col-md-3">
+                <div class="col-xs-3">
                   <div class="form-group">
                     <input type="text" class="form-control" id="student_id" formControlName="student_id"
                            name="student_id">
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-xs-2">
                   <div class="form-group">
                     <select class="form-control" id="student_title" formControlName="student_title"
                             name="student_title">
@@ -131,13 +131,13 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-4">
                   <div class="form-group">
                     <input type="text" class="form-control" id="student_name" formControlName="student_name"
                            name="student_name">
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xs-3">
                   <div class="form-group">
                     <button class="btn btn-green btn-block" (click)="addStudent(studentsForm.value)"
                             [disabled]="!studentsForm.valid">
@@ -166,27 +166,23 @@
       </div>
 
       <form *ngIf="tabIndex == 3">
-        <table class="table table-hover">
-          <thead>
-          <tr>
-            <th>รหัส</th>
-            <th>ชื่อ</th>
-            <th>รูปภาพ</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let student of students">
-            <th scope="row">{{student.student_id}}</th>
-            <td>{{student.name}}</td>
-            <td>
+        <div class="row thTable">
+            <div class="col-xs-3">รหัสนักเรียน</div>
+            <div class="col-xs-3">ชื่อ</div>
+            <div class="col-xs-6">รูปภาพ</div>
+        </div>
+
+        <div class="row tdTable" *ngFor="let student of students">
+            <div class="col-xs-3">{{student.student_id}}</div>
+            <div class="col-xs-3">{{student.name}}</div>
+            <div class="col-xs-3">
               <img [src]="student.image" class="img-responsive" style="max-height: 100px"><br>
               <input type="file" image-upload
                      (imageSelected)="selected($event, student)"
                      [resizeOptions]="resizeOptions">
-            </td>
-          </tr>
-          </tbody>
-        </table>
+            </div>
+        </div>
+
         <div class="form-group row pull-right">
           <div class="col-sm-12">
             <button type="button" class="btn btn-info {{tabIndex == 1 ? 'disabled': ''}}" (click)="previous()">ย้อนกลับ
@@ -202,14 +198,14 @@
           <h5>กำหนดค่าเริ่มต้น</h5>
           <form [formGroup]="xpForm">
             <div class="form-group row">
-              <label for="start_xp" class="col-xs-4 col-form-label">แต้มเริ่มต้นของทุกคน</label>
+              <label for="start_xp" class="col-xs-4 col-form-label">XP เริ่มต้นของทุกคน</label>
               <div class="col-xs-6">
                 <input class="form-control" type="number" id="start_xp" formControlName="start_xp" name="start_xp">
               </div>
               <label class="col-xs-2 col-form-label">XP</label>
             </div>
             <div class="form-group row">
-              <label for="leader_board" class="col-xs-4 col-form-label">แสดงข้อมูลเฉพาะ</label>
+              <label for="leader_board" class="col-xs-4 col-form-label">แสดงข้อมูลผู้นำเฉพาะ (Leaderboard)</label>
               <div class="col-xs-6">
                 <input class="form-control" id="leader_board" type="number" formControlName="leader_board"
                        name="leader_board">
@@ -220,31 +216,26 @@
         </div>
 
         <hr>
-        <h5>กำหนดการเลื่อนขั้น</h5>
-        <table class="table table-hover" style="margin-bottom: 15px">
-          <thead>
-          <tr>
-            <th>Level</th>
-            <th>ค่า XP เริ่มต้น</th>
-            <th>ค่า XP สูงสุด</th>
-          </tr>
-          </thead>
-          <tbody *ngIf="levels != null">
-          <tr *ngFor="let level of levels; let last = last">
-            <th scope="row">{{level.level_id}}</th>
-            <td>
-              <div class="">{{level.floor_xp}}</div>
-            </td>
-            <td>
-              <div class="">{{level.ceiling_xp}}</div>
-            </td>
-            <td>
-              <button *ngIf="last" class="btn btn-danger btn-block" type="button" (click)="deleteLevel(level)">ลบ
-              </button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+        <h5>กำหนดการเลื่อนขั้น (Level UP)</h5>
+        <div class="rowTable">
+          <div class="row thTable" >
+            <div class="col-xs-3">Level</div>
+            <div class="col-xs-3">ค่า XP เริ่มต้น</div>
+            <div class="col-xs-3">ค่า XP สูงสุด</div>
+          </div>
+
+          <div *ngIf="levels != null">
+            <div class="row tdTable" *ngFor="let level of levels; let last = last">
+              <div class="col-xs-3">{{level.level_id}}</div>
+              <div class="col-xs-3">{{level.floor_xp}}</div>
+              <div class="col-xs-3">{{level.ceiling_xp}}</div>
+              <div class="col-xs-3">
+                <button *ngIf="last" class="btn btn-danger btn-block" type="button" (click)="deleteLevel(level)">ลบ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <form class="form-inline" [formGroup]="levelsForm" style="margin-bottom: 45px">
 
           <label style="margin-right: 15px; font-weight: 900;">Level</label>

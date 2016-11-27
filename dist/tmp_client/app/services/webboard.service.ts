@@ -28,9 +28,26 @@ export class WebboardService {
 
   getAllPost (id: any): Observable<any> {
     return this.http.get(`${apiUrl}post/course/${id}?token=${this.authService.token}`)
-      .map((res) => res.json().data)
+      .map((res) => res.json())
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
+
+
+  editPost(post: any): Observable<any>{
+    let body = JSON.stringify(post);
+    return this.http.post(`${apiUrl}post/edit?token=${this.authService.token}`, body, xhrHeaders())
+      .map((res) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+
+  deletePost(id: any): Observable<any>{
+    let body = JSON.stringify(id);
+    return this.http.post(`${apiUrl}post/delete?token=${this.authService.token}`, body, xhrHeaders())
+      .map((res) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
 
 
   postComment(post: any): Observable<any>{
@@ -56,6 +73,19 @@ export class WebboardService {
   }
 
 
+  replyComment(post: any): Observable<any>{
+    let body = JSON.stringify(post);
+    return this.http.post(`${apiUrl}post/replycomment?token=${this.authService.token}`, body, xhrHeaders())
+      .map((res) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  deleteReplyComment(id: any): Observable<any>{
+    let body = JSON.stringify(id);
+    return this.http.post(`${apiUrl}post/replycomment/delete?token=${this.authService.token}`, body, xhrHeaders())
+      .map((res) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
 
 
 }

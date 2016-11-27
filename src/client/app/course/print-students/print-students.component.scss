@@ -1,51 +1,106 @@
 @import "../../../styles/default";
 
-.box-title{
-  color: $dark-blue;
-  margin-bottom: 15px;
-}
+@media screen{
 
-.box-wrapper{
-  background-color: transparent;
-  border: none;
-}
+  .lms-body{
+    margin-top: 0;
+  }
+
+  .container-header{
+    margin-top: 55px;
+    margin-bottom: 15px;
+  }
+
+  .box-title{
+    color: $dark-blue;
+    margin-bottom: 15px;
+  }
+
+  .box-wrapper{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
 
 
-.section-header{
-  padding-top: 15px;
-  background-color: $white;
+  .section-header{
+    padding-top: 15px;
+    background-color: $white;
 
-  &-title{
+    &-title{
+      color: $gray;
+    }
+
+    &-link{
+      color: $gray;
+    }
+
+    &-icon{
+      color: $gray !important;
+    }
+  }
+
+
+  .fa{
     color: $gray;
+    cursor: pointer;
   }
 
-  &-link{
-    color: $gray;
+  .panel{
+    max-height: none;
+    min-height: inherit;
   }
 
-  &-icon{
-    color: $gray !important;
+  .panel-body{
+    text-align: left;
+    cursor: pointer;
+    min-height: inherit;
   }
+
+  .rowPrint{
+    margin-bottom: 15px;
+  }
+
+
+  .btn-print{
+    margin-top: 20px;
+  }
+
+
+
+}
+
+@media print{
+
+  .lms-body{
+    margin-top: 0;
+    background-color: transparent;
+  }
+
+  .section-header{
+    padding-top: 0;
+    display: none;
+  }
+
+  .btn-print{
+    display: none;
+  }
+
+
+  .box-wrapper{
+    border: none;
+    padding: 15px;
+  }
+
+  .panel{
+    max-height: none;
+    min-height: inherit;
+    background-color: transparent;
+    border: solid 1px $gray;
+  }
+
+  .page-break	{ display: block; page-break-before: always; }
+
 }
 
 
-.fa{
-  color: $gray;
-  cursor: pointer;
-}
-
-.box-wrapper{
-  padding: 45px;
-}
-
-
-.panel{
-  max-height: none;
-  min-height: inherit;
-}
-
-.panel-body{
-  text-align: left;
-  cursor: pointer;
-  min-height: inherit;
-}

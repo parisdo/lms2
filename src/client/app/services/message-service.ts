@@ -1,7 +1,7 @@
 class MessageService {
 
   getSeverity(status : any){
-    const success: string = 'success';
+    const success: string = 'info';
     const error: string = 'error';
     let msg: any;
     status == 200 ? msg = success : msg = error;

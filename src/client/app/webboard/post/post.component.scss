@@ -29,6 +29,7 @@
 
 .panel.panel-default.panel-comment {
   background-color: #e5e6e9;
+  padding: 15px;
 }
 
 
@@ -82,4 +83,16 @@
 .panel-body{
   cursor: pointer;
   min-height: inherit;
+}
+
+.replyComment{
+  margin-top: 15px;
+}
+
+.panel-replyComment{
+  background-color: #b3b4b7;
+}
+
+.textboxReplyComment{
+  margin-top: 15px;
 }

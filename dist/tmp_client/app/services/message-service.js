@@ -3,18 +3,37 @@ var MessageService = (function () {
     function MessageService() {
     }
     MessageService.prototype.getSeverity = function (status) {
-        var success = 'success';
+        var success = 'info';
         var error = 'error';
         var msg;
         status == 200 ? msg = success : msg = error;
         return msg;
     };
-    MessageService.prototype.getUpdateStudentsScoreMessage = function (status) {
+    MessageService.prototype.getUpdateTeacherProfile = function (status) {
         var success = {
-            summary: 'Updated Success', detail: 'Updated students score success'
+            summary: 'สำเร็จ', detail: 'บันทึกการแก้ไขข้อมูล'
         };
         var error = {
-            summary: 'Updated Failed', detail: 'Updated students score failed'
+            summary: 'Failed', detail: 'แก้ไขข้อมูลเรียบร้อย'
+        };
+        var summary;
+        var detail;
+        if (status == 200) {
+            summary = success.summary;
+            detail = success.detail;
+        }
+        else {
+            summary = error.summary;
+            detail = error.detail;
+        }
+        return { severity: this.getSeverity(status), summary: summary, detail: detail };
+    };
+    MessageService.prototype.getUpdateStudentsScoreMessage = function (status) {
+        var success = {
+            summary: 'Updated Success', detail: 'Updated success'
+        };
+        var error = {
+            summary: 'Updated Failed', detail: 'Updated failed'
         };
         var summary;
         var detail;

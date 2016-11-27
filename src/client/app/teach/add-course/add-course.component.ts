@@ -68,7 +68,7 @@ export class AddCourseComponent {
     createCourseForm(){
         this.courseForm = this.formBuilder.group({
             'name': ['', [Validators.required]],
-            'description': ['', [Validators.required]]
+            'description': ['']
         });
     }
 
@@ -103,7 +103,7 @@ export class AddCourseComponent {
     }
 
     editStudent(index: any){
-      console.log(index);
+      //console.log(index);
       this.selectedIndex = index;
       this.editStudentMode = !this.editStudentMode;
     }
@@ -149,10 +149,10 @@ export class AddCourseComponent {
 
     addLevel(level: any){
 
-        if(level.ceiling_xp > level.floor_xp){
-
+        if(level.ceiling_xp > level.floor_xp && level.floor_xp > 0){
 
             if(this.current_level == 0){
+                level.floor_xp = 1;
                 this.newLevel(level);
             }else {
 
@@ -215,8 +215,8 @@ export class AddCourseComponent {
         this.courseService.createNewCourse(newCourse)
             .subscribe(
                 (data: any) => {
-                    console.log(data);
-                    console.log(data.status);
+                    //console.log(data);
+                    //console.log(data.status);
                     this.router.navigate(['/teach']);
                 },
                 (error) => console.log(error)

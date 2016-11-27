@@ -1,12 +1,12 @@
 <p-growl [value]="msgs" sticky="sticky"></p-growl>
 
 <div class="section-header">
-  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+  <div class="container" style="margin-top: 55px;">
     <div class="row">
       <div class="col-xs-12">
         <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
           <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
-        <h3 class="section-header-title">กำหนดการแต้มเริ่มต้นและการเลื่อนชั้น</h3>
+        <h3 class="section-header-title">กำหนด XP เริ่มต้นและการเลื่อนขั้น</h3>
       </div>
     </div>
   </div>
@@ -14,22 +14,20 @@
 
 <div class="lms-body" *ngIf="course != null">
   <div class="container">
-
         <div class="row box-wrapper">
+          <h3>กำหนดค่าเริ่มต้น</h3>
             <div class="center">
-
                 <div style="margin-bottom: 45px;">
-                    <h5>กำหนดค่าเริ่มต้น</h5>
                     <form [formGroup]="xpForm">
                         <div class="form-group row">
-                            <label for="start_xp" class="col-xs-4 col-form-label">แต้มเริ่มต้นของทุกคน</label>
+                            <label for="start_xp" class="col-xs-4 col-form-label">XP เริ่มต้นของทุกคน</label>
                             <div class="col-xs-6">
                                 <input class="form-control" type="number" id="start_xp" formControlName="start_xp" name="start_xp">
                             </div>
                             <label class="col-xs-2 col-form-label">XP</label>
                         </div>
                         <div class="form-group row">
-                            <label for="leader_board" class="col-xs-4 col-form-label">แสดงข้อมูลเฉพาะ</label>
+                            <label for="leader_board" class="col-xs-4 col-form-label">แสดงข้อมูลผู้นำเฉพาะ (Leaderboard)</label>
                             <div class="col-xs-6">
                                 <input class="form-control" id="leader_board" type="number"  formControlName="leader_board" name="leader_board">
                             </div>
@@ -39,26 +37,28 @@
                 </div>
 
                 <hr>
-                <h5>กำหนดการเลื่อนขั้น</h5>
-                <table class="table table-hover" style="margin-bottom: 15px">
-                    <thead>
-                    <tr>
-                        <th>Level</th>
-                        <th>ค่า XP เริ่มต้น</th>
-                        <th>ค่า XP สูงสุด</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngIf="levels != null">
-                    <tr *ngFor="let level of levels; let last = last">
-                        <th scope="row">{{level.level_id}}</th>
-                        <td><div class="">{{level.floor_xp}}</div></td>
-                        <td><div class="">{{level.ceiling_xp}}</div></td>
-                        <td>
-                            <button *ngIf="last" class="btn btn-danger" type="button" (click)="deleteLevel(level)">ลบ</button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+
+                <h3>กำหนดการเลื่อนขั้น</h3>
+
+                  <div class="rowTable">
+                    <div class="row thTable">
+                      <div class="col-md-3">Level</div>
+                      <div class="col-md-3">ค่า XP เริ่มต้น</div>
+                      <div class="col-md-3">ค่า XP สูงสุด</div>
+                    </div>
+
+                    <div *ngIf="levels != null">
+                      <div class="row tdTable" *ngFor="let level of levels; let last = last">
+                        <div class="col-md-3">{{level.level_id}}</div>
+                        <div class="col-md-3">{{level.floor_xp}}</div>
+                        <div class="col-md-3">{{level.ceiling_xp}}</div>
+                        <div class="col-md-3">
+                          <button *ngIf="last" class="btn btn-danger" type="button" (click)="deleteLevel(level)">ลบ</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
 
                 <div class="row">
                     <form class="form-inline" [formGroup]="levelsForm">

@@ -11,6 +11,9 @@ export class Student {
     public password?: string,
     public id?: any,
     public selected? : boolean,
-    public progressType?: any
+    public progressType?: any,
+    public maxXP?: any,
+    public badges?: any[]
+
   ) {}
 }

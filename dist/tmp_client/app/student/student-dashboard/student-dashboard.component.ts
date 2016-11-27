@@ -10,6 +10,7 @@ import {Teacher} from "../../models/teacher";
 import {Message} from "primeng/components/common/api";
 import {msg} from '../../services/message-service';
 import {AuthService} from "../../auth/auth.service";
+import {publicUrl} from "../../services/config"
 
 declare var $: any;
 
@@ -52,14 +53,12 @@ export class StudentDashboardComponent {
   }
 
   ngOnInit() {
-    this.sub = this.route
-      .queryParams
-      .subscribe(params => {
+    this.student_id = this.authService.id;
+    //console.log(this.student_id);
 
-        this.student_id = +params['id'];
-        console.log(this.student_id);
-        this.getStudent();
-      })
+    if(this.student_id != null){
+      this.getStudent(this.student_id);
+    }
   }
 
   selected(imageResult: ImageResult) {
@@ -71,6 +70,7 @@ export class StudentDashboardComponent {
   createForm() {
     this.userForm = this.formBuilder.group({
       'student_id': ['', [Validators.required]],
+      'username': ['', [Validators.required]],
       'name': ['', [Validators.required]],
       'password': ['', [Validators.required]]
     });
@@ -81,28 +81,37 @@ export class StudentDashboardComponent {
   }
 
 
-  getStudent() {
-    this.studentService.getStudent(this.student_id)
+  getStudent(id: any) {
+    this.studentService.getStudent(id)
       .subscribe(
         (data) => {
-          console.log(data);
+          //console.log(data);
 
           this.teacher = data.teacher[0];
           this.student = data.student[0].student;
-          this.student.image = 'http://54.169.115.233/students/logo/' + this.student.image;
+          this.student.image = publicUrl + 'students/logo/' + this.student.image;
           this.student.progressType = this.progressCalculator(this.student.overall_xp);
           this.studentService.student = this.student;
           this.badges = data.student[0].badge;
           this.badges.map((badge) => {
-            badge.image = 'http://54.169.115.233/students/badges/' + badge.image
+            badge.image = publicUrl​ + 'students/badges/' + badge.image
           });
 
           this.course = data.course;
           this.highScoreStudents = data.leaderboard;
+
           this.highScoreStudents.map((student) => {
-            student.image = 'http://54.169.115.233/students/logo/' + student.image
+            student.student.image = publicUrl + 'students/logo/' + student.student.image;
+
+            for(let i = 0; i < student.badge.length; i++){
+              student.badge[i].image = publicUrl + 'students/badges/' + student.badge[i].image;
+            }
+
           });
 
+
+
+          //console.log(this.highScoreStudents);
           this.showHighScore = +this.course.leader_board;
 
           this.createForm();
@@ -149,6 +158,10 @@ export class StudentDashboardComponent {
 
 
   save() {
+
+    let imageSubstr = this.student.image.substring(35);
+    console.log(imageSubstr);
+
     this.studentService.editStudent(this.student)
       .subscribe(
         (data: any) => {
@@ -180,10 +193,6 @@ export class StudentDashboardComponent {
 
   cancel(){
     window.history.back();
-  }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
   }
 
 

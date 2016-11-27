@@ -3,6 +3,10 @@
 @import "colors";
 @import "button";
 
+body{
+  background-color: $light-gray;
+}
+
 .lms-body, body{
   font-family: "proxima-nova", sans-serif;
   overflow-x: hidden;
@@ -10,9 +14,12 @@
   color: $dark-blue;
 }
 
+
 .lms-body{
   margin-top: 45px;
-  margin-bottom: 45px;
+  padding-top: 45px;
+  padding-bottom: 90px;
+  //margin-bottom: 45px;
 }
 
 .container{
@@ -110,17 +117,45 @@ textarea {
   padding: 2rem;
   overflow-y: scroll;
 }
+
 .scrollable-content::-webkit-scrollbar {
   width:10px;
   border-radius: 10px;
 }
+
 .scrollable-content::-webkit-scrollbar * {
   background:transparent;
   border-radius: 10px;
-
 }
+
 .scrollable-content::-webkit-scrollbar-thumb {
   background: $gray !important;
   border-radius: 10px;
 
 }
+
+/* Table */
+
+.rowTable{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.thTable{
+  @extend .rowTable;
+  background-color: $light-gray;
+}
+
+.tdTable{
+  @extend .rowTable;
+  border-bottom: 1px solid $light-gray;
+}
+
+/* Message ui-growl */
+
+:host/deep/.ui-growl-item-container.ui-state-highlight.ui-growl-message-info {
+  background-color: $green;
+  border-color: $green;
+}
+

@@ -15,7 +15,7 @@ declare var  $: any;
 declare var _: any;
 
 export class updateStudentsScore {
-  constructor(public course_id?: any, public score?: any, public students?: any) { }
+  constructor(public course_id?: any, public score?: any, public students?: any, public max_score?: any) { }
 }
 
 export class updateStudentsBadge {
@@ -41,7 +41,7 @@ export class CourseListComponent {
   students: Student[]= [];
   levels: Level[] = [];
 
-  exp: any[] = [10, 15, 20];
+  exp: any[] = [50, 100, 1000];
   badges: Badge[] = [];
 
   msgs: Message[] = [];
@@ -61,6 +61,7 @@ export class CourseListComponent {
   //View Highscore
 
   showHighScore: number = 5;
+  defaultHighScore: number;
 
   highScoreStudents: any[] = [];
 
@@ -80,6 +81,7 @@ export class CourseListComponent {
         .subscribe(params => {
 
           this.selectedId = +params['id'];
+          localStorage.setItem('course_id', params['id']);
           //console.log(this.selectedId);
 
           this.courseService.getCourse(this.selectedId)
@@ -88,17 +90,19 @@ export class CourseListComponent {
 
                     this.course = data.course;
                     this.levels = data.levels;
+                    //console.log(this.levels);
                     this.badges = data.badges;
 
                     this.badges.map((badge) => {
-                      badge.image = 'http://54.169.115.233/students/badges/' + badge.image
+                      badge.image = publicUrl​ + 'students/badges/' + badge.image
                     });
 
                     this.courseService.course = data.course;
                     this.courseService.levels = data.levels;
                     this.courseService.badges = this.badges;
 
-                    this.showHighScore = +this.course.leader_board;
+                    this.defaultHighScore = +this.course.leader_board;
+                    this.showHighScore = this.defaultHighScore;
 
                     // console.log(data.students);
 
@@ -108,20 +112,58 @@ export class CourseListComponent {
                           student.student_id = student.student_id.toString();
                           student.image = publicUrl + 'students/logo/' + student.image;
                           student.progressType = this.progressCalculator(student.overall_xp);
+                          student.maxXP = this.calculateMaxXP(student.level);
+                          student.badges = this.getBadgeStudent(student.id);
                         }
                     );
+                    //console.log(this.students);
                     this.studentService.students = this.students;
 
                     this.courseService.getHighscore(this.courseService.course.id)
                       .subscribe(
                         (data: any) => {
+
                           this.highScoreStudents = data.students;
+                          this.highScoreStudents.forEach(
+                            student => {
+                              student.student_id = student.student_id.toString();
+                              student.image = publicUrl + 'students/logo/' + student.image;
+                              student.progressType = this.progressCalculator(student.overall_xp);
+                              student.maxXP = this.calculateMaxXP(student.level);
+                              student.badges = this.getBadgeStudent(student.id);
+                            }
+                          );
+
                         });
 
                   },
                   error =>  this.errorMessage = <any>error);
          });
 
+  }
+
+  getBadgeStudent(id: any){
+
+    let badges: any[] = [];
+
+    this.studentService.getStudentBadge(id)
+      .subscribe(
+        (data: any) => {
+          data.forEach((badge: any) => {
+            badge.image = publicUrl + '/students/badges/' + badge.image;
+            let newBadge = new Badge(this.selectedId.toString(), badge.id, badge.name, badge.image, badge.xp, badge.id, false);
+            badges.push(newBadge);
+          });
+        },
+        (error) => console.log(error)
+      );
+
+    return badges;
+
+  }
+
+  selectHighScore(value: any){
+    this.showHighScore = value;
   }
 
   private progressType: string;
@@ -144,8 +186,20 @@ export class CourseListComponent {
 
   }
 
+  calculateMaxXP(studentLevel: any){
+    let maxXP: any;
+    this.levels.forEach((level) => {
+      if(level.level_id == studentLevel){
+        maxXP = level.ceiling_xp;
+      }
+    });
+
+    return maxXP;
+
+  }
+
   orderBy(value: any){
-    this.students = _.orderBy(this.students, [value, 'id'], ['asc', 'desc']);
+    this.students = _.orderBy(this.students, [value, 'student_id'], ['asc', 'desc']);
   }
 
   search(value: any){
@@ -165,10 +219,14 @@ export class CourseListComponent {
 
   onUpdateStudentScore(score: any){
 
+    let maxScore = this.levels[this.levels.length - 1].ceiling_xp;
+    //console.log(this.levels[this.levels.length - 1].ceiling_xp);
+
     let students = new updateStudentsScore(
       this.course.id,
       score,
-      this.selectedStudents
+      this.selectedStudents,
+      maxScore
     );
 
     this.studentService.updateStudentsScore(students)
@@ -291,8 +349,6 @@ export class CourseListComponent {
   updateStudent(){
       this.router.navigate(['/course/update-student']);
   }
-
-
 
   showMessage(msg: any){
     this.msgs = [];

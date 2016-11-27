@@ -32,18 +32,3 @@
   padding: 45px;
 }
 
-.rowTable{
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-}
-
-.thTable{
-  @extend .rowTable;
-  background-color: $light-gray;
-}
-
-.tdTable{
-  @extend .rowTable;
-  border-bottom: 1px solid $light-gray;
-}

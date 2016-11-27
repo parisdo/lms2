@@ -9,6 +9,7 @@ import {StudentService} from "../../services/student.service";
 import {ImageResult, ResizeOptions} from "ng2-imageupload";
 import {Message} from "primeng/components/common/api";
 import {msg} from '../../services/message-service';
+import {publicUrl} from  "../../services/config";
 
 export class deleteBadge {
   constructor(public id?: any, public badges?: any) {
@@ -67,13 +68,15 @@ export class EditStudentComponent implements OnInit {
             student.id == this.selectedId ? this.student = student : null;
           });
 
+           this.image = this.student.image;
+
           this.studentService.getStudentBadge(this.selectedId)
             .subscribe(
               (data: any) => {
                 console.log(data);
                 //this.badges = data;
                 data.forEach((badge: any) => {
-                  badge.image = 'http://54.169.115.233/students/badges/' + badge.image;
+                  badge.image = publicUrl + '/students/badges/' + badge.image;
                   let newBadge = new Badge(this.course_id, badge.id, badge.name, badge.image, badge.xp, badge.id, false);
                   this.badges.push(newBadge);
                 });
@@ -89,7 +92,13 @@ export class EditStudentComponent implements OnInit {
 
   }
 
-
+  newImage: boolean = false;
+  selected(imageResult: ImageResult) {
+    this.newImage = true;
+    this.image = imageResult.resized
+      && imageResult.resized.dataURL
+      || imageResult.dataURL;
+  }
 
   createForm() {
     this.userForm = this.formBuilder.group({
@@ -107,6 +116,13 @@ export class EditStudentComponent implements OnInit {
   save(student: Student) {
 
     this.student.course_id = this.course_id;
+
+    if(this.newImage){
+      this.student.image = this.image;
+    }else {
+      this.student.image = this.student.image.substring(34);
+    }
+
     console.log(this.student);
 
     this.studentService.editStudentProfile(this.student)
@@ -114,9 +130,9 @@ export class EditStudentComponent implements OnInit {
         (data: any) => {
           console.log(data);
           if (data.status == 'success') {
-            //this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            this.showMessage(msg.getUpdateStudentsScoreMessage(200));
           } else {
-            //this.showMessage(msg.getUpdateStudentsScoreMessage(500));
+            this.showMessage(msg.getUpdateStudentsScoreMessage(500));
           }
         },
         (error) => console.log(error)

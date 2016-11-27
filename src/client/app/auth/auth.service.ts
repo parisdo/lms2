@@ -14,10 +14,12 @@ import {apiUrl} from '../services/config';
 export class AuthService {
 
     token: string;
+    id: any;
     redirectUrl: string;
 
     constructor (private http: Http, private  router: Router) {
         this.token = localStorage.getItem('token');
+        this.id = localStorage.getItem('id');
     }
 
     upload(data: any){
@@ -65,8 +67,11 @@ export class AuthService {
 
     signout() {
         this.token = undefined;
+        this.id = undefined;
+
         localStorage.removeItem('token');
         localStorage.removeItem('role');
+        localStorage.removeItem('id');
         return Observable.of(true);
     }
 
@@ -74,10 +79,12 @@ export class AuthService {
         return !!localStorage.getItem('token');
     }
 
-    setToken(token: any, role: string){
+    setToken(token: any, role: string, id?: any){
         this.token = token;
+        this.id = id;
         localStorage.setItem('token', this.token);
         localStorage.setItem('role', role);
+        localStorage.setItem('id', id);
         return Observable.of('token');
     }
 

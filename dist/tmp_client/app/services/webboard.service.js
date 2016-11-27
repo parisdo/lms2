@@ -29,7 +29,19 @@ var WebboardService = (function () {
     };
     WebboardService.prototype.getAllPost = function (id) {
         return this.http.get(config_1.apiUrl + "post/course/" + id + "?token=" + this.authService.token)
-            .map(function (res) { return res.json().data; })
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    WebboardService.prototype.editPost = function (post) {
+        var body = JSON.stringify(post);
+        return this.http.post(config_1.apiUrl + "post/edit?token=" + this.authService.token, body, xhr_headers_1.xhrHeaders())
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    WebboardService.prototype.deletePost = function (id) {
+        var body = JSON.stringify(id);
+        return this.http.post(config_1.apiUrl + "post/delete?token=" + this.authService.token, body, xhr_headers_1.xhrHeaders())
+            .map(function (res) { return res.json(); })
             .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
     };
     WebboardService.prototype.postComment = function (post) {
@@ -47,6 +59,18 @@ var WebboardService = (function () {
     WebboardService.prototype.deleteComment = function (id) {
         var body = JSON.stringify(id);
         return this.http.post(config_1.apiUrl + "post/comment/delete?token=" + this.authService.token, body, xhr_headers_1.xhrHeaders())
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    WebboardService.prototype.replyComment = function (post) {
+        var body = JSON.stringify(post);
+        return this.http.post(config_1.apiUrl + "post/replycomment?token=" + this.authService.token, body, xhr_headers_1.xhrHeaders())
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    WebboardService.prototype.deleteReplyComment = function (id) {
+        var body = JSON.stringify(id);
+        return this.http.post(config_1.apiUrl + "post/replycomment/delete?token=" + this.authService.token, body, xhr_headers_1.xhrHeaders())
             .map(function (res) { return res.json(); })
             .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
     };

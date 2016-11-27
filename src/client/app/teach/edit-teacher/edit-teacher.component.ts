@@ -88,7 +88,6 @@ export class EditTeacherComponent implements OnInit{
         this.teacher.image = this.teacher.image.substring(34);
       }
 
-      //this.teacher.image = this.teacher.image.substring(34);
       console.log( this.teacher.image);
 
       this.teacherService.editTeacherProfile(this.teacher)

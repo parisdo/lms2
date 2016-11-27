@@ -28,6 +28,8 @@ export class TeachListComponent{
 
   ngOnInit() {
 
+      // remove course id
+      window.localStorage.removeItem('course_id');
 
       if (this.authService.checkRole()) {
         this.getTeacher();

@@ -4,8 +4,6 @@ import {AuthService} from "../../auth/auth.service";
 import {Router} from "@angular/router";
 import {TeacherService} from "../../services/teacher.service";
 
-import {publicUrl} from "../../services/config"
-
 @Component({
   moduleId: module.id,
   selector: 'my-teach-nav',
@@ -17,12 +15,9 @@ export class TeachNavComponent {
 
   private teacher: Teacher;
 
-  constructor(public authService: AuthService,
-              public router: Router,
-              private teacherService: TeacherService) {}
+  constructor(public authService: AuthService, public router: Router, private teacherService: TeacherService) {}
 
   ngOnInit() {
-
       if (this.authService.checkRole()) {
         this.getTeacher();
       }

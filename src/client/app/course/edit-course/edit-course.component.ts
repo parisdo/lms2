@@ -4,6 +4,7 @@ import {CourseService} from "../../services/course.service";
 import {Validators, FormBuilder} from "@angular/forms";
 import {Message} from "primeng/components/common/api";
 import {msg} from '../../services/message-service';
+import {Router} from "@angular/router";
 
 @Component({
     moduleId: module.id,
@@ -17,12 +18,22 @@ export class EditCourseComponent {
     course: Course;
     msgs: Message[] = [];
 
-    constructor(private formBuilder: FormBuilder,
-                private courseService: CourseService){}
+    constructor(private formBuilder: FormBuilder, private courseService: CourseService,
+                private router: Router){}
 
-    ngOnInit(){
-        this.course = this.courseService.course;
-        this.createCourseForm();
+    ngOnInit() {
+
+      if(localStorage.getItem('course_id') != undefined){
+        this.courseService.getCourse(localStorage.getItem('course_id'))
+          .subscribe((data: any) => {
+            this.course = data.course;
+            this.createCourseForm();
+          }, error => console.log(error));
+      }else {
+        this.router.navigate(['/teach']);
+      }
+
+
     }
 
     courseForm: any;
@@ -30,7 +41,7 @@ export class EditCourseComponent {
         this.courseForm = this.formBuilder.group({
             'course_id': [this.course.id],
             'name': [this.course.name, [Validators.required]],
-            'description': [this.course.description, [Validators.required]]
+            'description': [this.course.description]
         });
     }
 

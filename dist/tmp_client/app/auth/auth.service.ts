@@ -8,18 +8,18 @@ import {Teacher} from "../models/teacher";
 import {xhrHeaders} from "../services/xhr-headers";
 import {Student} from "../models/student";
 import {Router} from "@angular/router";
+import {apiUrl} from '../services/config';
 
 @Injectable()
 export class AuthService {
 
-    private teacherUrl = 'http://54.169.115.233/api/v1/user/signin';
-    private studentUrl = '';
-
     token: string;
+    id: any;
     redirectUrl: string;
 
     constructor (private http: Http, private  router: Router) {
         this.token = localStorage.getItem('token');
+        this.id = localStorage.getItem('id');
     }
 
     upload(data: any){
@@ -53,22 +53,25 @@ export class AuthService {
 
     signin (teacher: Teacher): Observable<any> {
         let body = JSON.stringify(teacher);
-        return this.http.post(`${this.teacherUrl}`, body, xhrHeaders())
+        return this.http.post(`${apiUrl}user/signin`, body, xhrHeaders())
             .map((res) => res.json())
             .cache();
     }
 
     studentSigin(student: Student){
         let body = JSON.stringify(student);
-        return this.http.post(`${this.teacherUrl}`, body, xhrHeaders())
+        return this.http.post(`${apiUrl}user/signin`, body, xhrHeaders())
             .map((res) => res.json())
             .cache();
     }
 
     signout() {
         this.token = undefined;
+        this.id = undefined;
+
         localStorage.removeItem('token');
         localStorage.removeItem('role');
+        localStorage.removeItem('id');
         return Observable.of(true);
     }
 
@@ -76,10 +79,12 @@ export class AuthService {
         return !!localStorage.getItem('token');
     }
 
-    setToken(token: any, role: string){
+    setToken(token: any, role: string, id?: any){
         this.token = token;
+        this.id = id;
         localStorage.setItem('token', this.token);
         localStorage.setItem('role', role);
+        localStorage.setItem('id', id);
         return Observable.of('token');
     }
 

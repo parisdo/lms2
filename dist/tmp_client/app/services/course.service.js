@@ -94,6 +94,10 @@ var CourseService = (function () {
             .map(function (res) { return res.json().data; })
             .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
     };
+    CourseService.prototype.downloadExcel = function (id) {
+        return this.http.get(config_1.apiUrl + "downloadExcel/" + id)
+            .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
+    };
     CourseService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http, auth_service_1.AuthService])

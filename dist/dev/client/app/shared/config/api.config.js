@@ -1,7 +1,0 @@
-"use strict";
-exports.apiUrl = "http://54.255.138.5/api/v1/";
-module.exports = {
-    apiUrl: exports.apiUrl,
-};
-
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zaGFyZWQvY29uZmlnL2FwaS5jb25maWcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFhLGNBQU0sR0FBVyw2QkFBNkIsQ0FBQztBQUU1RCxNQUFNLENBQUMsT0FBTyxHQUFHO0lBQ2YsTUFBTSxFQUFFLGNBQU07Q0FDZixDQUFDIiwiZmlsZSI6ImFwcC9zaGFyZWQvY29uZmlnL2FwaS5jb25maWcuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgYXBpVXJsOiBzdHJpbmcgPSBcImh0dHA6Ly81NC4yNTUuMTM4LjUvYXBpL3YxL1wiO1xuXG5tb2R1bGUuZXhwb3J0cyA9IHtcbiAgYXBpVXJsOiBhcGlVcmwsXG59O1xuIl19
