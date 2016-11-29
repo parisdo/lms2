@@ -55,22 +55,22 @@
       <div *ngIf="tabIndex == 2">
 
         <div style="margin-bottom: 15px">
-          <label class="form-check-inline" style="margin-right: 15px">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="onCheck('excel')"
-                   [checked]="check == 'excel'"> นำข้อมูลเข้าจากไฟล์ (m3 Excel)
-          </label>
+          <!--<label class="form-check-inline" style="margin-right: 15px">-->
+            <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="onCheck('excel')"-->
+                   <!--[checked]="check == 'excel'"> นำข้อมูลเข้าจากไฟล์ (m3 Excel)-->
+          <!--</label>-->
 
-          <label class="form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="onCheck('manual')"
-                   [checked]="check == 'manual'"> กรอกข้อมูลเอง
-          </label>
+          <!--<label class="form-check-inline">-->
+            <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="onCheck('manual')"-->
+                   <!--[checked]="check == 'manual'"> กรอกข้อมูลเอง-->
+          <!--</label>-->
 
         </div>
 
         <div class="row thTable">
           <div class="col-xs-3">รหัสนักเรียน</div>
-          <div class="col-xs-3">คำนำหน้า</div>
-          <div class="col-xs-3">ชื่อ-นามสกุล</div>
+          <div class="col-xs-2">คำนำหน้า</div>
+          <div class="col-xs-4">ชื่อ-นามสกุล</div>
           <div class="col-xs-3">แก้ไข</div>
         </div>
 
@@ -79,7 +79,10 @@
 
             <div *ngIf="!editStudentMode || selectedIndex != index">
               <div class="col-xs-3">{{student.student_id}}</div>
-              <div class="col-xs-2">{{student.title == 'mr' || student.title == 'boy' ? 'นาย': 'นางสาว'}}</div>
+              <div class="col-xs-2" *ngIf="student.title == 'mr'">นาย</div>
+              <div class="col-xs-2" *ngIf="student.title == 'boy'">ด.ช.</div>
+              <div class="col-xs-2" *ngIf="student.title == 'miss'">นางสาว</div>
+              <div class="col-xs-2" *ngIf="student.title == 'girl'">ด.ญ.</div>
               <div class="col-xs-4">{{student.name}}</div>
               <div class="col-xs-3">
                 <button class="btn btn-info btn-sm" type="button" (click)="editStudent(index)">แก้ไข</button>
@@ -100,14 +103,14 @@
           </div>
         </div>
 
-        <form *ngIf="check == 'excel'">
-          <div class="form-group">
-            <input type="file" class="form-control-file" aria-describedby="fileHelp">
-            <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's
-              abit lighter and easily wraps to a new line.
-            </small>
-          </div>
-        </form>
+        <!--<form *ngIf="check == 'excel'">-->
+          <!--<div class="form-group">-->
+            <!--<input type="file" class="form-control-file" aria-describedby="fileHelp">-->
+            <!--<small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's-->
+              <!--abit lighter and easily wraps to a new line.-->
+            <!--</small>-->
+          <!--</div>-->
+        <!--</form>-->
 
         <div *ngIf="check == 'manual'">
 

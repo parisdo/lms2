@@ -28,6 +28,7 @@ var student_service_1 = require("../services/student.service");
 var progressbar_1 = require("primeng/components/progressbar/progressbar");
 var webboard_service_1 = require("../services/webboard.service");
 var equal_validator_directive_1 = require("../services/equal-validator.directive");
+var dialog_1 = require("primeng/components/dialog/dialog");
 var SharedModule = (function () {
     function SharedModule() {
     }
@@ -55,7 +56,8 @@ var SharedModule = (function () {
                 http_1.JsonpModule,
                 growl_1.GrowlModule,
                 progressbar_1.ProgressBarModule,
-                ng2_imageupload_1.ImageUploadModule
+                ng2_imageupload_1.ImageUploadModule,
+                dialog_1.DialogModule
             ],
             declarations: [
                 header_component_1.HeaderComponent,
@@ -81,7 +83,8 @@ var SharedModule = (function () {
                 teach_nav_component_1.TeachNavComponent,
                 control_messages_component_1.ControlMessagesComponent,
                 filterdata_pipe_1.FilterData,
-                equal_validator_directive_1.EqualValidator
+                equal_validator_directive_1.EqualValidator,
+                dialog_1.DialogModule
             ]
         }), 
         __metadata('design:paramtypes', [])

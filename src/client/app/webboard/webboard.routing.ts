@@ -11,7 +11,7 @@ const webboardRoutes: Routes = [
         path: 'webboard',
         component: WebboardComponent,
         children: [
-            {path: '',                            component: WebboardListComponent},
+            {path: '',                            component: PostComponent},
             {path: 'new-post',                    component: NewPostComponent},
             {path: 'post',                        component: PostComponent}
         ]

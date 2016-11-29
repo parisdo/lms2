@@ -10,29 +10,19 @@
   </div>
 </div>
 
-<div class="lms-body" *ngIf="course != null">
+<div class="lms-body">
   <div class="container">
-        <!--<div class="row" style="margin-bottom: 15px;">-->
-            <!--<div class="col-xs-12">-->
-                <!--<div class="text-center">-->
-                    <!--<div class="btn-group" role="group" aria-label="Basic example" >-->
-                        <!--<button type="button" class="btn {{uploadStete == 'add_xp' ? 'btn-info' : 'btn-secondary'}}"   (click)="changeUploadState('add_xp')">บวกเพิ่มค่า XP</button>-->
-                        <!--&lt;!&ndash;<button type="button" class="btn {{uploadStete == 'edit_xp' ? 'btn-info' : 'btn-secondary'}}"     (click)="changeUploadState('edit_xp')">แก้เป็น XP ล่าสุด</button>&ndash;&gt;-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
 
         <div class="row box-wrapper">
 
 
-            <form style="max-width: 800px" class="center" *ngIf="uploadStete == 'add_xp'" method="post" enctype="multipart/form-data">
+            <form style="max-width: 800px" class="center" *ngIf="uploadStete == 'add_xp'" ngNoForm action="http://54.179.136.36/api/v1/import"
+                  method="post" enctype="multipart/form-data" novalidate>
                 <h5 style="margin-bottom: 15px">ขั้นตอนปรับแก้ XP ของนักเรียน<hr></h5>
                 <div class="form-group row">
                     <label for="add_xp_step1" class="col-sm-8 col-form-label"><span class="step-tag tag tag-info">ขั้นตอนที่ 1</span> Download ไฟล์ต้นฉบับ (Excel)</label>
                     <div class="col-sm-4">
                       <a [href]="downloadPath" id="add_xp_step1" *ngIf="selectedId != null">Download</a>
-                      <!--<button type="button" class="btn btn-secondary" style="min-width: 100px" id="add_xp_step1" (click)="downloadFile()">Download</button>-->
                     </div>
                 </div>
                 <div class="form-group row">
@@ -41,12 +31,7 @@
                 <div class="form-group row">
                     <label class="col-sm-8 col-form-label"><span class="step-tag tag tag-info">ขั้นตอนที่ 3</span> Upload ไฟล์ XP ของนักเรียน (Excel) เข้าสู่ระบบ</label>
                     <div class="col-sm-4">
-                        <!--<label class="btn btn-secondary" for="add_xp-file-selector">-->
-                            <!--<input id="add_xp-file-selector" type="file" style="display:none;" onchange="$('#upload-file-info').html($(this).val());">-->
-                            <!--เลือกไฟล์-->
-                        <!--</label>-->
-
-                        <input type="file" class="form-control" name="documents" (change)="importFile($event)" >
+                        <input type="file" class="form-control" name="file">
                         <span class='label label-info' id="upload-file-info"></span>
                     </div>
                 </div>
@@ -59,36 +44,6 @@
                 </div>
             </form>
 
-
-            <!--<form style="max-width: 800px" class="center" *ngIf="uploadStete == 'edit_xp'">-->
-                <!--<h5 style="margin-bottom: 15px">ขั้นตอนการบวกเพิ่มค่า XP <hr></h5>-->
-                <!--<div class="form-group row">-->
-                    <!--<label for="edit_xp_step1" class="col-sm-8 col-form-label"><span class="step-tag tag tag-info">ขั้นตอนที่ 1</span> Download ไฟล์ต้นฉบับ (Excel)</label>-->
-                    <!--<div class="col-sm-4">-->
-                        <!--<button type="button" class="btn btn-secondary" style="min-width: 100px" id="edit_xp_step1">Download</button>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="form-group row">-->
-                    <!--<label class="col-sm-12 col-form-label"><span class="step-tag tag tag-info">ขั้นตอนที่ 2</span> เปิดไฟล์ต้นแบบที่ Download มาและใส่ค่า XP ของนักเรียนที่ต้องการบวกเพิ่มและ ันทึกลงไฟล์เดิม</label>-->
-                <!--</div>-->
-                <!--<div class="form-group row">-->
-                    <!--<label class="col-sm-8 col-form-label"><span class="step-tag tag tag-info">ขั้นตอนที่ 3</span> Upload ไฟล์ XP ของนักเรียน (Excel) เข้าสู่ระบบ</label>-->
-                    <!--<div class="col-sm-4">-->
-                        <!--<label class="btn btn-secondary" for="edit_xp-file-selector">-->
-                            <!--<input id="edit_xp-file-selector" type="file" style="display:none;" onchange="$('#file-info').html($(this).val());">-->
-                            <!--เลือกไฟล์-->
-                        <!--</label>-->
-                        <!--<span class='label label-info' id="file-info"></span>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<hr>-->
-                <!--<div class="form-group row pull-xs-right">-->
-                    <!--<div class="col-sm-12">-->
-                        <!--<button type="button" class="btn btn-secondary" (click)="goBack()">ยกเลิก</button>-->
-                        <!--<button type="submit" class="btn btn-info">Upload</button>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</form>-->
         </div>
     </div>
 </div>

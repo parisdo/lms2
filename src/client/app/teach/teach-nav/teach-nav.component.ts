@@ -3,6 +3,7 @@ import {Teacher} from "../../models/teacher";
 import {AuthService} from "../../auth/auth.service";
 import {Router} from "@angular/router";
 import {TeacherService} from "../../services/teacher.service";
+import {publicUrl} from  "../../services/config";
 
 @Component({
   moduleId: module.id,
@@ -28,7 +29,7 @@ export class TeachNavComponent {
       .subscribe(
         data => {
           this.teacher = data;
-          this.teacher.image = data.image;
+          this.teacher.image = `${publicUrl}/teachers/logo/` + data.image;
         },
         error => {
           console.log(error);

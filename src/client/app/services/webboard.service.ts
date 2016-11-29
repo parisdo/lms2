@@ -80,6 +80,13 @@ export class WebboardService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
+  editReplyComment(post: any): Observable<any>{
+    let body = JSON.stringify(post);
+    return this.http.post(`${apiUrl}post/replycomment/edit?token=${this.authService.token}`, body, xhrHeaders())
+      .map((res) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
   deleteReplyComment(id: any): Observable<any>{
     let body = JSON.stringify(id);
     return this.http.post(`${apiUrl}post/replycomment/delete?token=${this.authService.token}`, body, xhrHeaders())

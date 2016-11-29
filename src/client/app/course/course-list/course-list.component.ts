@@ -36,6 +36,14 @@ export class deleteStudent{
 
 export class CourseListComponent {
 
+  display: boolean = false;
+  message = {
+    title: '',
+    content: ``,
+    button: ''
+  };
+
+
   errorMessage: string;
   course: Course;
   students: Student[]= [];
@@ -316,6 +324,15 @@ export class CourseListComponent {
     this.router.navigate([`/course/edit-student`], navigationExtras);
   }
 
+  deletePopup(){
+    this.display = true;
+    this.message = {
+      title: 'ลบนักเรียน',
+      content: `ยืนยันการลบข้อมูลที่เลือก`,
+      button: 'ลบ'
+    };
+  }
+
   onDeleteStudent(){
 
     let tempStudents: any[] = [];
@@ -334,10 +351,11 @@ export class CourseListComponent {
       .subscribe(
         (data: any) => {
           if(data.status == 'success'){
-            this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            //this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            this.display = false;
             this.ngOnInit();
           }else {
-            this.showMessage(msg.getUpdateStudentsScoreMessage(500));
+            //this.showMessage(msg.getUpdateStudentsScoreMessage(500));
           }
         },
         (error) => console.log(error)

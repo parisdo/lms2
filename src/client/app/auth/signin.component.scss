@@ -9,7 +9,7 @@ body{
 }
 
 .box-wrapper{
-  margin-top: 45px;
+  margin-top: 90px;
   margin-bottom: 45px;
   max-width: 550px;
   padding: 45px;
@@ -28,3 +28,8 @@ body{
   margin-top: 45px;
   margin-bottom: -15px;
 }
+
+.forgotpassword>a{
+   color: $gray;
+ }
+

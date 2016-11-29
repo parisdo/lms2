@@ -83,7 +83,7 @@ export class AddCourseComponent {
     }
 
 
-    check: string = 'excel';
+    check: string = 'manual';
 
     onCheck(check: string){
         this.check = check;

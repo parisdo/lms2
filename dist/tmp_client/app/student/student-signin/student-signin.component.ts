@@ -53,17 +53,11 @@ export class StudentSigninComponent {
       this.authService.signin(this.student)
         .subscribe(
           (data: any) => {
-            if(data.status == 'success'){
-              //console.log(data.data.id);
-              // let navigationExtras: NavigationExtras = {
-              //   queryParams: { 'id': data.data.id },
-              // };
-
-              this.authService.setToken(data.data.token, 'student',  data.data.id);
+            console.log(data);
+            if(data.status == 'success' && data.data.role == 'student') {
+              this.authService.setToken(data.data.token, 'student', data.data.id);
               this.router.navigate(['./student/dashboard']);
-
             }else {
-              //console.log(data);
               this.errorMessage = data.errormessage;
             }
           },

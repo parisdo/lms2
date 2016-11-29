@@ -5,12 +5,14 @@ var signup_component_1 = require("./signup.component");
 var auth_service_1 = require("./auth.service");
 var auth_guard_service_1 = require("./auth-guard.service");
 var auth_component_1 = require("./auth.component");
+var forgotpassword_component_1 = require("./forgotpassword/forgotpassword.component");
 var authRoutes = [{
         path: 'auth',
         component: auth_component_1.AuthComponent,
         children: [
             { path: 'signin', component: signin_component_1.SigninComponent },
             { path: 'signup', component: signup_component_1.SignupComponent },
+            { path: 'forgotpassword', component: forgotpassword_component_1.ForgotPasswordComponent },
         ]
     }];
 exports.authProviders = [

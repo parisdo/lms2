@@ -1,0 +1,96 @@
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+
+<div class="section-header">
+  <div class="container" style="margin-top: 55px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
+          <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
+        <h3 class="section-header-title">กำหนด XP เริ่มต้นและการเลื่อนขั้น</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lms-body" *ngIf="course != null">
+  <div class="container">
+        <div class="row box-wrapper">
+          <h3>กำหนดค่าเริ่มต้น</h3>
+            <div class="center">
+                <div style="margin-bottom: 45px;">
+                    <form [formGroup]="xpForm">
+                        <div class="form-group row">
+                            <label for="start_xp" class="col-xs-4 col-form-label">XP เริ่มต้นของทุกคน</label>
+                            <div class="col-xs-6">
+                                <input class="form-control" type="number" id="start_xp" formControlName="start_xp" name="start_xp">
+                            </div>
+                            <label class="col-xs-2 col-form-label">XP</label>
+                        </div>
+                        <div class="form-group row">
+                            <label for="leader_board" class="col-xs-4 col-form-label">แสดงข้อมูลผู้นำเฉพาะ (Leaderboard)</label>
+                            <div class="col-xs-6">
+                                <input class="form-control" id="leader_board" type="number"  formControlName="leader_board" name="leader_board">
+                            </div>
+                            <label class="col-xs-2 col-form-label">อันดับแรกเท่านั้น</label>
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+
+                <h3>กำหนดการเลื่อนขั้น</h3>
+
+                  <div class="rowTable">
+                    <div class="row thTable">
+                      <div class="col-md-3">Level</div>
+                      <div class="col-md-3">ค่า XP เริ่มต้น</div>
+                      <div class="col-md-3">ค่า XP สูงสุด</div>
+                    </div>
+
+                    <div *ngIf="levels != null">
+                      <div class="row tdTable" *ngFor="let level of levels; let last = last">
+                        <div class="col-md-3">{{level.level_id}}</div>
+                        <div class="col-md-3">{{level.floor_xp}}</div>
+                        <div class="col-md-3">{{level.ceiling_xp}}</div>
+                        <div class="col-md-3">
+                          <button *ngIf="last" class="btn btn-danger" type="button" (click)="deleteLevel(level)">ลบ</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                <div class="row">
+                    <form class="form-inline" [formGroup]="levelsForm">
+
+                        <label style="margin-right: 15px; font-weight: 900;">Level</label>
+
+
+                        <div class="form-group">
+                            <label for="floor_xp">ค่าเริ่มต้น</label>
+                            <input type="number" class="form-control" id="floor_xp" formControlName="floor_xp" name="floor_xp">
+                        </div>
+                        <div class="form-group">
+                            <label for="ceiling_xp">ถึง</label>
+                            <input type="number" class="form-control" id="ceiling_xp" formControlName="ceiling_xp" name="ceiling_xp">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" (click)="addLevel(levelsForm.value)" [disabled]="!levelsForm.valid">เพิ่ม</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 45px; margin-bottom: 45px">
+                <div class="pull-xs-right">
+                    <button type="button" class="btn btn-secondary" (click)="cancel()">ยกเลิก</button>
+                    <button type="submit" class="btn btn-info" (click)="submit()">บันทึก</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

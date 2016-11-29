@@ -1,8 +1,19 @@
+<p-dialog header="{{message.title}}" [(visible)]="display" modal="modal"
+          showEffect="fade" responsive="responsive" resizable="!resizable">
+  {{message.content}} <br>
+  <footer>
+    <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+      <button type="button" class="btn btn-danger" (click)="deleteCourse()">{{message.button}}</button>
+      <button type="button" class="btn btn-secondary" (click)="display = false">ยกเลิก</button>
+    </div>
+  </footer>
+</p-dialog>
+
 <div class="section-header">
   <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
     <div class="row">
       <div class="col-xs-12">
-        <h2 class="section-header-title">CLASSROOM</h2>
+        <h2 class="section-header-title">ชั้นเรียน</h2>
         <hr>
         <div class="section-header-link link">
           <a class="text-muted link" style="margin-right: 15px" data-toggle="modal" data-target=".hide-class-modal-sm" ><ins>ดูชั้นเรียนที่ถูกซ่อน</ins></a>
@@ -13,7 +24,7 @@
   </div>
 </div>
 
-<div class="lms-body">
+<div class="lms-body" style="margin-top: 0">
 <div class="container">
   <div class="row box-wrapper">
 
@@ -36,7 +47,7 @@
 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="right: 0; left: inherit">
                 <li><a (click)="updateStatus(course, 2)">ซ่อนชั้นเรียน</a></li>
-                <li><a (click)="updateStatus(course, 3)">ลบชั้นเรียน</a></li>
+                <li><a (click)="deletePopup(course)">ลบชั้นเรียน</a></li>
               </ul>
             </div>
           </div>

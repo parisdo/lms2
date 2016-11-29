@@ -68,6 +68,12 @@ var WebboardService = (function () {
             .map(function (res) { return res.json(); })
             .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
     };
+    WebboardService.prototype.editReplyComment = function (post) {
+        var body = JSON.stringify(post);
+        return this.http.post(config_1.apiUrl + "post/replycomment/edit?token=" + this.authService.token, body, xhr_headers_1.xhrHeaders())
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Observable_1.Observable.throw(error.json().error || 'Server error'); });
+    };
     WebboardService.prototype.deleteReplyComment = function (id) {
         var body = JSON.stringify(id);
         return this.http.post(config_1.apiUrl + "post/replycomment/delete?token=" + this.authService.token, body, xhr_headers_1.xhrHeaders())

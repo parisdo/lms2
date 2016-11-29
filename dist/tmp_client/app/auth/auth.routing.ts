@@ -7,6 +7,7 @@ import {SignupComponent} from "./signup.component";
 import {AuthService} from "./auth.service";
 import {AuthGuard} from "./auth-guard.service";
 import {AuthComponent} from "./auth.component";
+import {ForgotPasswordComponent} from "./forgotpassword/forgotpassword.component";
 
 const authRoutes: Routes = [{
   path: 'auth',
@@ -14,6 +15,7 @@ const authRoutes: Routes = [{
   children: [
     { path: 'signin',  component: SigninComponent },
     { path: 'signup',  component: SignupComponent },
+    { path: 'forgotpassword',  component: ForgotPasswordComponent },
   ]
 }];
 

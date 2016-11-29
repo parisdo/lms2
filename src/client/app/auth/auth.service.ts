@@ -22,35 +22,6 @@ export class AuthService {
         this.id = localStorage.getItem('id');
     }
 
-    upload(data: any){
-
-        console.log(data);
-        let formData: FormData = new FormData(),
-            xhr: XMLHttpRequest = new XMLHttpRequest();
-
-
-        for (let i = 0; i < data.length; i++) {
-            formData.append("uploads[]", data[i], data[i].name);
-        }
-
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log('success');
-                    console.log(xhr.response);
-                } else {
-                    console.log('error');
-                    console.log(xhr.response);
-                }
-            }
-        };
-
-        xhr.open('POST', 'http://54.179.160.42/api/v1/upload', true);
-        xhr.send(formData);
-        console.log(formData);
-
-    }
-
     signin (teacher: Teacher): Observable<any> {
         let body = JSON.stringify(teacher);
         return this.http.post(`${apiUrl}user/signin`, body, xhrHeaders())
@@ -63,6 +34,13 @@ export class AuthService {
         return this.http.post(`${apiUrl}user/signin`, body, xhrHeaders())
             .map((res) => res.json())
             .cache();
+    }
+
+    forgotPassword (email: any): Observable<any> {
+      let body = JSON.stringify(email);
+      return this.http.post(`${apiUrl}password/email`, body, xhrHeaders())
+        .map((res) => res.json())
+        .cache();
     }
 
     signout() {

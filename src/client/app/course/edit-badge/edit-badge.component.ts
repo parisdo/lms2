@@ -27,6 +27,7 @@ export class EditBadgeComponent {
     };
 
     badges: Badge[] = [];
+    badgePath: any;
     selectedBadge: Badge = new Badge();
     badgeForm: any;
 
@@ -39,6 +40,8 @@ export class EditBadgeComponent {
     ngOnInit(){
 
       this.createBadgeForm();
+
+      this.badgePath = `${publicUrl}students/badges/`.length;
 
       if(localStorage.getItem('course_id') != undefined){
         this.courseService.getCourse(localStorage.getItem('course_id'))
@@ -84,7 +87,7 @@ export class EditBadgeComponent {
     addBadge(){
 
         let badge = new Badge(this.course.id, '', this.badgeForm.value.name, this.image, this.badgeForm.value.xp);
-        console.log(badge);
+        //console.log(badge);
 
         this.courseService.createBadge(badge)
             .subscribe(
@@ -109,10 +112,11 @@ export class EditBadgeComponent {
 
     editBadge(){
 
+
       if(this.isEdited){
         this.selectedBadge.image = this.editBadgeImage;
       }else {
-        this.selectedBadge.image = this.selectedBadge.image.substring(36);
+        this.selectedBadge.image = this.selectedBadge.image.substring(this.badgePath);
       }
 
       this.isEdited = false;

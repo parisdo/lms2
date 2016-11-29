@@ -1,0 +1,51 @@
+<div class="section-header">
+  <div class="container container-header">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
+          <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
+        <h3 class="section-header-title">พิมพ์บัตรเข้าระบบของนักเรียน</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lms-body" *ngIf="students != null">
+  <div class="container">
+
+
+    <div class="row box-wrapper">
+
+      <div class="row rowPrint">
+        <div class="col-xs-6">
+          <h3>{{courseName}}</h3>
+        </div>
+        <div class="col-xs-6">
+          <div class="pull-right">
+            <button class="btn-print btn btn-green" (click)="print()">พิมพ์</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row {{i > 0 ? 'page-break': ''}}" *ngFor="let outer of thum; let i = index;">
+
+        <div class="col-xs-4 col-md-4" *ngFor="let student of thum[i]; let j = index">
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4 class="panel-title">ID: {{student.student_id}}</h4>
+              <h4 class="panel-title">Name: {{student.name}}</h4>
+              <hr>
+              <p><strong>username:</strong> {{student.username}}</p>
+              <p><strong>password:</strong> {{student.password}} </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

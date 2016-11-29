@@ -8,6 +8,8 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {Comments} from "../../models/comment";
 import {StudentService} from "../../services/student.service";
 import {Student} from "../../models/student";
+import {TeacherService} from "../../services/teacher.service";
+import {Teacher} from "../../models/teacher";
 
 @Component({
     moduleId: module.id,
@@ -17,6 +19,9 @@ import {Student} from "../../models/student";
 })
 export class PostComponent {
 
+  teacher: Teacher;
+  teacher_id: any;
+  student: Student;
   student_id: any;
 
   name: string;
@@ -26,24 +31,21 @@ export class PostComponent {
   comments: any[] =[];
   commentForm: any;
   private sub: Subscription;
-
-  student: Student;
   edit_comment_id: any = null;
+  edit_reply_comment_id: any = null;
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private route: ActivatedRoute, private router: Router,
-              private webboardService: WebboardService, private studentService: StudentService) {}
+              private webboardService: WebboardService, private studentService: StudentService, private teacherService: TeacherService) {}
 
 
   ngOnInit() {
-
-
     this.student_id = this.authService.id;
     this.role = this.authService.checkRole();
 
     if(this.role){
-      this.name = 'teacher';
+      this.getTeacher();
     }else {
-      this.name = 'student';
+      this.getStudent(this.student_id);
     }
 
     this.sub = this.route
@@ -53,6 +55,28 @@ export class PostComponent {
         this.getPost();
         this.createCommentForm();
       })
+  }
+
+  getTeacher() {
+    this.teacherService.getTeacher()
+      .subscribe(
+        data => {
+
+          this.teacher = data;
+          this.teacher_id = data.user_id;
+          this.name = this.teacher.name;
+        },
+        error =>  console.log(error));
+  }
+
+  getStudent(id: any) {
+    this.studentService.getStudent(id)
+      .subscribe(
+        (data) => {
+          this.student = data.student[0].student;
+          this.name = this.student.name;
+        },
+        error => console.log(error));
   }
 
   createPost(){
@@ -73,6 +97,9 @@ export class PostComponent {
           if(data.status == 'success'){
             this.post = data.data.post;
             this.comments = data.data.comments;
+
+            //console.log( this.post );
+            console.log( this.comments );
           }
 
         },
@@ -107,7 +134,6 @@ export class PostComponent {
     });
   }
 
-
   postComment(){
     let newComment = new Comments(this.course_id, this.name, this.commentForm.detail);
     //console.log(newComment);
@@ -118,6 +144,7 @@ export class PostComponent {
           //console.log(data);
           if(data.status == 'success'){
             this.getPost();
+            this.createCommentForm();
           }
         },
         (error) => console.log(error)
@@ -162,7 +189,6 @@ export class PostComponent {
     this.edit_comment_id = null;
   }
 
-
   editModeComment(id: any){
     this.edit_comment_id = id;
   }
@@ -186,6 +212,15 @@ export class PostComponent {
 
   reset(){
     this.createCommentForm();
+  }
+
+
+  home(){
+    if(this.role){
+      this.router.navigate(['/teach']);
+    } else {
+      this.router.navigate(['/student/dashboard']);
+    }
   }
 
   cancel(){
@@ -234,15 +269,39 @@ export class PostComponent {
 
   }
 
+  editModeReplyComment(id: any){
+    this.edit_reply_comment_id = id;
+  }
+
+  editReplyComment(id: any, detail: any){
+
+    this.edit_reply_comment_id = id;
+    let editComment = new Comments(id, this.name,detail);
+
+
+    this.webboardService.editReplyComment(editComment)
+      .subscribe(
+        (data: any) => {
+          //console.log(data);
+          if(data.status == 'success'){
+            this.getPost();
+            this.edit_reply_comment_id = null;
+          }
+        },
+        (error) => console.log(error)
+      );
+  }
+
   deleteReplyComment(id: any){
 
-    console.log(id);
+    //console.log(id);
 
     let replyComentId = {id: id};
 
     this.webboardService.deleteReplyComment(replyComentId)
       .subscribe(
         (data: any) => {
+          console.log(data);
           if(data.status == 'success'){
             this.getPost();
           }

@@ -14,6 +14,14 @@ import {AuthService} from "../../auth/auth.service";
 })
 export class TeachListComponent{
 
+  display: boolean = false;
+  message = {
+    title: '',
+    content: ``,
+    button: ''
+  };
+
+
   errorMessage: string;
   courses: Course[] = [];
   hideCourses: Course[] = [];
@@ -68,6 +76,23 @@ export class TeachListComponent{
             }
          },
           error =>  this.errorMessage = <any>error);
+  }
+
+  tempCourse: any;
+
+  deletePopup(course: Course){
+    this.display = true;
+    this.message = {
+      title: 'ลบชั้นเรียน',
+      content: `ยืนยันการลบข้อมูลที่เลือก`,
+      button: 'ลบ'
+    };
+    this.tempCourse = course;
+  }
+
+  deleteCourse(){
+    this.updateStatus(this.tempCourse, 3);
+    this.display = false;
   }
 
   updateStatus(course: Course, status: any){

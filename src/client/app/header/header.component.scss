@@ -18,6 +18,8 @@
 .navbar-home{
   background-color: $white;
   color: $black;
+  min-height: 80px;
+  padding-top: 15px;
 }
 
 .navbar-login{
@@ -37,9 +39,13 @@
   color: $white;
 }
 
+.navbar-brand{
+  margin-top: -10px;
+}
+
 .navbar-brand>img {
   display: block;
-  max-height: 25px;
+  max-height: 35px;
   float: left;
   margin-right: 15px;
 }
@@ -47,3 +53,5 @@
 .navbar-default .navbar-nav>.open>a{
   background-color: transparent;
 }
+
+

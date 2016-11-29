@@ -46,17 +46,18 @@ export class SigninComponent {
     this.authService.signin(this.teacher)
           .subscribe(
               (data: any) => {
-                if(data.status == 'success'){
-                  // console.log(data.data.token);
+                //console.log(data);
+                if(data.status == 'success' && data.data.role == 'teacher'){
                   this.authService.setToken(data.data.token, 'teacher');
                   this.router.navigate(['./teach']);
-
                 }else {
-                  //console.log(data);
                   this.errorMessage = data.errormessage;
                 }
               },
-              (error) => { console.log(error); }
+              (error) => {
+                this.errorMessage = 'Please Activate Your Account. Before you can login, you must active your account with the code sent to your email address.'
+                console.log(error);
+              }
           );
   }
 

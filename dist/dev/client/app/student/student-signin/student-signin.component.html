@@ -1,0 +1,33 @@
+<div class="lms-body">
+  <div class="container">
+    <div class="row box-wrapper">
+      <h4 class="title text-center">เข้าสู่ระบบผู้เรียน</h4>
+      <p style="margin-bottom: 15px"><small *ngIf="this.authService.isLoggedIn()" class="text-muted" >{{message}}</small></p>
+      <form [formGroup]="userForm"  (ngSubmit)="signin(userForm.value)" novalidate >
+        <div class="form-group row">
+          <label for="username" class="col-sm-3 col-form-label">Username</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="username" placeholder="Username"  name="username" formControlName="username">
+            <control-messages [control]="userForm.controls.username"></control-messages>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="password" class="col-sm-3 col-form-label">Password</label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password" formControlName="password">
+            <control-messages [control]="userForm.controls.password"></control-messages>
+          </div>
+        </div>
+        <small class="form-text text-muted offset-sm-3 col-sm-9" *ngIf="errorMessage != null" style="float: left; margin-bottom: 15px;">{{errorMessage}}</small>
+        <div class="form-group row submit">
+          <div class="col-sm-12">
+            <button type="submit" class="btn btn-info btn-block" [disabled]="!userForm.valid">เข้าสู่ระบบ</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+

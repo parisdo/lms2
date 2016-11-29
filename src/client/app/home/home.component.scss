@@ -9,8 +9,29 @@ body{
 }
 
 .title{
-  margin-top: -15px;
-  padding-bottom: 45px;
+
+
+  @include media($mobile) {
+    margin-top: 15px;
+    padding-bottom: 45px;
+  }
+
+  @include media($small-tablet) {
+    margin-top: 15px;
+    padding-bottom: 45px;
+  }
+
+  @include media($tablet) {
+    margin-top: 15px;
+    padding-bottom: 45px;
+  }
+
+
+  @include media($desktop) {
+    margin-top: -15px;
+    padding-bottom: 45px;
+  }
+
 }
 
 .section{

@@ -26,9 +26,9 @@ export class EditStudentScoreComponent {
         this.uploadStete = state;
     }
 
-    course: Course = new Course('Dummy Course', 'Dummy');
 
-    constructor(private authService: AuthService, private courseService: CourseService, private route: ActivatedRoute, private router: Router) {
+    constructor(private authService: AuthService, private courseService: CourseService,
+                private route: ActivatedRoute, private router: Router) {
     }
 
     ngOnInit(){
@@ -43,28 +43,6 @@ export class EditStudentScoreComponent {
       }else {
         this.router.navigate(['/teach']);
       }
-
-
-    }
-
-
-    importFile(event: any){
-
-      console.log(event.srcElement.files);
-      let file = event.srcElement.files;
-
-      let xhr: XMLHttpRequest = new XMLHttpRequest();
-      xhr.open('POST', `${apiUrl}import`, true);
-      xhr.setRequestHeader("content-type", "multipart/form-data; charset=utf-8;");
-
-      let formData: FormData = new FormData();
-      formData.append("file", file);
-      //formData.append("id", '55080501');
-
-      console.log(formData);
-      xhr.send(formData);
-      console.log(xhr.response);
-
     }
 
     cancel() {

@@ -1,0 +1,131 @@
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+
+<div class="section-header">
+  <div class="container" style="margin-top: 55px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
+          <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
+        <h3 class="section-header-title">แก้ไขรายละเอียดผู้เรียน</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lms-body">
+  <div class="container">
+    <div class="row box-wrapper">
+
+      <div class="row box-wrapper" style="padding: 2rem; margin-bottom: 45px;">
+        <div class="col-md-4 col-xs-12 text-xs-center" style="margin-bottom: 45px">
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <img class="img-responsive center" [src]="image" [hidden]="!image"
+                   style="margin-bottom: 15px">
+              <label class="btn btn-info btn-sm" for="file-selector" style="display: block">
+                <input id="file-selector" type="file" image-upload (imageSelected)="selected($event)"
+                       [resizeOptions]="resizeOptions" style="display:none;">
+                ใส่รูป
+              </label>
+              <small class='text-muted' [hidden]="image">ยังไม่ได้ใส่รูป (ใส่รูปไฟล์ .jpg, .jpeg)</small>
+              <small class='text-muted' style="font-size: 10px" id="upload-file-info"></small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-xs-12">
+
+          <form class="center" [formGroup]="userForm" novalidate autocomplete="off">
+            <h5 style="margin-bottom: 15px">แก้ไขข้อมูลส่วนตัว
+              <hr>
+            </h5>
+            <div class="form-group row">
+              <label for="username" class="col-sm-3 col-form-label">Username</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="username" name="id" formControlName="username"
+                       [(ngModel)]="student.username">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="student_id" class="col-sm-3 col-form-label">รหัสนักเรียน *</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="student_id" name="student_id" formControlName="student_id"
+                       [(ngModel)]="student.student_id">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="name" class="col-sm-3 col-form-label">ชื่อ-นามสกุล *</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="name" name="name" formControlName="name"
+                       [(ngModel)]="student.name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="overall_xp" class="col-sm-3 col-form-label">XP</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="overall_xp" name="overall_xp" formControlName="overall_xp"
+                       [(ngModel)]="student.overall_xp">
+              </div>
+            </div>
+            <hr>
+            <div class="form-group row pull-xs-right">
+              <div class="col-xs-12">
+                <button type="submit" class="btn btn-info" (click)="save()" [disabled]="!userForm.valid">บันทึก</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <h3 style="margin-bottom: 15px;">เหรียญที่ได้รับ</h3>
+      <div class="form-group">
+        <p class="form-check-inline" (click)="onCheckAll()" *ngIf="badges.length != 0">
+          <input class="form-check-input form-control-sm" type="checkbox" value="checkAll" style="right: 5px"
+                 [(ngModel)]="checkAll" name="checkAll">
+          เลือกทั้งหมด
+        </p>
+      </div>
+      <div *ngIf="badges != null">
+        <div class="row box-wrapper" style="padding: 2rem; max-height: 300px; overflow-y: auto; margin-bottom: 15px;">
+
+
+          <div class="row" style="margin-top: 15px">
+            <div class="col-xs-12">
+              <div class="row box-wrapper">
+                <div class="row" *ngIf="badges">
+                  <div class="col-md-3" *ngFor="let badge of badges;">
+                    <div class="panel panel-default" style="max-height: inherit; min-height: inherit">
+                      <div class="panel-body">
+                        <img class="center img-responsive img-circle " src="{{badge.image}}" style="margin-bottom: 5px; max-width: 80px">
+                        <p class="card-text" style="margin-bottom: 0">{{badge.name}}</p>
+                      </div>
+                      <div class="panel-footer">
+                        <p class="form-check-inline text-muted on-checked" (click)="onCheck(badge)">
+                          <input class="form-check-input" type="checkbox" [(ngModel)]="badge.selected"
+                                 name="badge.name"> เลือก
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p *ngIf="badges.length == 0" style="text-align: center">ไม่มีเหรียญที่ได้รับ</p>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+      <hr>
+
+      <div class="row " style="padding: 1rem; margin-bottom: 15px;">
+
+        <div class="pull-right">
+          <button type="button" class="btn btn-danger" (click)="onDeleteStudentBadge()" [disabled]="badges.length == 0">ลบเหรียญที่ได้รับ</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+

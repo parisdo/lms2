@@ -1,5 +1,15 @@
 <p-growl [value]="msgs" sticky="sticky"></p-growl>
 
+<p-dialog header="{{message.title}}" [(visible)]="display" modal="modal"
+          showEffect="fade" responsive="responsive" resizable="!resizable">
+  {{message.content}} <br>
+  <footer>
+    <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+      <button type="button" class="btn btn-danger" (click)="onDeleteStudent()">{{message.button}}</button>
+      <button type="button" class="btn btn-secondary" (click)="display = false">ยกเลิก</button>
+    </div>
+  </footer>
+</p-dialog>
 
 <div class="section-header" *ngIf="course != null">
   <my-course-nav (webboard)="gotoWebboard()" (feedback)="giveAllFeedback()" (leaderboard)="viewLeaderboard()"></my-course-nav>
@@ -30,7 +40,7 @@
 </div>
 
 
-<div class="lms-body">
+<div class="lms-body" style="margin-top: 0; padding-top: 0">
   <div class="container" *ngIf="course != null">
 
     <div class="row">
@@ -51,7 +61,7 @@
           <div class="form-group">
             <select class="form-control form-control-sm" [(ngModel)]="filterKeys" name="filterKeys">
               <option value="name">ชื่อนักเรียน</option>
-              <option value="id">รหัสนักเรียน</option>
+              <option value="student_id">รหัสนักเรียน</option>
             </select>
           </div>
 
@@ -69,7 +79,7 @@
       <div class="col-md-4">
         <form class="form-inline">
           <div class="form-group pull-right">
-            <button class="btn btn-orenge" type="button" (click)="onDeleteStudent()"><i class="fa fa-minus-circle" aria-hidden="true"></i> ลบนักเรียน</button>
+            <button class="btn btn-danger" type="button" (click)="deletePopup()"><i class="fa fa-minus-circle" aria-hidden="true"></i> ลบนักเรียน</button>
             <button class="btn btn-green" type="button" (click)="updateStudent()"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มนักเรียน</button>
           </div>
         </form>

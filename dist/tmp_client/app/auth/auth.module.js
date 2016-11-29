@@ -14,6 +14,7 @@ var auth_routing_1 = require("./auth.routing");
 var signin_component_1 = require("./signin.component");
 var signup_component_1 = require("./signup.component");
 var auth_component_1 = require("./auth.component");
+var forgotpassword_component_1 = require("./forgotpassword/forgotpassword.component");
 var AuthModule = (function () {
     function AuthModule() {
     }
@@ -26,7 +27,8 @@ var AuthModule = (function () {
             declarations: [
                 auth_component_1.AuthComponent,
                 signin_component_1.SigninComponent,
-                signup_component_1.SignupComponent
+                signup_component_1.SignupComponent,
+                forgotpassword_component_1.ForgotPasswordComponent
             ]
         }), 
         __metadata('design:paramtypes', [])

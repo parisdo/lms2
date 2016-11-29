@@ -9,12 +9,14 @@ import {ValidationService} from "../../services/validation.service";
 import {CourseService} from "../../services/course.service";
 import {msg} from '../../services/message-service';
 import {Message} from "primeng/components/common/api";
+import {publicUrl} from  "../../services/config";
+
 
 @Component({
     moduleId: module.id,
     selector: 'edit-teacher',
     templateUrl: 'edit-teacher.component.html',
-  styleUrls: ['edit-teacher.component.css'],
+    styleUrls: ['edit-teacher.component.css'],
 })
 export class EditTeacherComponent implements OnInit{
 
@@ -42,7 +44,7 @@ export class EditTeacherComponent implements OnInit{
 
       if (this.teacherService.teacher != null) {
         this.teacher = this.teacherService.teacher;
-        this.teacher.image = 'http://54.255.138.5/teachers/logo/' + this.teacher.image;
+        this.teacher.image = `${publicUrl}/teachers/logo/` + this.teacher.image;
         this.image =  this.teacher.image;
 
       } else {
@@ -85,7 +87,8 @@ export class EditTeacherComponent implements OnInit{
       if(this.newImage){
         this.teacher.image = this.image;
       }else {
-        this.teacher.image = this.teacher.image.substring(34);
+        let teacherPath = `${publicUrl}teachers/logo/`.length;
+        this.teacher.image = this.teacher.image.substring(teacherPath);
       }
 
       console.log( this.teacher.image);

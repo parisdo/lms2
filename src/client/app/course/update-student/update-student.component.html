@@ -7,14 +7,14 @@
       <div class="col-xs-12">
         <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
           <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
-        <h3 class="section-header-title">เพิ่มชั้นเรียน</h3>
+        <h3 class="section-header-title">เพิ่มนักเรียน</h3>
       </div>
     </div>
   </div>
 </div>
 
 <div class="lms-body">
-  <div class="container" style="max-width: 800px; display: block">
+  <div class="container" style="display: block">
     <div class="row box-wrapper">
 
       <h4>ขั้นตอนที่ {{tabIndex}} {{tabName}}</h4>
@@ -31,51 +31,67 @@
       <div *ngIf="tabIndex == 1">
 
         <div style="margin-bottom: 15px">
-          <label class="form-check-inline" style="margin-right: 15px">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="onCheck('excel')"
-                   [checked]="check == 'excel'"> นำข้อมูลเข้าจากไฟล์
-          </label>
+          <!--<label class="form-check-inline" style="margin-right: 15px">-->
+            <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="onCheck('excel')"-->
+                   <!--[checked]="check == 'excel'"> นำข้อมูลเข้าจากไฟล์-->
+          <!--</label>-->
 
-          <label class="form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="onCheck('manual')"
-                   [checked]="check == 'manual'"> กรอกข้อมูลเอง
-          </label>
+          <!--<label class="form-check-inline">-->
+            <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="onCheck('manual')"-->
+                   <!--[checked]="check == 'manual'"> กรอกข้อมูลเอง-->
+          <!--</label>-->
 
         </div>
 
-        <table class="table table-hover" style="margin-bottom: 15px">
-          <thead>
-          <tr>
-            <th>รหัส</th>
-            <th>คำนำหน้า</th>
-            <th>ชื่อ-นามสกุล</th>
-            <th>แก้ไข</th>
-          </tr>
-          </thead>
-          <tbody *ngIf="students != null">
-          <tr *ngFor="let student of students">
-            <th scope="row">{{student.student_id}}</th>
-            <th scope="row">{{student.title == 'mr' ? 'นาย': 'นางสาว'}}</th>
-            <td>
-              <div class="">{{student.name}}</div>
-            </td>
-            <td>
-              <button class="btn btn-danger btn-block" type="button" (click)="deleteStudent(student)">ลบ</button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+        <div *ngIf="students != null">
 
-
-        <form *ngIf="check == 'excel'">
-          <div class="form-group">
-            <input type="file" class="form-control-file" aria-describedby="fileHelp">
-            <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's
-              a
-              bit lighter and easily wraps to a new line.
-            </small>
+          <div class="row thTable">
+            <div class="col-xs-3">รหัสนักเรียน</div>
+            <div class="col-xs-2">คำนำหน้า</div>
+            <div class="col-xs-4">ชื่อ-นามสกุล</div>
+            <div class="col-xs-3">แก้ไข</div>
           </div>
-        </form>
+
+          <div class="row tdTable"  *ngFor="let student of students; let index = index">
+
+            <div *ngIf="!editStudentMode || selectedIndex != index">
+              <div class="col-xs-3">{{student.student_id}}</div>
+              <div class="col-xs-2" *ngIf="student.title == 'mr'">นาย</div>
+              <div class="col-xs-2" *ngIf="student.title == 'boy'">ด.ช.</div>
+              <div class="col-xs-2" *ngIf="student.title == 'miss'">นางสาว</div>
+              <div class="col-xs-2" *ngIf="student.title == 'girl'">ด.ญ.</div>
+
+              <div class="col-xs-4">{{student.name}}</div>
+              <div class="col-xs-3">
+                <button class="btn btn-info btn-sm" type="button" (click)="editStudent(index)">แก้ไข</button>
+                <button class="btn btn-danger btn-sm" type="button" (click)="deleteStudent(student)">ลบ</button>
+              </div>
+            </div>
+
+            <div *ngIf="editStudentMode && selectedIndex == index">
+              <div class="col-xs-3"><input type="text" class="form-control" [(ngModel)]="student.student_id" ></div>
+              <div class="col-xs-2">{{student.title == 'mr' || student.title == 'boy' ? 'นาย': 'นางสาว'}}</div>
+              <div class="col-xs-4"><input type="text" class="form-control" [(ngModel)]="student.name" ></div>
+              <div class="col-xs-3">
+                <button class="btn btn-info btn-sm" type="button" (click)="editStudent(null)">ยกเลิก</button>
+                <button class="btn btn-danger btn-sm" type="button" (click)="deleteStudent(student)">ลบ</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <!--<form *ngIf="check == 'excel'">-->
+          <!--<div class="form-group">-->
+            <!--<input type="file" class="form-control-file" aria-describedby="fileHelp">-->
+            <!--<small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's-->
+              <!--a-->
+              <!--bit lighter and easily wraps to a new line.-->
+            <!--</small>-->
+          <!--</div>-->
+        <!--</form>-->
 
         <div *ngIf="check == 'manual'">
 
@@ -88,16 +104,18 @@
                            name="student_id">
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                   <div class="form-group">
                     <select class="form-control" id="student_title" formControlName="student_title"
                             name="student_title">
                       <option value="mr">นาย</option>
                       <option value="miss">นางสาว</option>
+                      <option value="boy">ด.ช.</option>
+                      <option value="girl">ด.ญ.</option>
                     </select>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="form-group">
                     <input type="text" class="form-control" id="student_name" formControlName="student_name"
                            name="student_name">
@@ -132,27 +150,44 @@
       </div>
 
       <form *ngIf="tabIndex == 2">
-        <table class="table table-hover">
-          <thead>
-          <tr>
-            <th>รหัส</th>
-            <th>ชื่อ</th>
-            <th>รูปภาพ</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let student of students">
-            <th scope="row">{{student.student_id}}</th>
-            <td>{{student.name}}</td>
-            <td>
-              <img [src]="student.image" class="img-responsive" style="max-height: 100px"><br>
-              <input type="file" image-upload
-                     (imageSelected)="selected($event, student)"
-                     [resizeOptions]="resizeOptions">
-            </td>
-          </tr>
-          </tbody>
-        </table>
+        <!--<table class="table table-hover">-->
+          <!--<thead>-->
+          <!--<tr>-->
+            <!--<th>รหัส</th>-->
+            <!--<th>ชื่อ</th>-->
+            <!--<th>รูปภาพ</th>-->
+          <!--</tr>-->
+          <!--</thead>-->
+          <!--<tbody>-->
+          <!--<tr *ngFor="let student of students">-->
+            <!--<th scope="row">{{student.student_id}}</th>-->
+            <!--<td>{{student.name}}</td>-->
+            <!--<td>-->
+              <!--<img [src]="student.image" class="img-responsive" style="max-height: 100px"><br>-->
+              <!--<input type="file" image-upload-->
+                     <!--(imageSelected)="selected($event, student)"-->
+                     <!--[resizeOptions]="resizeOptions">-->
+            <!--</td>-->
+          <!--</tr>-->
+          <!--</tbody>-->
+        <!--</table>-->
+        <div class="row thTable">
+          <div class="col-xs-3">รหัสนักเรียน</div>
+          <div class="col-xs-3">ชื่อ</div>
+          <div class="col-xs-6">รูปภาพ</div>
+        </div>
+
+        <div class="row tdTable" *ngFor="let student of students">
+          <div class="col-xs-3">{{student.student_id}}</div>
+          <div class="col-xs-3">{{student.name}}</div>
+          <div class="col-xs-3">
+            <img [src]="student.image" class="img-responsive" style="max-height: 100px"><br>
+            <input type="file" image-upload
+                   (imageSelected)="selected($event, student)"
+                   [resizeOptions]="resizeOptions">
+          </div>
+        </div>
+
         <div class="form-group row pull-right">
           <div class="col-sm-12">
             <button type="button" class="btn btn-info {{tabIndex == 1 ? 'disabled': ''}}" (click)="previous()">ย้อนกลับ

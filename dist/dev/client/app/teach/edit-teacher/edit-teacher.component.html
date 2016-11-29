@@ -1,0 +1,154 @@
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+
+<div class="section-header">
+  <div class="container" style="margin-top: 55px; padding-bottom: 15px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="section-header-link link" (click)="cancel()" routerLinkActive="true">
+          <i class="section-header-icon fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>
+        <h3 class="section-header-title">แก้ไขข้อมูล</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lms-body">
+  <div class="container">
+    <div class="row box-wrapper">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)" style="padding: 15px; " autocomplete="off"
+            novalidate>
+        <div class="col-md-4">
+
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <img class="img-responsive center" [src]="image" [hidden]="!image" style="margin-bottom: 15px">
+              <label class="btn btn-info btn-sm" for="file-selector" style="display: block">
+                <input id="file-selector" type="file" image-upload (imageSelected)="selected($event)"
+                       [resizeOptions]="resizeOptions" style="display:none;">
+                ใส่รูป
+              </label>
+              <small class='text-muted' [hidden]="image">ยังไม่ได้ใส่รูป (ใส่รูปไฟล์ .jpg, .jpeg)</small>
+              <small class='text-muted' style="font-size: 10px" id="upload-file-info"></small>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-8">
+
+          <div class="form-group row">
+            <label for="title" class="col-sm-4 col-form-label">คำนำหน้าชื่อ *</label>
+            <div class="col-sm-8">
+              <select class="custom-select" id="title" name="title" formControlName="title" [(ngModel)]="teacher.title">
+                <option value="นาย">นาย</option>
+                <option value="นาง">นาง</option>
+                <option value="นางสาว">นางสาว</option>
+                <option value="อื่นๆ">อื่นๆ</option>
+              </select>
+              <control-messages [control]="userForm.controls.title"></control-messages>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="name" class="col-sm-4 col-form-label">ชื่อ - นามสกุล *</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="name" name="name" formControlName="name"
+                     [(ngModel)]="teacher.name">
+              <control-messages [control]="userForm.controls.name"></control-messages>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <label for="position" class="col-sm-4 col-form-label">ตำแหน่ง / วิทยฐานะ</label>
+            <div class="col-sm-8">
+              <select class="custom-select" id="position" name="position" formControlName="position"
+                      [(ngModel)]="teacher.position">
+                <option value="ครูอัตราจ้าง">ครูอัตราจ้าง</option>
+                <option value="ครูบรรจุใหม่/ครูผู้ช่วย">ครูบรรจุใหม่/ครูผู้ช่วย</option>
+                <option value="ครูประจำการ">ครูประจำการ</option>
+                <option value="ครูชำนาญการ">ครูชำนาญการ</option>
+                <option value="ครูชำนาญการพิเศษ">ครูชำนาญการพิเศษ</option>
+                <option value="ครุูชี่ยวชาญ">ครุฌชี่ยวชาญ</option>
+                <option value="ครูชี่ยวชาญพิเศษ">ครุฌชี่ยวชาญพิเศษ</option>
+                <option value="ศึกษานิเทศก์">ศึกษานิเทศก์</option>
+                <option value="ผู้บริการสถานศึกษา">ผู้บริการสถานศึกษา</option>
+                <option value="ครูโรงเรียนเอกชน">ครูโรงเรียนเอกชน</option>
+                <option value="ผู้ช่วยศาสตร์จารย์">ผู้ช่วยศาสตร์จารย์</option>
+                <option value="รองศาสตร์จารย์">รองศาสตร์จารย์</option>
+                <option value="ศาสตร์จารย์">ศาสตร์จารย์</option>
+                <option value="อื่นๆ">อื่นๆ</option>
+              </select>
+              <control-messages [control]="userForm.controls.position"></control-messages>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <label for="id_card" class="col-sm-4 col-form-label">เลขบัตรประชาชน</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="id_card" name="id_card" formControlName="id_card"
+                     [(ngModel)]="teacher.id_card">
+              <control-messages [control]="userForm.controls.id_card"></control-messages>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="phone" class="col-sm-4 col-form-label">เบอร์โทรศัพท์</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="phone" name="phone" formControlName="phone"
+                     [(ngModel)]="teacher.phone">
+              <control-messages [control]="userForm.controls.phone"></control-messages>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="address" class="col-sm-4 col-form-label">ที่อยู่ที่สามารถติดต่อได้</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="address" name="address" formControlName="address"
+                     [(ngModel)]="teacher.address">
+              <control-messages [control]="userForm.controls.address"></control-messages>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="teaching_level" class="col-sm-4 col-form-label">สอนระดับชั้น</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="teaching_level" name="password"
+                     formControlName="teaching_level" [(ngModel)]="teacher.teaching_level">
+              <control-messages [control]="userForm.controls.teaching_level"></control-messages>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="institution" class="col-sm-4 col-form-label">ชื่อสถาบัน</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="institution" name="institution" formControlName="institution"
+                     [(ngModel)]="teacher.institution">
+              <control-messages [control]="userForm.controls.institution"></control-messages>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="province" class="col-sm-4 col-form-label">จังหวัด</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="province" name="province" formControlName="province"
+                     [(ngModel)]="teacher.province">
+              <control-messages [control]="userForm.controls.province"></control-messages>
+            </div>
+          </div>
+
+          <hr>
+          <div class="form-group row pull-xs-right">
+            <div style="margin-right: 15px">
+              <button type="button" class="btn  btn-secondary" (click)="reset()">ยกเลิก</button>
+              <button type="submit" class="btn  btn-info" [disabled]="!userForm.valid">บันทึก</button>
+            </div>
+          </div>
+
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>

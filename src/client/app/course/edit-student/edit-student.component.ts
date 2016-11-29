@@ -42,6 +42,7 @@ export class EditStudentComponent implements OnInit {
 
   student = new Student;
   students: Student[] = [];
+  studentPath: any;
 
   badges: Badge[] = [];
   msgs: Message[] = [];
@@ -73,7 +74,7 @@ export class EditStudentComponent implements OnInit {
           this.studentService.getStudentBadge(this.selectedId)
             .subscribe(
               (data: any) => {
-                console.log(data);
+                //console.log(data);
                 //this.badges = data;
                 data.forEach((badge: any) => {
                   badge.image = publicUrl + '/students/badges/' + badge.image;
@@ -120,7 +121,8 @@ export class EditStudentComponent implements OnInit {
     if(this.newImage){
       this.student.image = this.image;
     }else {
-      this.student.image = this.student.image.substring(34);
+      this.studentPath = `${publicUrl}students/logo/`.length;
+      this.student.image = this.student.image.substring(this.studentPath);
     }
 
     console.log(this.student);

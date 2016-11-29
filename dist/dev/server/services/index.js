@@ -1,0 +1,8 @@
+"use strict";
+var name_list_1 = require('./name.list');
+function init(app) {
+    name_list_1.nameList(app);
+}
+exports.init = init;
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZpY2VzL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSwwQkFBeUIsYUFBYSxDQUFDLENBQUE7QUFFdkMsY0FBcUIsR0FBd0I7SUFDekMsb0JBQVEsQ0FBQyxHQUFHLENBQUMsQ0FBQztBQUNsQixDQUFDO0FBRmUsWUFBSSxPQUVuQixDQUFBIiwiZmlsZSI6InNlcnZpY2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgZXhwcmVzcyBmcm9tICdleHByZXNzJztcbmltcG9ydCB7IG5hbWVMaXN0IH0gZnJvbSAnLi9uYW1lLmxpc3QnO1xuXG5leHBvcnQgZnVuY3Rpb24gaW5pdChhcHA6IGV4cHJlc3MuQXBwbGljYXRpb24pIHsgXG4gICAgbmFtZUxpc3QoYXBwKTtcbn1cbiJdfQ==

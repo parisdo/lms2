@@ -49,8 +49,7 @@ export class NewPostComponent {
     this.webboardService.createPost(newPost)
       .subscribe(
         (data: any) => {
-          //console.log(data);
-          //console.log(data.status);
+
 
           if(data.status == 'success'){
 

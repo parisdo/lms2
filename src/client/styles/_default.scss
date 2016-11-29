@@ -16,10 +16,8 @@ body{
 
 
 .lms-body{
-  margin-top: 45px;
   padding-top: 45px;
   padding-bottom: 90px;
-  //margin-bottom: 45px;
 }
 
 .container{
@@ -159,3 +157,16 @@ textarea {
   border-color: $green;
 }
 
+/* modal */
+
+
+:host /deep/.ui-resizable-se{
+  display: none;
+}
+
+:host /deep/.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-shadow {
+  position: fixed;
+  padding: 0;
+  overflow: hidden;
+  width: 500px;
+}

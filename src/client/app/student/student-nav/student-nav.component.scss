@@ -10,6 +10,8 @@
   z-index: 999;
   background-color: $green;
   color: $white;
+  min-height: 80px;
+  padding-top: 15px;
 }
 
 .navbar-nav>li>a{
@@ -27,6 +29,19 @@
 .btn-logout{
   cursor: pointer;
 }
+
+
+.navbar-brand{
+  margin-top: -10px;
+}
+
+.navbar-brand>img {
+  display: block;
+  max-height: 35px;
+  float: left;
+  margin-right: 15px;
+}
+
 
 .navbar-default .navbar-nav>.open>a{
   background-color: transparent;

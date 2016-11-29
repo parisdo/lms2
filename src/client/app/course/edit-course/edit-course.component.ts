@@ -48,7 +48,7 @@ export class EditCourseComponent {
 
     submit(){
 
-        console.log(this.courseForm.value);
+       // console.log(this.courseForm.value);
         this.courseService.editCourse(this.courseForm.value)
             .subscribe(
                 (data: any) => {

@@ -21,6 +21,7 @@ import {StudentService} from "../services/student.service";
 import {ProgressBarModule} from "primeng/components/progressbar/progressbar";
 import {WebboardService} from "../services/webboard.service";
 import {EqualValidator} from "../services/equal-validator.directive";
+import {DialogModule} from "primeng/components/dialog/dialog";
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {EqualValidator} from "../services/equal-validator.directive";
     JsonpModule,
     GrowlModule,
     ProgressBarModule,
-    ImageUploadModule
+    ImageUploadModule,
+    DialogModule
   ],
   declarations: [
     HeaderComponent,
@@ -60,7 +62,8 @@ import {EqualValidator} from "../services/equal-validator.directive";
     TeachNavComponent,
     ControlMessagesComponent,
     FilterData,
-    EqualValidator
+    EqualValidator,
+    DialogModule
   ]
 })
 export class SharedModule {

@@ -23,28 +23,6 @@ var AuthService = (function () {
         this.token = localStorage.getItem('token');
         this.id = localStorage.getItem('id');
     }
-    AuthService.prototype.upload = function (data) {
-        console.log(data);
-        var formData = new FormData(), xhr = new XMLHttpRequest();
-        for (var i = 0; i < data.length; i++) {
-            formData.append("uploads[]", data[i], data[i].name);
-        }
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log('success');
-                    console.log(xhr.response);
-                }
-                else {
-                    console.log('error');
-                    console.log(xhr.response);
-                }
-            }
-        };
-        xhr.open('POST', 'http://54.179.160.42/api/v1/upload', true);
-        xhr.send(formData);
-        console.log(formData);
-    };
     AuthService.prototype.signin = function (teacher) {
         var body = JSON.stringify(teacher);
         return this.http.post(config_1.apiUrl + "user/signin", body, xhr_headers_1.xhrHeaders())
@@ -54,6 +32,12 @@ var AuthService = (function () {
     AuthService.prototype.studentSigin = function (student) {
         var body = JSON.stringify(student);
         return this.http.post(config_1.apiUrl + "user/signin", body, xhr_headers_1.xhrHeaders())
+            .map(function (res) { return res.json(); })
+            .cache();
+    };
+    AuthService.prototype.forgotPassword = function (email) {
+        var body = JSON.stringify(email);
+        return this.http.post(config_1.apiUrl + "password/email", body, xhr_headers_1.xhrHeaders())
             .map(function (res) { return res.json(); })
             .cache();
     };

@@ -1,0 +1,5 @@
+"use strict";
+exports.apiUrl = "http://52.77.209.241/laravel/public/api/v1/";
+exports.publicUrl = "http://52.77.209.241/laravel/public/";
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zZXJ2aWNlcy9jb25maWcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFhLGNBQU0sR0FBVyw2Q0FBNkMsQ0FBQztBQUMvRCxpQkFBUyxHQUFXLHNDQUFzQyxDQUFDIiwiZmlsZSI6ImFwcC9zZXJ2aWNlcy9jb25maWcuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgYXBpVXJsOiBzdHJpbmcgPSBcImh0dHA6Ly81Mi43Ny4yMDkuMjQxL2xhcmF2ZWwvcHVibGljL2FwaS92MS9cIjtcbmV4cG9ydCBjb25zdCBwdWJsaWNVcmw6IHN0cmluZyA9IFwiaHR0cDovLzUyLjc3LjIwOS4yNDEvbGFyYXZlbC9wdWJsaWMvXCI7XG5cbiJdfQ==

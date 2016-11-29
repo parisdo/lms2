@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/app.component.scss"],"names":[],"mappings":"AAAA;EACE,0BAA0B,EAC3B","file":"app.component.css","sourcesContent":["body{\n  background-color: #f0f2f1;\n}\n"]}

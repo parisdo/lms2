@@ -27,6 +27,10 @@
   }
 }
 
+.fa-home{
+  font-size: 14px;
+}
+
 .panel.panel-default.panel-comment {
   background-color: #e5e6e9;
   padding: 15px;
@@ -90,9 +94,13 @@
 }
 
 .panel-replyComment{
-  background-color: #b3b4b7;
+  background-color: whitesmoke;
 }
 
 .textboxReplyComment{
   margin-top: 15px;
+}
+
+a{
+  color: $gray;
 }

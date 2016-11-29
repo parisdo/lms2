@@ -1,3 +1,3 @@
 "use strict";
-exports.apiUrl = "http://54.179.136.36/api/v1/";
-exports.publicUrl = "http://54.179.136.36/";
+exports.apiUrl = "http://52.77.209.241/laravel/public/api/v1/";
+exports.publicUrl = "http://52.77.209.241/laravel/public/";
