@@ -88,10 +88,15 @@ body {
   background-color: #f0f2f1; }
 
 .lms-body, body {
-  font-family: "proxima-nova", sans-serif;
+  font-family: 'Kanit', sans-serif !important;
+  font-weight: 400 !important;
   overflow-x: hidden;
   background-color: #f0f2f1 !important;
   color: #1e394f; }
+
+.nav, .section-header-title, .section-header-link, .modal, .modal-header, .modal-body, .btn, a, h1, h2, h3, h4, h5, p, label, small, input {
+  font-family: 'Kanit', sans-serif !important;
+  font-weight: 400 !important; }
 
 .lms-body {
   padding-top: 45px;
@@ -230,6 +235,9 @@ textarea {
 
 .fa-home {
   font-size: 14px; }
+
+.panel-body {
+  text-align: left; }
 
 .panel.panel-default.panel-comment {
   background-color: #e5e6e9;

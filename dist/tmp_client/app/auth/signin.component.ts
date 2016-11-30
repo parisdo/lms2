@@ -46,10 +46,12 @@ export class SigninComponent {
     this.authService.signin(this.teacher)
           .subscribe(
               (data: any) => {
-                //console.log(data);
+                console.log(data);
                 if(data.status == 'success' && data.data.role == 'teacher'){
                   this.authService.setToken(data.data.token, 'teacher');
                   this.router.navigate(['./teach']);
+                }else  if(data.status = 'failed'){
+                  this.errorMessage = 'username or password not match!';
                 }else {
                   this.errorMessage = data.errormessage;
                 }

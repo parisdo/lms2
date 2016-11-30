@@ -28,7 +28,7 @@ export class NewPostComponent {
       .queryParams
       .subscribe(params => {
         this.course_id = +params['id'];
-        console.log(this.course_id);
+        //console.log(this.course_id);
       })
   }
 
@@ -44,7 +44,7 @@ export class NewPostComponent {
 
     let newPost = new Post(this.course_id, this.postForm.title, this.postForm.detail);
 
-    console.log(newPost);
+    //console.log(newPost);
 
     this.webboardService.createPost(newPost)
       .subscribe(

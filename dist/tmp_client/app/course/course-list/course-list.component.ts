@@ -19,7 +19,7 @@ export class updateStudentsScore {
 }
 
 export class updateStudentsBadge {
-  constructor(public course_id?: any, public badge_id?: any, public score?: any, public students?: any) { }
+  constructor(public course_id?: any, public badge_id?: any, public score?: any, public students?: any, public max_score?: any) { }
 }
 
 
@@ -254,11 +254,14 @@ export class CourseListComponent {
 
   onUpdateStudentBadge(badge: any){
 
+    let maxScore = this.levels[this.levels.length - 1].ceiling_xp;
+
     let students = new updateStudentsBadge(
       this.course.id,
       badge.id,
       badge.xp,
-      this.selectedStudents
+      this.selectedStudents,
+      maxScore
     );
 
     //console.log(students);

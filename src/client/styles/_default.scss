@@ -8,10 +8,16 @@ body{
 }
 
 .lms-body, body{
-  font-family: "proxima-nova", sans-serif;
+  font-family: 'Kanit', sans-serif !important;
+  font-weight: 400 !important;
   overflow-x: hidden;
   background-color: $light-gray !important;
   color: $dark-blue;
+}
+
+.nav, .section-header-title, .section-header-link, .modal, .modal-header, .modal-body, .btn, a, h1,h2,h3,h4,h5,p,label, small, input{
+  font-family: 'Kanit', sans-serif !important;
+  font-weight: 400 !important;
 }
 
 

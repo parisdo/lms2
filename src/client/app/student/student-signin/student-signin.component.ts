@@ -48,7 +48,7 @@ export class StudentSigninComponent {
     signin(student: Student) {
         this.message = 'Trying to log in ...';
         this.student = new studentSignin(student.username, student.password);
-        console.log(this.student);
+        //console.log(this.student);
 
       this.authService.signin(this.student)
         .subscribe(
@@ -57,7 +57,10 @@ export class StudentSigninComponent {
             if(data.status == 'success' && data.data.role == 'student') {
               this.authService.setToken(data.data.token, 'student', data.data.id);
               this.router.navigate(['./student/dashboard']);
-            }else {
+            }else  if(data.data.role != 'student'){
+              this.errorMessage = 'username or password not match!';
+            }
+            else {
               this.errorMessage = data.errormessage;
             }
           },

@@ -44,9 +44,9 @@
               <button class="btn btn-green" (click)="editPost(post.id, post.title, post_detail.value)">แก้ไข</button>
             </div>
           </div>
-          <div *ngIf="!isEditPost">
-            <h3 class="panel-title" style="margin-bottom: 15px;">{{post.title}}</h3>
-            <p>{{post.detail}}</p>
+          <div *ngIf="!isEditPost" style="padding: 15px">
+            <h2 style="margin-bottom: 15px;">{{post.title}}</h2>
+            <h5>{{post.detail}}</h5>
           </div>
         </div>
         <div class="panel-footer" style="text-align: right">
@@ -93,7 +93,7 @@
             </div>
 
             <div class="panel-body">
-              <p *ngIf="edit_comment_id != comment.comment.id">{{comment.comment.detail}}</p>
+              <h5 *ngIf="edit_comment_id != comment.comment.id">{{comment.comment.detail}}</h5>
               <div *ngIf="edit_comment_id == comment.comment.id">
                 <textarea rows="3" class="form-control" id="comment_detail" name="comment_detail" #comment_detail style="margin-bottom: 15px;">{{comment.comment.detail}}</textarea>
                 <div class="pull-right">
@@ -118,7 +118,7 @@
 
                       <div class="row">
                         <div class="col-xs-6">
-                          <p><i class="fa fa-user" aria-hidden="true"></i> {{replyComment.name}}</p>
+                          <small><i class="fa fa-user" aria-hidden="true"></i> {{replyComment.name}}</small>
                         </div>
                         <div class="col-xs-6">
                           <div style="text-align: right">
@@ -137,7 +137,7 @@
 
                     </div>
                     <div class="panel-body">
-                      <p *ngIf="edit_reply_comment_id != replyComment.id">{{replyComment.detail}}</p>
+                      <h5 *ngIf="edit_reply_comment_id != replyComment.id">{{replyComment.detail}}</h5>
                       <div *ngIf="edit_reply_comment_id == replyComment.id">
                         <textarea rows="3" class="form-control" id="reply_comment_detail" name="reply_comment_detail" #reply_comment_detail style="margin-bottom: 15px;">{{replyComment.detail}}</textarea>
                         <div class="pull-right">

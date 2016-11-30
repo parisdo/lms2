@@ -64,6 +64,10 @@
 .panel-body{
   cursor: pointer;
   min-height: 120px;
+
+  &-description{
+    color: $gray;
+  }
 }
 
 .panel-footer {

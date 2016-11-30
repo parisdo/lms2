@@ -120,7 +120,9 @@ export class EditTeacherComponent implements OnInit{
       window.history.back();
   }
 
-  ngOnDestroy() {}
+  ngOnDestroy() {
+    location.reload();
+  }
 
 
 }
