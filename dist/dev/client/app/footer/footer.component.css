@@ -196,7 +196,7 @@ textarea {
   border-bottom: 1px solid #f0f2f1; }
 
 /* Message ui-growl */
-:host/deep/.ui-growl-item-container.ui-state-highlight.ui-growl-message-info {
+:host/deep/.ui-growl-item-container.ui-state-highlight.ui-growl-message-success {
   background-color: #87c97f;
   border-color: #87c97f; }
 

@@ -98,9 +98,9 @@ export class EditTeacherComponent implements OnInit{
           (data: any) => {
             //console.log(data);
             if(data.status == "success"){
-              this.showMessage(msg.getRegisterMessage(200));
+              this.showMessage(msg.getUpdateMessage(200));
             }else {
-              this.showMessage(msg.getRegisterMessage(500));
+              this.showMessage(msg.getUpdateMessage(500));
             }
           },
           (error) => console.log(error)

@@ -125,9 +125,9 @@ export class EditXPComponent {
       .subscribe(
         (data: any) => {
           if(data.status == 'success'){
-            this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            this.showMessage(msg.getUpdateMessage(200));
           }else {
-            this.showMessage(msg.getUpdateStudentsScoreMessage(500));
+            this.showMessage(msg.getUpdateMessage(500));
           }
         },
         (error) => console.log(error)

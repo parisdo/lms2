@@ -132,9 +132,9 @@ export class EditStudentComponent implements OnInit {
         (data: any) => {
           console.log(data);
           if (data.status == 'success') {
-            this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            this.showMessage(msg.getUpdateMessage(200));
           } else {
-            this.showMessage(msg.getUpdateStudentsScoreMessage(500));
+            this.showMessage(msg.getUpdateMessage(500));
           }
         },
         (error) => console.log(error)
@@ -177,10 +177,10 @@ export class EditStudentComponent implements OnInit {
       .subscribe(
         (data: any) => {
           if (data.status == 'success') {
-            this.showMessage(msg.getUpdateStudentsScoreMessage(200));
+            this.showMessage(msg.getUpdateMessage(200));
             this.ngOnInit();
           } else {
-            this.showMessage(msg.getUpdateStudentsScoreMessage(500));
+            this.showMessage(msg.getUpdateMessage(500));
           }
         },
         (error) => console.log(error)

@@ -152,7 +152,7 @@ textarea {
 
 /* Message ui-growl */
 
-:host/deep/.ui-growl-item-container.ui-state-highlight.ui-growl-message-info {
+:host/deep/.ui-growl-item-container.ui-state-highlight.ui-growl-message-success {
   background-color: $green;
   border-color: $green;
 }

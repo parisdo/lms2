@@ -120,7 +120,7 @@ export class EditBadgeComponent {
       }
 
       this.isEdited = false;
-      console.log(this.selectedBadge);
+      //console.log(this.selectedBadge);
 
       this.courseService.editBadge(this.selectedBadge)
             .subscribe(
@@ -156,7 +156,7 @@ export class EditBadgeComponent {
     deleteBadge(){
 
       this.selectedBadge.badge_id = this.selectedBadge.id;
-      console.log(this.selectedBadge);
+      //console.log(this.selectedBadge);
         this.courseService.deleteBadge(this.selectedBadge.badge_id)
             .subscribe(
                 (data: any) => {
