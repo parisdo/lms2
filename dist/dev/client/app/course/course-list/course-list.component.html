@@ -199,18 +199,22 @@
                 <p class="form-control-static">กำหนดค่า XP</p>
               </div>
               <div class="form-group">
-                <input type="number" class="form-control form-control-sm" #dynamicXp>
+                <input type="number" class="form-control form-control-sm" name="dynamicXp" [(ngModel)]="dynamicXp">
               </div>
-              <button type="submit" class="btn btn-info btn-sm" (click)="onUpdateStudentScore(dynamicXp.value)">ตกลง
-              </button>
+              <button type="submit" class="btn btn-info btn-sm" (click)="onUpdateStudentScore()">ตกลง</button>
             </form>
+          </div>
+          <div class="row">
+            <div class="col-xs-12" style="text-align: center; margin-top: 15px">
+              <small *ngIf="!isXp">กรุณาใส่ข้อมูลตัวเลขที่มีค่ามากกว่า 0 ขึ้นไป</small>
+            </div>
           </div>
         </div>
 
       </div>
 
       <div class="modal-footer">
-        <button type="button" id="closeUpdateModal" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+        <button type="button" id="closeUpdateModal" class="btn btn-secondary" data-dismiss="modal" (click)="resetXp()" >ปิด</button>
       </div>
     </div>
   </div>

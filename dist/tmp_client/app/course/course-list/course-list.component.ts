@@ -225,31 +225,47 @@ export class CourseListComponent {
     this.selectedStudents.push(student);
   }
 
-  onUpdateStudentScore(score: any){
+  dynamicXp: number = 0;
+  isXp: boolean = true;
+  onUpdateStudentScore(){
 
     let maxScore = this.levels[this.levels.length - 1].ceiling_xp;
-    //console.log(this.levels[this.levels.length - 1].ceiling_xp);
 
-    let students = new updateStudentsScore(
-      this.course.id,
-      score,
-      this.selectedStudents,
-      maxScore
-    );
+    if(this.dynamicXp > 0){
+      this.isXp = true;
+      this.dynamicXp = this.dynamicXp;
 
-    this.studentService.updateStudentsScore(students)
-      .subscribe(
-        (data: any) => {
-          if(data.status == 'success'){
-            this.showMessage(msg.getUpdateMessage(200));
-            $("#giveFeedback").modal('toggle');
-            this.ngOnInit();
-          }else {
-            this.showMessage(msg.getUpdateMessage(500));
-          }
-        },
-        (error) => console.log(error)
+      let students = new updateStudentsScore(
+        this.course.id,
+        this.dynamicXp,
+        this.selectedStudents,
+        maxScore
       );
+
+      this.studentService.updateStudentsScore(students)
+        .subscribe(
+          (data: any) => {
+            if(data.status == 'success'){
+              this.showMessage(msg.getUpdateMessage(200));
+              $("#giveFeedback").modal('toggle');
+              this.ngOnInit();
+            }else {
+              this.showMessage(msg.getUpdateMessage(500));
+            }
+          },
+          (error) => console.log(error)
+        );
+
+    }else {
+      this.isXp = false;
+      this.dynamicXp = 0;
+    }
+
+  }
+
+  resetXp(){
+    this.dynamicXp = 0;
+    this.isXp = true;
   }
 
   onUpdateStudentBadge(badge: any){
