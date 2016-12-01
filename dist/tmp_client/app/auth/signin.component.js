@@ -41,7 +41,6 @@ var SigninComponent = (function () {
         this.teacher = new teacher_1.Teacher(teacher.email, teacher.password);
         this.authService.signin(this.teacher)
             .subscribe(function (data) {
-            console.log(data);
             if (data.status == 'success' && data.data.role == 'teacher') {
                 _this.authService.setToken(data.data.token, 'teacher');
                 _this.router.navigate(['./teach']);
@@ -54,7 +53,6 @@ var SigninComponent = (function () {
             }
         }, function (error) {
             _this.errorMessage = 'Please Activate Your Account. Before you can login, you must active your account with the code sent to your email address.';
-            console.log(error);
         });
     };
     SigninComponent = __decorate([
