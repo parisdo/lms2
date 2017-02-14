@@ -60,7 +60,6 @@ var SignupComponent = (function () {
         this.image = imageResult.resized
             && imageResult.resized.dataURL
             || imageResult.dataURL;
-        console.log(this.image);
     };
     SignupComponent.prototype.showDialog = function () {
         this.display = true;

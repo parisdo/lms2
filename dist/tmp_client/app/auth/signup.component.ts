@@ -66,7 +66,7 @@ export class SignupComponent {
           && imageResult.resized.dataURL
           || imageResult.dataURL;
 
-    console.log(this.image);
+    //console.log(this.image);
   }
 
   display: boolean = false;
